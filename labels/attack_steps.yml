@@ -1,0 +1,25 @@
+# STEP-LEVEL GROUND TRUTH (one row per attack action).  Derived from the README attack narrative + alert timeline.
+# ANALYST-ANNOTATED: verify times/techniques against the dataset documentation before publishing.
+# Windows are UTC on 2019-05-14.  A step counts as DETECTED when a rule alert on the step host overlaps
+# [start - tol, end + tol] AND its tactic is in `tactics`.  `techniques` is the expected ATT&CK technique list
+# (strict technique recall is reported separately because rule technique granularity differs from annotation).
+dataset: empire_apt3
+date: "2019-05-14"
+tolerance_seconds: 30
+steps:
+  - {id: ST01, name: Script delivered via browser,            host: HR001,  start: "22:32:00", end: "22:32:21", tactics: [Initial Access],                      techniques: [T1189]}
+  - {id: ST02, name: User executes script / WSH spawns shell,  host: HR001,  start: "22:32:21", end: "22:32:30", tactics: [Execution],                           techniques: [T1204.002, T1059.005]}
+  - {id: ST03, name: Obfuscated hidden PowerShell stager,      host: HR001,  start: "22:32:21", end: "22:32:30", tactics: [Defense Evasion],                     techniques: [T1027, T1564.003]}
+  - {id: ST04, name: Logging/AMSI bypass + download cradle,    host: HR001,  start: "22:32:30", end: "22:33:00", tactics: [Defense Evasion, Command and Control], techniques: [T1562.001, T1105]}
+  - {id: ST05, name: C2 beaconing (workstation),               host: HR001,  start: "22:32:30", end: "23:47:45", tactics: [Command and Control],                 techniques: [T1071.001]}
+  - {id: ST06, name: Host and domain discovery,                host: HR001,  start: "22:34:00", end: "22:50:00", tactics: [Discovery],                           techniques: [T1087, T1082]}
+  - {id: ST07, name: Password spraying admin shares / lateral, host: HR001,  start: "22:54:00", end: "22:56:00", tactics: [Credential Access, Lateral Movement], techniques: [T1110.003, T1021.002, T1021]}
+  - {id: ST08, name: Script staged in System32 (HR001),        host: HR001,  start: "22:58:30", end: "23:00:00", tactics: [Persistence, Defense Evasion, Execution], techniques: [T1546.008]}
+  - {id: ST09, name: Remote service created on the DC,         host: HFDC01, start: "23:13:00", end: "23:14:30", tactics: [Persistence, Lateral Movement],       techniques: [T1543.003]}
+  - {id: ST10, name: SYSTEM Empire agent on the DC,            host: HFDC01, start: "23:16:00", end: "23:16:30", tactics: [Execution, Defense Evasion],          techniques: [T1059.005, T1027, T1564.003]}
+  - {id: ST11, name: C2 beaconing (DC),                        host: HFDC01, start: "23:16:10", end: "23:31:30", tactics: [Command and Control],                 techniques: [T1071.001]}
+  - {id: ST12, name: DC discovery,                             host: HFDC01, start: "23:17:30", end: "23:19:00", tactics: [Discovery],                           techniques: [T1087]}
+  - {id: ST13, name: takeown/icacls + overwrite Magnify.exe,   host: HFDC01, start: "23:19:00", end: "23:30:00", tactics: [Defense Evasion, Persistence],        techniques: [T1222.001, T1546.008]}
+  - {id: ST14, name: Data staged in Recycle Bin,               host: HR001,  start: "23:33:00", end: "23:34:00", tactics: [Collection],                          techniques: [T1074.001]}
+  - {id: ST15, name: RDP session to the DC,                    host: HFDC01, start: "23:43:00", end: "23:43:30", tactics: [Lateral Movement],                    techniques: [T1021.001]}
+  - {id: ST16, name: Accessibility backdoor triggered,         host: HFDC01, start: "23:44:20", end: "23:46:30", tactics: [Persistence],                         techniques: [T1546.008]}

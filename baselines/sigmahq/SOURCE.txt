@@ -1,0 +1,2 @@
+SigmaHQ/sigma ref=master
+url=https://codeload.github.com/SigmaHQ/sigma/zip/refs/heads/master

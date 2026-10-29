@@ -1,0 +1,31 @@
+{
+ "alerts": 35,
+ "iocs": 33,
+ "by_type": {
+  "hash": 21,
+  "host": 2,
+  "account": 2,
+  "filename": 2,
+  "url": 2,
+  "ip": 2,
+  "service": 2
+ },
+ "by_verdict": {
+  "unknown": 23,
+  "internal": 6,
+  "malicious": 4
+ },
+ "external_iocs": 23,
+ "techniques_known": 31,
+ "techniques_total": 33,
+ "kb": {
+  "source": "mitre-attack/attack-stix-data enterprise-attack",
+  "built": "2026-10-12",
+  "spec": ""
+ },
+ "confidence": {
+  "high": 18,
+  "medium": 10,
+  "low": 7
+ }
+}

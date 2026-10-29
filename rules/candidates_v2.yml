@@ -1,0 +1,60 @@
+# CANDIDATE v2 RULES - written AFTER ground-truth error analysis of the v1 rule set on the development scenario
+# (missed malicious process starts + one false positive; see outputs/reports/evaluation_report.md).
+# Because they were derived from this very dataset, report v1 and v1+v2 SEPARATELY (experiment E1) and never present
+# v2 numbers on empire_apt3 as generalisation.  Evaluate them on the held-out scenario before trusting them.
+# Loaded with:  AI_SOC_RULESETS=detection_rules.yml,candidates_v2.yml   (later files override rules with the same id)
+
+- id: SIG-013
+  title: "Child process spawned by an accessibility binary (refined: ignores the legitimate sound agent)"
+  description: "v1 flagged sethc.exe /AccessibilitySoundAgent started by utilman - normal OS behaviour (false positive found by ground-truth evaluation). Detecting a *replaced* Magnify.exe still needs hash/signature data (Sysmon `hashes`)."
+  tactic: Persistence
+  technique: T1546.008
+  level: critical
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      parent_process: [magnify.exe, sethc.exe, utilman.exe, osk.exe, narrator.exe, displayswitch.exe]
+    filter:
+      command_line|contains: accessibilitysoundagent
+    condition: selection and not filter
+
+- id: SIG-018
+  title: "ftp.exe run with a command script (-s:) - scripted exfiltration / tool transfer"
+  description: "ftp -s:file executes a pre-written command script; common for hands-off data exfiltration. Rare on modern workstations - allow-list admin jobs in production."
+  tactic: Exfiltration
+  technique: T1048.003
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: ftp.exe
+      command_line|contains: "-s:"
+    condition: selection
+
+- id: SIG-019
+  title: "Archiver invoked under an unexpected binary name (a -t7z ...)"
+  description: "7-Zip style arguments (`a -t7z`) executed by a binary that is not 7z/7za/7zg - renamed archiver used to stage data (here recycler.exe archiving into $Recycle.Bin)."
+  tactic: Collection
+  technique: T1560.001
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      command_line|contains: "-t7z"
+    filter:
+      process: [7z.exe, 7za.exe, 7zg.exe, 7zr.exe]
+    condition: selection and not filter
+
+- id: SIG-020
+  title: "net1.exe account/group/service enumeration"
+  description: "net1.exe (the real worker behind net.exe) enumerating users, groups or services. Complements SIG-006, which only sees net.exe when its parent is PowerShell. Noisy outside a lab - needs allow-listing."
+  tactic: Discovery
+  technique: T1087
+  level: medium
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: net1.exe
+      parent_process: net.exe
+      command_line|re: 'net1(\.exe)?"?\s+(user|group|localgroup|accounts|start|view|share)'
+    condition: selection

@@ -1,0 +1,65 @@
+# GROUND-TRUTH LABELLING SPEC for empire_apt3  (analyst-annotated - VERIFY against the dataset docs / APT3 emulation plan)
+#
+# Independence rule: labels are derived from *process lineage + analyst-identified seeds*, NOT from detection-rule
+# output, so evaluating the rules against them is not circular.  (The seeds themselves come from reading the attack
+# narrative, so treat results on this dataset as development-set numbers, not held-out accuracy.)
+#
+# Selector syntax = sigma_lite (field|contains|startswith|endswith|re, list = OR, several fields = AND).
+dataset: empire_apt3
+attack_start_utc: "2019-05-14T22:30:00+00:00"    # everything earlier = benign pre-attack window (831 events)
+
+# 1. Lineage seeds: matching process_create events and ALL their descendants (via parent_guid) are malicious.
+lineage_seeds:
+  - id: SEED-1
+    name: Downloaded autoupdate.vbs executed by the user (HR001) - Empire stager
+    match: {event_type: process_create, process: wscript.exe, command_line|contains: autoupdate.vbs}
+  - id: SEED-2
+    name: Remote service on the DC runs autoupdate.vbs as SYSTEM (HFDC01)
+    match: {event_type: process_create, process: cmd.exe, parent_process: services.exe, command_line|contains: autoupdate.vbs}
+  - id: SEED-3
+    name: Replaced Magnify.exe spawned by utilman (accessibility backdoor, HFDC01)
+    match: {event_type: process_create, process: magnify.exe, parent_process: utilman.exe}
+  - id: SEED-4
+    name: "Attacker-launched RDP client on the workstation (README step: RDP to the DC)"
+    match: {event_type: process_create, process: mstsc.exe, host: HR001}
+
+# 2. Scope rules: in this lab ALL PowerShell logging after the first malicious process on the host is attacker activity
+#    (README: "In this lab ALL PowerShell child processes are attacker activity").  No process GUID is available on
+#    PowerShell log events, so they are labelled by host + time.
+scope_rules:
+  - id: SCOPE-PS
+    name: PowerShell operational/classic logs after first seed activity on the same host
+    event_types: [ps_scriptblock, ps_module_log, ps_pipeline, ps_provider]
+    from: first_seed_on_host
+
+# 3. Explicit selectors for events that have no process lineage (authentication, shares, services).
+selectors:
+  - id: SEL-LATERAL-PGUSTAVO
+    name: pgustavo (compromised admin) authentication / share / explicit-credential activity
+    match: {event_type: [logon, explicit_cred_logon, share_access, kerberos_tgt, kerberos_service_ticket, ntlm_auth, logoff], user_short: pgustavo}
+    after: attack_start
+  - id: SEL-LATERAL-IPC
+    name: nmartha IPC$/IT share access from the infected workstation
+    match: {event_type: share_access, user_short: nmartha, share_name|re: 'IPC\$|\\IT$'}
+    after: attack_start
+  - id: SEL-DELIVERY
+    name: The delivered script file itself (file write of autoupdate.vbs - written by the browser, so not in any seed lineage)
+    match: {event_type: file_create, file_path|contains: autoupdate.vbs}
+    after: attack_start
+  - id: SEL-SERVICE
+    name: Malicious "Adobe" services installed on the DC
+    match: {event_type: service_install, service_name|contains: adobe}
+    after: attack_start
+
+# 4. Ambiguous: could be attacker or normal OS/user behaviour - excluded from strict precision/recall.
+ambiguous:
+  - id: AMB-UAC
+    name: UAC consent UI and elevation COM surrogate (possible UAC-bypass side effects)
+    match: {event_type: process_create, process: [consent.exe], }
+  - id: AMB-EVENTVWR
+    name: mmc.exe eventvwr.msc launched from explorer (possible Empire eventvwr UAC bypass)
+    match: {event_type: process_create, process: mmc.exe, command_line|contains: eventvwr}
+  - id: AMB-NMARTHA-LOGON
+    name: nmartha network logons to the DC (normal domain auth vs attacker use is indistinguishable)
+    match: {event_type: [logon, explicit_cred_logon, kerberos_tgt, kerberos_service_ticket], user_short: nmartha}
+    after: attack_start

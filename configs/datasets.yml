@@ -1,0 +1,25 @@
+# Dataset registry. role: development = rules/ML were tuned on it; held_out = frozen-rule evaluation only;
+# benign = used to fit the ML "normal" model.  Fill in `path` after downloading; `url` is intentionally
+# left null for datasets you must verify/obtain yourself (see docs/DATASETS.md).
+datasets:
+  empire_apt3:
+    role: development
+    description: OTRF Security-Datasets (Mordor) - simulated APT3 via PowerShell Empire, 4 Windows hosts
+    path: data/raw/empire_apt3_2019-05-14223117.json
+    archive: data/raw/empire_apt3_tar.gz
+    format: winlogbeat_jsonl
+    expected_events: 121659
+    labels: labels/            # attack_seeds.yml + attack_steps.yml
+  held_out_scenario:           # e.g. another OTRF scenario (APT29 evaluation, other Empire/ATT&CK-evals runs)
+    role: held_out
+    description: TODO - a different attack scenario; freeze rules before running
+    path: data/raw/held_out_scenario.json
+    url: null
+    format: winlogbeat_jsonl
+    labels: null               # create labels/<name>_seeds.yml + _steps.yml (same schema)
+  benign_baseline:             # e.g. DARPA OpTC benign hosts or any attack-free Windows/Sysmon capture
+    role: benign
+    description: TODO - attack-free logs normalised with the same schema
+    path: data/raw/benign_baseline.json
+    url: null
+    format: winlogbeat_jsonl

@@ -1,0 +1,10 @@
+data/raw/*
+!data/raw/.gitkeep
+data/intel/enterprise-attack.json
+data/intel/lookup_cache.json
+# baselines/sigmahq/rules/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.venv

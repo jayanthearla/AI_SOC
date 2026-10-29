@@ -1,0 +1,15 @@
+rater,criterion,score_1_to_5,comment
+rater_A,narrative_correctness,,
+rater_A,completeness_of_kill_chain,,
+rater_A,actionability_of_recommendations,,
+rater_A,appropriate_risk_level,,
+rater_A,overall_trust,,
+rater_B,narrative_correctness,,
+rater_B,completeness_of_kill_chain,,
+rater_B,actionability_of_recommendations,,
+rater_B,appropriate_risk_level,,
+rater_B,overall_trust,,
+
+REPORT_SUMMARY,"9 ATT&CK tactics observed across HFDC01, HR001 between 22:32:03 and 23:47:41."
+NARRATIVE,"22:32:03 Initial Access: Script file downloaded by a web browser on HR001 [ALR-0002]. 22:32:22 Execution: Script executed from Downloads / AppData / Temp on HR001 [ALR-0003], [ALR-0004], [ALR-0019]. 22:32:23 Defense Evasion: PowerShell with encoded command on HR001 [ALR-0005], [ALR-0006], [ALR-0008]. 22:32:32 Command and Control: PowerShell download cradle in script block on HR001 [ALR-0007], [ALR-0009], [ALR-0012]. 22:34:11 Discovery: Discovery commands spawned by PowerShell on HR001 [ALR-0010], [ALR-0011], [ALR-0028]. 22:54:13 Lateral Movement: net use with explicit credentials to an admin share on HR001 [ALR-0015], [ALR-0017], [ALR-0034]. 22:54:13 Credential Access: Password-guessing burst against admin shares on HR001 [ALR-0016]. 22:58:56 Persistence: Executable or script written to System32 by a script engine on HR001 [ALR-0018], [ALR-0020], [ALR-0021]. 23:33:07 Collection: Data staged in the Recycle Bin / System32 text file by PowerShell on HR001 [ALR-0031]."
+ACTIONS,kill_process(HFDC01); quarantine_file(); block_ip(10.0.10.106); isolate_endpoint(HFDC01); reset_credentials(nmartha); remove_persistence(HFDC01); hunt_similar_activity()

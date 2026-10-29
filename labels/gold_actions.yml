@@ -1,0 +1,17 @@
+# GOLD RESPONSE for INC-001 (empire_apt3) - written by the project author as a first draft.
+# HAVE 2+ SECURITY PRACTITIONERS REVIEW THIS before using it for the paper (and report inter-rater agreement).
+# required   : actions a competent responder would propose (matched on action_id; target checked when given)
+# acceptable : reasonable extras (not penalised)
+# forbidden  : harmful or contradictory proposals (counted as "harmful-action rate")
+dataset: empire_apt3
+incident: INC-001
+required:
+  - {action_id: isolate_endpoint, target: HR001}
+  - {action_id: reset_credentials}
+  - {action_id: block_ip, target: 10.0.10.106}
+  - {action_id: remove_persistence, target: HFDC01}
+  - {action_id: hunt_similar_activity}
+acceptable: [disable_account, kill_process, quarantine_file, collect_forensic_triage, create_detection_rule, monitor_and_review, isolate_endpoint]
+forbidden: [close_false_positive]
+gold_techniques:      # union of technique ids annotated in labels/attack_steps.yml (loaded programmatically by llm_eval)
+  from: attack_steps

@@ -1,0 +1,40 @@
+{
+ "total_events": 121659,
+ "suspicious_events": 3226,
+ "raw_rule_hits": 3398,
+ "rule_alerts": 33,
+ "ml_only_alerts": 2,
+ "incidents": 1,
+ "alerts_by_severity": {
+  "critical": 14,
+  "high": 11,
+  "medium": 8
+ },
+ "alerts_by_tactic": {
+  "Defense Evasion": 8,
+  "Persistence": 7,
+  "Execution": 5,
+  "Command and Control": 4,
+  "Discovery": 3,
+  "Lateral Movement": 3,
+  "Initial Access": 1,
+  "Credential Access": 1,
+  "Collection": 1
+ },
+ "alerts_by_host": {
+  "HR001": 21,
+  "HFDC01": 12
+ },
+ "high_risk_alerts": 25,
+ "ml_evaluation": {
+  "n_scored": 308,
+  "k": 15,
+  "topk_in_rules": 8,
+  "precision_at_k": 0.5333333333333333,
+  "rule_flagged_scored": 85,
+  "rule_in_top10pct": 11,
+  "ml_only": 2
+ },
+ "rules_loaded": 17,
+ "python_rules": 5
+}

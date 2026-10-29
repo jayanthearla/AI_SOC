@@ -1,0 +1,238 @@
+# Sigma-style rules (simplified "Sigma-lite" dialect, evaluated by src/sigma_lite.py)
+#
+# Field names refer to the NORMALIZED schema produced in Step 2 (not raw Windows field names).
+# Modifiers:  field|contains  |contains_all  |startswith  |endswith  |re      (case-insensitive)
+# A list of values = OR.  Several fields in one selection = AND.  Booleans: field: true
+# condition supports:  and / or / not / ( ) / "1 of selection*"
+# level -> base risk:  low 0.25 | medium 0.50 | high 0.75 | critical 0.90
+
+- id: SIG-016
+  title: "Script file downloaded by a web browser"
+  description: "A browser process wrote a .vbs/.vbe/.jse/.hta/.wsf file (including partial downloads and cache copies). Delivery vector (phishing link vs drive-by) cannot be proven from host logs alone."
+  tactic: Initial Access
+  technique: T1189
+  level: medium
+  logsource: {event_type: file_create}
+  detection:
+    selection:
+      process: [microsoftedgecp.exe, msedge.exe, browser_broker.exe, chrome.exe, firefox.exe, iexplore.exe]
+      file_path|re: '(\.(vbs|jse|vbe|hta|wsf)(\.\w+\.partial)?$)|(\[\d+\]\.(vbs|hta)$)'   # plain .js excluded: Edge caches hundreds of benign .js files
+    condition: selection
+
+- id: SIG-001
+  title: "Script host spawning a shell (wscript/cscript/mshta -> powershell/cmd)"
+  description: "A Windows Script Host process launched PowerShell or cmd. Typical of VBS/JS droppers (e.g. a downloaded autoupdate.vbs)."
+  tactic: Execution
+  technique: T1059.005
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      parent_process: [wscript.exe, cscript.exe, mshta.exe]
+      process: [powershell.exe, cmd.exe]
+    condition: selection
+
+- id: SIG-002
+  title: "PowerShell with encoded command"
+  description: "PowerShell started with -EncodedCommand/-enc and a base64 payload (obfuscation, typical of Empire/Cobalt Strike stagers)."
+  tactic: Defense Evasion
+  technique: T1027
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: powershell.exe
+      f_encoded_cmd: true
+    condition: selection
+
+- id: SIG-003
+  title: "PowerShell hidden window + no profile"
+  description: "PowerShell launched with a hidden window and -NoProfile, common for non-interactive malicious launchers."
+  tactic: Defense Evasion
+  technique: T1564.003
+  level: medium
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: powershell.exe
+      f_hidden_window: true
+      f_no_profile: true
+    condition: selection
+
+- id: SIG-004
+  title: "PowerShell download cradle in script block"
+  description: "Script block logging shows a web download + in-memory execution (Net.WebClient / DownloadString / IEX)."
+  tactic: Command and Control
+  technique: T1105
+  level: high
+  logsource: {event_type: ps_scriptblock}
+  detection:
+    selection:
+      script_block|re: 'downloadstring|downloadfile|net\.webclient|invoke-webrequest'
+    condition: selection
+
+- id: SIG-005
+  title: "PowerShell logging / AMSI bypass in script block"
+  description: "Script block tampers with ScriptBlockLogging cached policy or AMSI init (Empire stager behaviour)."
+  tactic: Defense Evasion
+  technique: T1562.001
+  level: critical
+  logsource: {event_type: ps_scriptblock}
+  detection:
+    selection:
+      script_block|contains: [cachedGroupPolicySettings, amsiInitFailed, EnableScriptBlockLogging]
+    condition: selection
+
+- id: SIG-006
+  title: "Discovery commands spawned by PowerShell"
+  description: "whoami / net / ipconfig / netstat / route / qprocess / reg query run as children of PowerShell (host & domain reconnaissance)."
+  tactic: Discovery
+  technique: T1087
+  level: medium
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      parent_process: powershell.exe
+      process: [whoami.exe, net.exe, net1.exe, ipconfig.exe, netstat.exe, route.exe, qprocess.exe, reg.exe, systeminfo.exe, nltest.exe, tasklist.exe]
+    condition: selection
+
+- id: SIG-007
+  title: "net use with explicit credentials to an admin share"
+  description: "net.exe mapping ADMIN$/C$/IPC$ with /user: and a password - credential guessing / lateral movement setup."
+  tactic: Lateral Movement
+  technique: T1021.002
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: net.exe
+      command_line|re: 'use\s+\\\\\S+\\(admin|c|ipc)\$\s+/user:'
+    condition: selection
+
+- id: SIG-017
+  title: "Service created via sc.exe (local or remote)"
+  description: "sc.exe create ... binPath= used to register a service, including remote creation with \\\\HOST. Found by reviewing the ML-only queue, then codified as a rule."
+  tactic: Persistence
+  technique: T1543.003
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: sc.exe
+      command_line|contains_all: [create, binpath]
+    condition: selection
+
+- id: SIG-008
+  title: "Service installed that runs cmd/script from a user profile"
+  description: "New service whose image path launches cmd /c, a script, or a file under a user profile - persistence masquerading as an updater."
+  tactic: Persistence
+  technique: T1543.003
+  level: high
+  logsource: {event_type: service_install}
+  detection:
+    selection:
+      service_path|contains: ['cmd.exe /c', '.vbs', '\users\', '\appdata\', '\temp\', 'powershell']
+    filter:
+      service_path|contains: 'svchost.exe -k'
+    condition: selection and not filter
+
+- id: SIG-009
+  title: "Ownership/permission change on a System32 binary (takeown / icacls)"
+  description: "takeown or icacls /grant used against a file in System32 - precursor to replacing a system binary (e.g. magnify.exe)."
+  tactic: Defense Evasion
+  technique: T1222.001
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    sel_icacls:
+      process: icacls.exe
+      command_line|contains_all: ['\system32\', '/grant']
+    sel_takeown:
+      process: takeown.exe
+      command_line|contains: '\system32\'
+    condition: 1 of sel_*
+
+- id: SIG-010
+  title: "Executable or script written to System32 by a script engine"
+  description: "PowerShell / WScript / cmd wrote an .exe/.dll/.vbs/.bat into System32 (binary planting / masquerading)."
+  tactic: Persistence
+  technique: T1546.008
+  level: high
+  logsource: {event_type: file_create}
+  detection:
+    selection:
+      process: [powershell.exe, wscript.exe, cscript.exe, cmd.exe]
+      file_path|contains: '\windows\system32\'
+      file_path|endswith: [.exe, .dll, .vbs, .bat, .ps1]
+    condition: selection
+
+- id: SIG-011
+  title: "Data staged in the Recycle Bin / System32 text file by PowerShell"
+  description: "PowerShell created files in $Recycle.Bin or a .txt in System32, typical local data staging before exfiltration."
+  tactic: Collection
+  technique: T1074.001
+  level: medium
+  logsource: {event_type: file_create}
+  detection:
+    sel_bin:
+      process: powershell.exe
+      file_path|contains: '$recycle.bin'
+    sel_txt:
+      process: powershell.exe
+      file_path|contains: '\windows\system32\'
+      file_path|endswith: '.txt'
+    filter:
+      file_path|contains: ['powershell_transcript', '__psscriptpolicytest']
+    condition: 1 of sel_* and not filter
+
+- id: SIG-012
+  title: "Script executed from Downloads / AppData / Temp"
+  description: "wscript/cscript running a .vbs/.js located in a user-writable folder (user-executed downloaded script)."
+  tactic: Execution
+  technique: T1204.002
+  level: high
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      process: [wscript.exe, cscript.exe]
+      command_line|re: '\\(downloads|appdata|temp)\\.*\.(vbs|js|jse|vbe)'
+    condition: selection
+
+- id: SIG-013
+  title: "Child process spawned by an accessibility binary"
+  description: "Magnify/Sethc/Utilman/OSK/Narrator spawning another process - sign of an accessibility-feature backdoor."
+  tactic: Persistence
+  technique: T1546.008
+  level: critical
+  logsource: {event_type: process_create}
+  detection:
+    selection:
+      parent_process: [magnify.exe, sethc.exe, utilman.exe, osk.exe, narrator.exe, displayswitch.exe]
+    condition: selection
+
+- id: SIG-014
+  title: "Remote Desktop (type 10) logon"
+  description: "Interactive RemoteInteractive logon - verify it is expected, especially onto a domain controller."
+  tactic: Lateral Movement
+  technique: T1021.001
+  level: medium
+  logsource: {event_type: logon}
+  detection:
+    selection:
+      logon_type: '10'
+    condition: selection
+
+- id: SIG-015
+  title: "LSASS memory access with credential-dumping access mask"
+  description: "Process opened lsass.exe with a rights mask used by Mimikatz-style dumpers. (Coverage rule - no hits expected in this dataset.)"
+  tactic: Credential Access
+  technique: T1003.001
+  level: critical
+  logsource: {event_type: process_access}
+  detection:
+    selection:
+      target_process|endswith: lsass.exe
+      granted_access: ['0x1010', '0x1038', '0x1fffff', '0x143a', '0x1410', '0x1438']
+    filter:
+      process: [svchost.exe, wininit.exe, csrss.exe, msmpeng.exe]
+    condition: selection and not filter

@@ -1,0 +1,245 @@
+{
+ "n_process_creates": 303,
+ "n_malicious": 106,
+ "random_pr_auc": 0.34983498349834985,
+ "results": [
+  {
+   "model": "isolation_forest",
+   "protocol": "A: fit on all (contaminated)",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.4487596973469974,
+   "roc_auc_ci95": [
+    0.3645752896894231,
+    0.5404416691102915
+   ],
+   "pr_auc": 0.42587278409732976,
+   "pr_auc_ci95": [
+    0.3354724631807873,
+    0.521311954427176
+   ],
+   "precision_at_k": 0.42452830188679247,
+   "recall_at_10pct": 0.1509433962264151,
+   "precision_at_15": 0.6
+  },
+  {
+   "model": "local_outlier_factor",
+   "protocol": "A: fit on all (contaminated)",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.6219231874341538,
+   "roc_auc_ci95": [
+    0.5518886560260176,
+    0.6910356736017356
+   ],
+   "pr_auc": 0.6148153356259518,
+   "pr_auc_ci95": [
+    0.543301189614697,
+    0.6922977409969802
+   ],
+   "precision_at_k": 0.4811320754716981,
+   "recall_at_10pct": 0.27358490566037735,
+   "precision_at_15": 1.0
+  },
+  {
+   "model": "one_class_svm",
+   "protocol": "A: fit on all (contaminated)",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.5036873862656834,
+   "roc_auc_ci95": [
+    0.4477609865751235,
+    0.569218999856924
+   ],
+   "pr_auc": 0.35986569026681936,
+   "pr_auc_ci95": [
+    0.30180440627687166,
+    0.432972827576922
+   ],
+   "precision_at_k": 0.3113207547169811,
+   "recall_at_10pct": 0.04716981132075472,
+   "precision_at_15": 0.26666666666666666
+  },
+  {
+   "model": "autoencoder",
+   "protocol": "A: fit on all (contaminated)",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.31184752418350736,
+   "roc_auc_ci95": [
+    0.23728650329527523,
+    0.3869260287642641
+   ],
+   "pr_auc": 0.3601078436339987,
+   "pr_auc_ci95": [
+    0.2942093405398563,
+    0.4336622773665693
+   ],
+   "precision_at_k": 0.2641509433962264,
+   "recall_at_10pct": 0.10377358490566038,
+   "precision_at_15": 0.6666666666666666
+  },
+  {
+   "model": "isolation_forest",
+   "protocol": "B: benign-only cross-fit",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9590556460109185,
+   "roc_auc_ci95": [
+    0.932814353554383,
+    0.9797089947089946
+   ],
+   "pr_auc": 0.8995958003855614,
+   "pr_auc_ci95": [
+    0.823399636631495,
+    0.9614350969258315
+   ],
+   "precision_at_k": 0.8113207547169812,
+   "recall_at_10pct": 0.2641509433962264,
+   "precision_at_15": 0.9333333333333333
+  },
+  {
+   "model": "local_outlier_factor",
+   "protocol": "B: benign-only cross-fit",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9912364716023369,
+   "roc_auc_ci95": [
+    0.9812472435426719,
+    0.9990828262677789
+   ],
+   "pr_auc": 0.9889108084966888,
+   "pr_auc_ci95": [
+    0.9764993928307094,
+    0.9983281242779534
+   ],
+   "precision_at_k": 0.9528301886792453,
+   "recall_at_10pct": 0.2830188679245283,
+   "precision_at_15": 1.0
+  },
+  {
+   "model": "one_class_svm",
+   "protocol": "B: benign-only cross-fit",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9784503400057466,
+   "roc_auc_ci95": [
+    0.9590006671022231,
+    0.9961156201933641
+   ],
+   "pr_auc": 0.9799989542830134,
+   "pr_auc_ci95": [
+    0.9622325257033628,
+    0.9955813109027395
+   ],
+   "precision_at_k": 0.9528301886792453,
+   "recall_at_10pct": 0.2830188679245283,
+   "precision_at_15": 1.0
+  },
+  {
+   "model": "autoencoder",
+   "protocol": "B: benign-only cross-fit",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9864476582702807,
+   "roc_auc_ci95": [
+    0.972102173069334,
+    0.9968832477805475
+   ],
+   "pr_auc": 0.9829330516808391,
+   "pr_auc_ci95": [
+    0.9661179208370103,
+    0.9952793088922951
+   ],
+   "precision_at_k": 0.9528301886792453,
+   "recall_at_10pct": 0.2830188679245283,
+   "precision_at_15": 1.0
+  },
+  {
+   "model": "random_forest",
+   "protocol": "C: supervised, group CV by chain",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9737094148070109,
+   "roc_auc_ci95": [
+    0.9534191235252752,
+    0.9913613236901859
+   ],
+   "pr_auc": 0.9147382057621587,
+   "pr_auc_ci95": [
+    0.855207512322197,
+    0.9736180546480613
+   ],
+   "precision_at_k": 0.9339622641509434,
+   "recall_at_10pct": 0.24528301886792453,
+   "precision_at_15": 0.7333333333333333
+  },
+  {
+   "model": "gradient_boosting",
+   "protocol": "C: supervised, group CV by chain",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.9851307346039652,
+   "roc_auc_ci95": [
+    0.9663241513875261,
+    0.9973828212610493
+   ],
+   "pr_auc": 0.9415238779167869,
+   "pr_auc_ci95": [
+    0.8729464049598441,
+    0.9963239020042566
+   ],
+   "precision_at_k": 0.9622641509433962,
+   "recall_at_10pct": 0.2641509433962264,
+   "precision_at_15": 0.8666666666666667
+  },
+  {
+   "model": "logistic_regression",
+   "protocol": "C: supervised, group CV by chain",
+   "n": 303,
+   "n_malicious": 106,
+   "prevalence": 0.34983498349834985,
+   "roc_auc": 0.8526961019059477,
+   "roc_auc_ci95": [
+    0.8094068388186851,
+    0.8975611595694001
+   ],
+   "pr_auc": 0.7859392689614444,
+   "pr_auc_ci95": [
+    0.7260898803701415,
+    0.8475733554182558
+   ],
+   "precision_at_k": 0.6886792452830188,
+   "recall_at_10pct": 0.2830188679245283,
+   "precision_at_15": 1.0
+  }
+ ],
+ "benign_crossfit_pr_auc_over_5_seeds": {
+  "isolation_forest": {
+   "mean": 0.8974303767910465,
+   "std": 0.003878906989426648
+  },
+  "local_outlier_factor": {
+   "mean": 0.9882311104425676,
+   "std": 0.0003500140383436981
+  },
+  "one_class_svm": {
+   "mean": 0.98072100044646,
+   "std": 0.0005719566847067657
+  },
+  "autoencoder": {
+   "mean": 0.9838789781751617,
+   "std": 0.004082253347229368
+  }
+ }
+}

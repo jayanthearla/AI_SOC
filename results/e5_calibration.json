@@ -1,0 +1,48 @@
+{
+ "n_alerts": 35,
+ "n_pos": 33,
+ "n_neg": 2,
+ "raw": {
+  "brier": 0.05192857142857143,
+  "ece": 0.1814285714285714,
+  "reliability": [
+   {
+    "bin": 4,
+    "n": 2,
+    "mean_pred": 0.43,
+    "frac_pos": 0.0
+   },
+   {
+    "bin": 5,
+    "n": 3,
+    "mean_pred": 0.5666666666666668,
+    "frac_pos": 1.0
+   },
+   {
+    "bin": 6,
+    "n": 5,
+    "mean_pred": 0.676,
+    "frac_pos": 1.0
+   },
+   {
+    "bin": 7,
+    "n": 1,
+    "mean_pred": 0.79,
+    "frac_pos": 1.0
+   },
+   {
+    "bin": 8,
+    "n": 10,
+    "mean_pred": 0.8390000000000001,
+    "frac_pos": 1.0
+   },
+   {
+    "bin": 9,
+    "n": 14,
+    "mean_pred": 0.9464285714285714,
+    "frac_pos": 1.0
+   }
+  ]
+ },
+ "note": "calibrator NOT fitted: need >= 5 positives and negatives (have 33/2). Label alerts from held-out scenarios / benign data first; until then do not describe risk_score as a probability."
+}

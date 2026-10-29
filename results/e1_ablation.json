@@ -1,0 +1,5386 @@
+{
+ "rows": [
+  {
+   "variant": "sigma_only",
+   "alerts": 27,
+   "alert_precision": 1.0,
+   "proc_precision": 0.9882352941176471,
+   "proc_recall": 0.7924528301886793,
+   "proc_f1": 0.8795811518324608,
+   "step_detection": 0.9375,
+   "tech_cov_exact": 0.7777777777777778,
+   "tech_cov_family": 0.8125,
+   "median_ttd_s": 1.283,
+   "groups": 16,
+   "incidents": 1
+  },
+  {
+   "variant": "python_only",
+   "alerts": 6,
+   "alert_precision": 1.0,
+   "proc_precision": 1.0,
+   "proc_recall": 0.6037735849056604,
+   "proc_f1": 0.7529411764705882,
+   "step_detection": 0.375,
+   "tech_cov_exact": 0.2777777777777778,
+   "tech_cov_family": 0.3125,
+   "median_ttd_s": 6.062,
+   "groups": 5,
+   "incidents": 1
+  },
+  {
+   "variant": "ml_only",
+   "alerts": 31,
+   "alert_precision": 0.5161290322580645,
+   "proc_precision": 0.5161290322580645,
+   "proc_recall": 0.1509433962264151,
+   "proc_f1": 0.23357664233576644,
+   "step_detection": 0.1875,
+   "tech_cov_exact": 0.0,
+   "tech_cov_family": 0.0,
+   "median_ttd_s": 0.818,
+   "groups": 31,
+   "incidents": 0
+  },
+  {
+   "variant": "rules_v1",
+   "alerts": 33,
+   "alert_precision": 1.0,
+   "proc_precision": 0.9882352941176471,
+   "proc_recall": 0.7924528301886793,
+   "proc_f1": 0.8795811518324608,
+   "step_detection": 1.0,
+   "tech_cov_exact": 1.0,
+   "tech_cov_family": 1.0,
+   "median_ttd_s": 1.918,
+   "groups": 19,
+   "incidents": 1
+  },
+  {
+   "variant": "rules_v1+ml_queue",
+   "alerts": 35,
+   "alert_precision": 0.9428571428571428,
+   "proc_precision": 0.9655172413793104,
+   "proc_recall": 0.7924528301886793,
+   "proc_f1": 0.8704663212435234,
+   "step_detection": 1.0,
+   "tech_cov_exact": 1.0,
+   "tech_cov_family": 1.0,
+   "median_ttd_s": 1.918,
+   "groups": 21,
+   "incidents": 1
+  },
+  {
+   "variant": "rules_v1+v2 (dev-tuned)",
+   "alerts": 36,
+   "alert_precision": 1.0,
+   "proc_precision": 1.0,
+   "proc_recall": 0.8679245283018868,
+   "proc_f1": 0.9292929292929293,
+   "step_detection": 1.0,
+   "tech_cov_exact": 1.0,
+   "tech_cov_family": 1.0,
+   "median_ttd_s": 1.918,
+   "groups": 22,
+   "incidents": 1
+  },
+  {
+   "variant": "no_correlation (raw hits)",
+   "alerts": 3398,
+   "alert_precision": 0.9994114184814596,
+   "proc_precision": 0.9882352941176471,
+   "proc_recall": 0.7924528301886793,
+   "proc_f1": 0.8795811518324608,
+   "step_detection": 1.0,
+   "tech_cov_exact": 0.9444444444444444,
+   "tech_cov_family": 1.0,
+   "median_ttd_s": 3.0105,
+   "groups": 3226,
+   "incidents": 0
+  }
+ ],
+ "mcnemar_vs_sigma_only": {
+  "python_only": {
+   "only_a": 1,
+   "only_b": 20,
+   "discordant": 21,
+   "p_value": 2.09808349609375e-05
+  },
+  "ml_only": {
+   "only_a": 6,
+   "only_b": 88,
+   "discordant": 94,
+   "p_value": 8.807936656038951e-20
+  },
+  "rules_v1": {
+   "only_a": 0,
+   "only_b": 0,
+   "discordant": 0,
+   "p_value": 1.0
+  },
+  "rules_v1+ml_queue": {
+   "only_a": 0,
+   "only_b": 2,
+   "discordant": 2,
+   "p_value": 0.5
+  },
+  "rules_v1+v2 (dev-tuned)": {
+   "only_a": 9,
+   "only_b": 0,
+   "discordant": 9,
+   "p_value": 0.00390625
+  },
+  "no_correlation (raw hits)": {
+   "only_a": 0,
+   "only_b": 0,
+   "discordant": 0,
+   "p_value": 1.0
+  }
+ },
+ "details": {
+  "sigma_only": {
+   "name": "sigma_only",
+   "alert_level": {
+    "n_alerts": 27,
+    "tp": 27,
+    "fp": 0,
+    "unverifiable": 0,
+    "precision": 1.0,
+    "precision_ci95": [
+     1.0,
+     1.0
+    ],
+    "false_positive_alerts": []
+   },
+   "process_level": {
+    "tp": 84,
+    "fp": 1,
+    "fn": 22,
+    "precision": 0.9882352941176471,
+    "recall": 0.7924528301886793,
+    "f1": 0.8795811518324608,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E094886",
+      "timestamp": "2019-05-14 23:35:37.079000+00:00",
+      "host": "HR001",
+      "process": "recycler.exe",
+      "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+     },
+     {
+      "event_uid": "E097402",
+      "timestamp": "2019-05-14 23:37:55.957000+00:00",
+      "host": "HR001",
+      "process": "ftp.exe",
+      "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     }
+    ],
+    "flagged_background": [
+     {
+      "event_uid": "E117577",
+      "timestamp": "2019-05-14 23:44:30.570000+00:00",
+      "host": "HFDC01",
+      "process": "sethc.exe",
+      "command_line": "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent"
+     }
+    ]
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 103,
+      "fp": 2,
+      "fn": 52384,
+      "precision": 0.9809523809523809,
+      "recall": 0.001962390687217787,
+      "f1": 0.003916945543048372
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 103,
+      "fp": 2,
+      "fn": 49246,
+      "precision": 0.9809523809523809,
+      "recall": 0.0020871750187440477,
+      "f1": 0.004165487119343229
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -0.08499999999999996
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 1.283
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -6.767
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1071.001"
+      ],
+      "ttd_seconds": 2.553
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.5,
+      "technique_family": 0.5,
+      "missed_techniques": [
+       "T1082"
+      ],
+      "ttd_seconds": 10.519
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.3333333333333333,
+      "technique_family": 0.5,
+      "missed_techniques": [
+       "T1021",
+       "T1110.003"
+      ],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -1566.874
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.439
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1071.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 19.357
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.014
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.047
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.322
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.851
+     }
+    ],
+    "step_detection_rate": 0.9375,
+    "technique_coverage_exact": {
+     "coverage": 0.7777777777777778,
+     "detected": [
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1074.001",
+      "T1087",
+      "T1105",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "missed": [
+      "T1021",
+      "T1071.001",
+      "T1082",
+      "T1110.003"
+     ],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 0.8125,
+     "detected": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1074",
+      "T1087",
+      "T1105",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "missed": [
+      "T1071",
+      "T1082",
+      "T1110"
+     ],
+     "extra": []
+    },
+    "median_ttd_seconds": 1.283,
+    "max_ttd_seconds": 19.357
+   },
+   "rule_table": [
+    {
+     "rule_id": "SIG-001",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-002",
+     "hits": 7,
+     "malicious": 7,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-003",
+     "hits": 5,
+     "malicious": 5,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-004",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-005",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-006",
+     "hits": 67,
+     "malicious": 67,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-007",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-008",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-009",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-010",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-011",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-012",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-013",
+     "hits": 5,
+     "malicious": 4,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.8
+    },
+    {
+     "rule_id": "SIG-014",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-016",
+     "hits": 4,
+     "malicious": 3,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.75
+    },
+    {
+     "rule_id": "SIG-017",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 164,
+    "alerts": 27,
+    "alert_groups": 16,
+    "incidents": 1,
+    "dedup_ratio": 0.40740740740740744,
+    "alert_reduction_ratio": 0.9997780682070377,
+    "group_reduction_ratio": 0.9998684848634297
+   },
+   "incident_level": {
+    "n_incidents": 1,
+    "n_true_incidents": 1,
+    "fragmentation": 0,
+    "alerts_in_largest_incident": 27,
+    "tactics_observed": [
+     "Initial Access",
+     "Execution",
+     "Defense Evasion",
+     "Command and Control",
+     "Discovery",
+     "Lateral Movement",
+     "Persistence",
+     "Collection"
+    ],
+    "tactic_recall": 0.8888888888888888,
+    "tactics_missed": [
+     "Credential Access"
+    ],
+    "kill_chain_kendall_tau": 0.8571428571428571,
+    "share_of_alerts_in_incident": 1.0
+   }
+  },
+  "python_only": {
+   "name": "python_only",
+   "alert_level": {
+    "n_alerts": 6,
+    "tp": 6,
+    "fp": 0,
+    "unverifiable": 0,
+    "precision": 1.0,
+    "precision_ci95": [
+     1.0,
+     1.0
+    ],
+    "false_positive_alerts": []
+   },
+   "process_level": {
+    "tp": 64,
+    "fp": 0,
+    "fn": 42,
+    "precision": 1.0,
+    "recall": 0.6037735849056604,
+    "f1": 0.7529411764705882,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008027",
+      "timestamp": "2019-05-14 22:32:22.132000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\nmartha\\Downloads\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E008315",
+      "timestamp": "2019-05-14 22:32:23.415000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJ"
+     },
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E011377",
+      "timestamp": "2019-05-14 22:34:11.227000+00:00",
+      "host": "HR001",
+      "process": "route.exe",
+      "command_line": "\"C:\\Windows\\system32\\ROUTE.EXE\" print"
+     },
+     {
+      "event_uid": "E012287",
+      "timestamp": "2019-05-14 22:36:15.287000+00:00",
+      "host": "HR001",
+      "process": "qprocess.exe",
+      "command_line": "\"C:\\Windows\\system32\\qprocess.exe\" *"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016883",
+      "timestamp": "2019-05-14 22:41:48.711000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noninteractive -Sta -encodedC"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E025961",
+      "timestamp": "2019-05-14 22:51:19.220000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "powershell.exe -w 1 -enc SQBFAFgAIAAiACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAY"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E026664",
+      "timestamp": "2019-05-14 22:51:21.497000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc SQBmACgAJA"
+     },
+     {
+      "event_uid": "E029248",
+      "timestamp": "2019-05-14 22:52:19.221000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJ"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047020",
+      "timestamp": "2019-05-14 22:59:49.632000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJ"
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E067727",
+      "timestamp": "2019-05-14 23:13:31.295000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\WINDOWS\\system32\\sc.exe\" \\\\HFDC01 create AdobeUpdater binPath= \"cmd.exe /c \\\"C:\\Users\\"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071041",
+      "timestamp": "2019-05-14 23:16:10.316000+00:00",
+      "host": "HFDC01",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\au"
+     },
+     {
+      "event_uid": "E071110",
+      "timestamp": "2019-05-14 23:16:10.695000+00:00",
+      "host": "HFDC01",
+      "process": "powershell.exe",
+      "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJ"
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E073475",
+      "timestamp": "2019-05-14 23:17:50.638000+00:00",
+      "host": "HFDC01",
+      "process": "reg.exe",
+      "command_line": "\"C:\\Windows\\system32\\reg.exe\" query \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\T"
+     },
+     {
+      "event_uid": "E075635",
+      "timestamp": "2019-05-14 23:19:02.202000+00:00",
+      "host": "HFDC01",
+      "process": "takeown.exe",
+      "command_line": "\"C:\\Windows\\system32\\takeown.exe\" /F C:\\Windows\\system32\\magnify.exe"
+     },
+     {
+      "event_uid": "E076503",
+      "timestamp": "2019-05-14 23:19:58.328000+00:00",
+      "host": "HFDC01",
+      "process": "icacls.exe",
+      "command_line": "\"C:\\windows\\system32\\icacls.exe\" C:\\windows\\system32\\magnigy.exe /grant SYSTEM:F"
+     },
+     {
+      "event_uid": "E077944",
+      "timestamp": "2019-05-14 23:21:30.097000+00:00",
+      "host": "HFDC01",
+      "process": "icacls.exe",
+      "command_line": "\"C:\\windows\\system32\\icacls.exe\" C:\\windows\\system32\\magnify.exe /grant SYSTEM:F"
+     },
+     {
+      "event_uid": "E094886",
+      "timestamp": "2019-05-14 23:35:37.079000+00:00",
+      "host": "HR001",
+      "process": "recycler.exe",
+      "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+     },
+     {
+      "event_uid": "E097402",
+      "timestamp": "2019-05-14 23:37:55.957000+00:00",
+      "host": "HR001",
+      "process": "ftp.exe",
+      "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     },
+     {
+      "event_uid": "E117747",
+      "timestamp": "2019-05-14 23:44:36.188000+00:00",
+      "host": "HFDC01",
+      "process": "magnify.exe",
+      "command_line": "\"C:\\Windows\\System32\\Magnify.exe\"  "
+     },
+     {
+      "event_uid": "E117755",
+      "timestamp": "2019-05-14 23:44:36.204000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E119288",
+      "timestamp": "2019-05-14 23:45:36.585000+00:00",
+      "host": "HFDC01",
+      "process": "whoami.exe",
+      "command_line": "whoami"
+     },
+     {
+      "event_uid": "E119487",
+      "timestamp": "2019-05-14 23:45:46.020000+00:00",
+      "host": "HFDC01",
+      "process": "whoami.exe",
+      "command_line": "whoami"
+     }
+    ],
+    "flagged_background": []
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 3187,
+      "fp": 0,
+      "fn": 49300,
+      "precision": 1.0,
+      "recall": 0.06071979728313678,
+      "f1": 0.11448791177210188
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 66,
+      "fp": 0,
+      "fn": 49283,
+      "precision": 1.0,
+      "recall": 0.0013374131188068654,
+      "f1": 0.002671253667914601
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1189"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1059.005",
+       "T1204.002"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1027",
+       "T1564.003"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1105",
+       "T1562.001"
+      ],
+      "ttd_seconds": 6.062
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 6.062
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.5,
+      "technique_family": 0.5,
+      "missed_techniques": [
+       "T1087"
+      ],
+      "ttd_seconds": 51.852
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 0.6666666666666666,
+      "technique_family": 1.0,
+      "missed_techniques": [
+       "T1021.002"
+      ],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1546.008"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1027",
+       "T1059.005",
+       "T1564.003"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.468
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1087"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1222.001",
+       "T1546.008"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1074.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1021.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1546.008"
+      ],
+      "ttd_seconds": null
+     }
+    ],
+    "step_detection_rate": 0.375,
+    "technique_coverage_exact": {
+     "coverage": 0.2777777777777778,
+     "detected": [
+      "T1021",
+      "T1071.001",
+      "T1082",
+      "T1110.003",
+      "T1543.003"
+     ],
+     "missed": [
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1074.001",
+      "T1087",
+      "T1105",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 0.3125,
+     "detected": [
+      "T1021",
+      "T1071",
+      "T1082",
+      "T1110",
+      "T1543"
+     ],
+     "missed": [
+      "T1027",
+      "T1059",
+      "T1074",
+      "T1087",
+      "T1105",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "extra": []
+    },
+    "median_ttd_seconds": 6.062,
+    "max_ttd_seconds": 51.852
+   },
+   "rule_table": [
+    {
+     "rule_id": "PY-001",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-002",
+     "hits": 3121,
+     "malicious": 3121,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-003",
+     "hits": 64,
+     "malicious": 64,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-006",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 3234,
+    "alerts": 6,
+    "alert_groups": 5,
+    "incidents": 1,
+    "dedup_ratio": 0.16666666666666663,
+    "alert_reduction_ratio": 0.9999506818237861,
+    "group_reduction_ratio": 0.9999589015198218
+   },
+   "incident_level": {
+    "n_incidents": 1,
+    "n_true_incidents": 1,
+    "fragmentation": 0,
+    "alerts_in_largest_incident": 6,
+    "tactics_observed": [
+     "Command and Control",
+     "Discovery",
+     "Credential Access",
+     "Lateral Movement",
+     "Persistence"
+    ],
+    "tactic_recall": 0.5555555555555556,
+    "tactics_missed": [
+     "Collection",
+     "Defense Evasion",
+     "Execution",
+     "Initial Access"
+    ],
+    "kill_chain_kendall_tau": 0.7999999999999999,
+    "share_of_alerts_in_incident": 1.0
+   }
+  },
+  "ml_only": {
+   "name": "ml_only",
+   "alert_level": {
+    "n_alerts": 31,
+    "tp": 16,
+    "fp": 15,
+    "unverifiable": 0,
+    "precision": 0.5161290322580645,
+    "precision_ci95": [
+     0.3548387096774194,
+     0.6943548387096767
+    ],
+    "false_positive_alerts": [
+     {
+      "alert_id": "ML-0001",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0003",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "ACCT001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0005",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0006",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0007",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "ACCT001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0009",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "IT001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0012",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "IT001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0016",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0022",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "IT001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0024",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0025",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0026",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0027",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0028",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ML-0029",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     }
+    ]
+   },
+   "process_level": {
+    "tp": 16,
+    "fp": 15,
+    "fn": 90,
+    "precision": 0.5161290322580645,
+    "recall": 0.1509433962264151,
+    "f1": 0.23357664233576644,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008027",
+      "timestamp": "2019-05-14 22:32:22.132000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\nmartha\\Downloads\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E011377",
+      "timestamp": "2019-05-14 22:34:11.227000+00:00",
+      "host": "HR001",
+      "process": "route.exe",
+      "command_line": "\"C:\\Windows\\system32\\ROUTE.EXE\" print"
+     },
+     {
+      "event_uid": "E011695",
+      "timestamp": "2019-05-14 22:34:52.560000+00:00",
+      "host": "HR001",
+      "process": "ipconfig.exe",
+      "command_line": "\"C:\\Windows\\system32\\ipconfig.exe\" /all"
+     },
+     {
+      "event_uid": "E011995",
+      "timestamp": "2019-05-14 22:35:33.888000+00:00",
+      "host": "HR001",
+      "process": "whoami.exe",
+      "command_line": "\"C:\\Windows\\system32\\whoami.exe\" /all /fo list"
+     },
+     {
+      "event_uid": "E012287",
+      "timestamp": "2019-05-14 22:36:15.287000+00:00",
+      "host": "HR001",
+      "process": "qprocess.exe",
+      "command_line": "\"C:\\Windows\\system32\\qprocess.exe\" *"
+     },
+     {
+      "event_uid": "E012644",
+      "timestamp": "2019-05-14 22:36:56.596000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" start"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E018330",
+      "timestamp": "2019-05-14 22:42:04.879000+00:00",
+      "host": "HR001",
+      "process": "netstat.exe",
+      "command_line": "\"C:\\Windows\\system32\\NETSTAT.EXE\" -ano"
+     },
+     {
+      "event_uid": "E020529",
+      "timestamp": "2019-05-14 22:43:10.226000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021181",
+      "timestamp": "2019-05-14 22:44:11.879000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" localgroup Administrators"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021728",
+      "timestamp": "2019-05-14 22:45:18.627000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" user"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022227",
+      "timestamp": "2019-05-14 22:46:15.117000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" user /domain"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022742",
+      "timestamp": "2019-05-14 22:47:16.722000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E023862",
+      "timestamp": "2019-05-14 22:48:03.002000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use"
+     },
+     {
+      "event_uid": "E024332",
+      "timestamp": "2019-05-14 22:48:44.356000+00:00",
+      "host": "HR001",
+      "process": "netstat.exe",
+      "command_line": "\"C:\\Windows\\system32\\NETSTAT.EXE\" -ano"
+     },
+     {
+      "event_uid": "E025002",
+      "timestamp": "2019-05-14 22:49:56.158000+00:00",
+      "host": "HR001",
+      "process": "reg.exe",
+      "command_line": "\"C:\\Windows\\system32\\reg.exe\" query HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentV"
+     },
+     {
+      "event_uid": "E025961",
+      "timestamp": "2019-05-14 22:51:19.220000+00:00",
+      "host": "HR001",
+      "process": "powershell.exe",
+      "command_line": "powershell.exe -w 1 -enc SQBFAFgAIAAiACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAY"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E028759",
+      "timestamp": "2019-05-14 22:52:15.991000+00:00",
+      "host": "HR001",
+      "process": "whoami.exe",
+      "command_line": "\"C:\\Windows\\system32\\whoami.exe\" /groups"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E031612",
+      "timestamp": "2019-05-14 22:54:13+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\pgustavo Password123"
+     },
+     {
+      "event_uid": "E031859",
+      "timestamp": "2019-05-14 22:54:14.887000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\pgustavo W1n1!19"
+     },
+     {
+      "event_uid": "E031912",
+      "timestamp": "2019-05-14 22:54:15.044000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use /delete \\\\IT001\\ADMIN$"
+     },
+     {
+      "event_uid": "E031955",
+      "timestamp": "2019-05-14 22:54:15.122000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\pgustavo Luch0!"
+     },
+     {
+      "event_uid": "E032181",
+      "timestamp": "2019-05-14 22:54:16.575000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\pgustavo Hunt1ng!"
+     },
+     {
+      "event_uid": "E032452",
+      "timestamp": "2019-05-14 22:54:18.059000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\pgustavo P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E032701",
+      "timestamp": "2019-05-14 22:54:19.634000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\lrodriguez Password123"
+     },
+     {
+      "event_uid": "E032929",
+      "timestamp": "2019-05-14 22:54:21.264000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\lrodriguez W1n1!19"
+     },
+     {
+      "event_uid": "E033178",
+      "timestamp": "2019-05-14 22:54:22.855000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\lrodriguez Luch0!"
+     },
+     {
+      "event_uid": "E033419",
+      "timestamp": "2019-05-14 22:54:24.456000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\lrodriguez Hunt1ng!"
+     },
+     {
+      "event_uid": "E033681",
+      "timestamp": "2019-05-14 22:54:26.116000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\lrodriguez P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E033923",
+      "timestamp": "2019-05-14 22:54:27.979000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\mmidge Password123"
+     },
+     {
+      "event_uid": "E034195",
+      "timestamp": "2019-05-14 22:54:29.563000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\mmidge W1n1!19"
+     },
+     {
+      "event_uid": "E034426",
+      "timestamp": "2019-05-14 22:54:31.189000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\mmidge Luch0!"
+     },
+     {
+      "event_uid": "E034651",
+      "timestamp": "2019-05-14 22:54:32.742000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\mmidge Hunt1ng!"
+     },
+     {
+      "event_uid": "E034905",
+      "timestamp": "2019-05-14 22:54:34.447000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\IT001\\ADMIN$ /user:shire\\mmidge P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E035146",
+      "timestamp": "2019-05-14 22:54:36.058000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\pgustavo Password123"
+     },
+     {
+      "event_uid": "E035394",
+      "timestamp": "2019-05-14 22:54:37.747000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\pgustavo W1n1!19"
+     },
+     {
+      "event_uid": "E035446",
+      "timestamp": "2019-05-14 22:54:37.872000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use /delete \\\\ACCT001\\ADMIN$"
+     },
+     {
+      "event_uid": "E035489",
+      "timestamp": "2019-05-14 22:54:37.917000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\pgustavo Luch0!"
+     },
+     {
+      "event_uid": "E035753",
+      "timestamp": "2019-05-14 22:54:39.577000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\pgustavo Hunt1ng!"
+     },
+     {
+      "event_uid": "E035979",
+      "timestamp": "2019-05-14 22:54:41.100000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\pgustavo P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E036204",
+      "timestamp": "2019-05-14 22:54:42.561000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\lrodriguez Password123"
+     },
+     {
+      "event_uid": "E036446",
+      "timestamp": "2019-05-14 22:54:44.148000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\lrodriguez W1n1!19"
+     },
+     {
+      "event_uid": "E036700",
+      "timestamp": "2019-05-14 22:54:45.867000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\lrodriguez Luch0!"
+     },
+     {
+      "event_uid": "E036931",
+      "timestamp": "2019-05-14 22:54:47.436000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\lrodriguez Hunt1ng!"
+     },
+     {
+      "event_uid": "E037169",
+      "timestamp": "2019-05-14 22:54:49.141000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\lrodriguez P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E037409",
+      "timestamp": "2019-05-14 22:54:50.680000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\mmidge Password123"
+     },
+     {
+      "event_uid": "E037634",
+      "timestamp": "2019-05-14 22:54:52.246000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\mmidge W1n1!19"
+     },
+     {
+      "event_uid": "E037890",
+      "timestamp": "2019-05-14 22:54:53.846000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\mmidge Luch0!"
+     },
+     {
+      "event_uid": "E038132",
+      "timestamp": "2019-05-14 22:54:55.401000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\mmidge Hunt1ng!"
+     },
+     {
+      "event_uid": "E038364",
+      "timestamp": "2019-05-14 22:54:57.104000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\ACCT001\\ADMIN$ /user:shire\\mmidge P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E038627",
+      "timestamp": "2019-05-14 22:54:58.653000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo Password123"
+     },
+     {
+      "event_uid": "E038893",
+      "timestamp": "2019-05-14 22:55:00.281000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo W1n1!19"
+     },
+     {
+      "event_uid": "E038948",
+      "timestamp": "2019-05-14 22:55:00.378000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use /delete \\\\HFDC01\\ADMIN$"
+     },
+     {
+      "event_uid": "E038991",
+      "timestamp": "2019-05-14 22:55:00.430000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo Luch0!"
+     },
+     {
+      "event_uid": "E039230",
+      "timestamp": "2019-05-14 22:55:01.913000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo Hunt1ng!"
+     },
+     {
+      "event_uid": "E039455",
+      "timestamp": "2019-05-14 22:55:03.459000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E039707",
+      "timestamp": "2019-05-14 22:55:05.209000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\lrodriguez Password123"
+     },
+     {
+      "event_uid": "E039935",
+      "timestamp": "2019-05-14 22:55:06.843000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\lrodriguez W1n1!19"
+     },
+     {
+      "event_uid": "E040160",
+      "timestamp": "2019-05-14 22:55:08.309000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\lrodriguez Luch0!"
+     },
+     {
+      "event_uid": "E040399",
+      "timestamp": "2019-05-14 22:55:09.833000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\lrodriguez Hunt1ng!"
+     },
+     {
+      "event_uid": "E040639",
+      "timestamp": "2019-05-14 22:55:11.304000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\lrodriguez P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E040864",
+      "timestamp": "2019-05-14 22:55:12.873000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\mmidge Password123"
+     },
+     {
+      "event_uid": "E041123",
+      "timestamp": "2019-05-14 22:55:14.417000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\mmidge W1n1!19"
+     },
+     {
+      "event_uid": "E041375",
+      "timestamp": "2019-05-14 22:55:15.973000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\mmidge Luch0!"
+     },
+     {
+      "event_uid": "E041621",
+      "timestamp": "2019-05-14 22:55:17.521000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\mmidge Hunt1ng!"
+     },
+     {
+      "event_uid": "E041860",
+      "timestamp": "2019-05-14 22:55:19.231000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\mmidge P3dr0Dulc3!"
+     },
+     {
+      "event_uid": "E043348",
+      "timestamp": "2019-05-14 22:56:22.655000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\ADMIN$ /user:shire\\pgustavo W1n1!19"
+     },
+     {
+      "event_uid": "E044226",
+      "timestamp": "2019-05-14 22:57:08.792000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use /delete \\\\HFDC01\\ADMIN$"
+     },
+     {
+      "event_uid": "E045047",
+      "timestamp": "2019-05-14 22:58:05.158000+00:00",
+      "host": "HR001",
+      "process": "net.exe",
+      "command_line": "\"C:\\Windows\\system32\\net.exe\" use \\\\HFDC01\\C$ /user:shire\\pgustavo W1n1!19"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071041",
+      "timestamp": "2019-05-14 23:16:10.316000+00:00",
+      "host": "HFDC01",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\au"
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E076503",
+      "timestamp": "2019-05-14 23:19:58.328000+00:00",
+      "host": "HFDC01",
+      "process": "icacls.exe",
+      "command_line": "\"C:\\windows\\system32\\icacls.exe\" C:\\windows\\system32\\magnigy.exe /grant SYSTEM:F"
+     },
+     {
+      "event_uid": "E077944",
+      "timestamp": "2019-05-14 23:21:30.097000+00:00",
+      "host": "HFDC01",
+      "process": "icacls.exe",
+      "command_line": "\"C:\\windows\\system32\\icacls.exe\" C:\\windows\\system32\\magnify.exe /grant SYSTEM:F"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     },
+     {
+      "event_uid": "E117747",
+      "timestamp": "2019-05-14 23:44:36.188000+00:00",
+      "host": "HFDC01",
+      "process": "magnify.exe",
+      "command_line": "\"C:\\Windows\\System32\\Magnify.exe\"  "
+     },
+     {
+      "event_uid": "E117755",
+      "timestamp": "2019-05-14 23:44:36.204000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     }
+    ],
+    "flagged_background": [
+     {
+      "event_uid": "E005839",
+      "timestamp": "2019-05-14 22:31:59.132000+00:00",
+      "host": "HR001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe_S-1-5-21-2511"
+     },
+     {
+      "event_uid": "E011092",
+      "timestamp": "2019-05-14 22:33:49.771000+00:00",
+      "host": "ACCT001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe4_ Global\\UsGt"
+     },
+     {
+      "event_uid": "E017289",
+      "timestamp": "2019-05-14 22:41:52.493000+00:00",
+      "host": "HR001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe26_ Global\\UsG"
+     },
+     {
+      "event_uid": "E021953",
+      "timestamp": "2019-05-14 22:45:52.366000+00:00",
+      "host": "HR001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe27_ Global\\UsG"
+     },
+     {
+      "event_uid": "E024403",
+      "timestamp": "2019-05-14 22:48:49.720000+00:00",
+      "host": "ACCT001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe5_ Global\\UsGt"
+     },
+     {
+      "event_uid": "E028641",
+      "timestamp": "2019-05-14 22:52:15.663000+00:00",
+      "host": "IT001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe23_ Global\\UsG"
+     },
+     {
+      "event_uid": "E058729",
+      "timestamp": "2019-05-14 23:07:15.695000+00:00",
+      "host": "IT001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe24_ Global\\UsG"
+     },
+     {
+      "event_uid": "E070507",
+      "timestamp": "2019-05-14 23:15:52.403000+00:00",
+      "host": "HR001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe29_ Global\\UsG"
+     },
+     {
+      "event_uid": "E096460",
+      "timestamp": "2019-05-14 23:37:15.729000+00:00",
+      "host": "IT001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe25_ Global\\UsG"
+     },
+     {
+      "event_uid": "E105039",
+      "timestamp": "2019-05-14 23:43:04.802000+00:00",
+      "host": "HFDC01",
+      "process": "csrss.exe",
+      "command_line": "%%SystemRoot%%\\system32\\csrss.exe ObjectDirectory=\\Windows SharedSection=1024,20480,768 Wi"
+     },
+     {
+      "event_uid": "E105063",
+      "timestamp": "2019-05-14 23:43:04.840000+00:00",
+      "host": "HFDC01",
+      "process": "winlogon.exe",
+      "command_line": "winlogon.exe"
+     },
+     {
+      "event_uid": "E105670",
+      "timestamp": "2019-05-14 23:43:07.523000+00:00",
+      "host": "HFDC01",
+      "process": "dwm.exe",
+      "command_line": "\"dwm.exe\""
+     },
+     {
+      "event_uid": "E106924",
+      "timestamp": "2019-05-14 23:43:12.173000+00:00",
+      "host": "HFDC01",
+      "process": "rdpclip.exe",
+      "command_line": "rdpclip"
+     },
+     {
+      "event_uid": "E107435",
+      "timestamp": "2019-05-14 23:43:13.930000+00:00",
+      "host": "HFDC01",
+      "process": "sihost.exe",
+      "command_line": "sihost.exe"
+     },
+     {
+      "event_uid": "E109973",
+      "timestamp": "2019-05-14 23:43:30.006000+00:00",
+      "host": "HFDC01",
+      "process": "taskhostw.exe",
+      "command_line": "taskhostw.exe"
+     }
+    ]
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 16,
+      "fp": 15,
+      "fn": 52471,
+      "precision": 0.5161290322580645,
+      "recall": 0.00030483738830567567,
+      "f1": 0.0006093149015575612
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 16,
+      "fp": 15,
+      "fn": 49333,
+      "precision": 0.5161290322580645,
+      "recall": 0.0003242213621349977,
+      "f1": 0.0006480356419603079
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1189"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1059.005",
+       "T1204.002"
+      ],
+      "ttd_seconds": -23.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1027",
+       "T1564.003"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1105",
+       "T1562.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1071.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1082",
+       "T1087"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1021",
+       "T1021.002",
+       "T1110.003"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1546.008"
+      ],
+      "ttd_seconds": 79.343
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1543.003"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1027",
+       "T1059.005",
+       "T1564.003"
+      ],
+      "ttd_seconds": 0.818
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1071.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1087"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1222.001",
+       "T1546.008"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1074.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1021.001"
+      ],
+      "ttd_seconds": null
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": false,
+      "n_alerts": 0,
+      "technique_exact": 0.0,
+      "technique_family": 0.0,
+      "missed_techniques": [
+       "T1546.008"
+      ],
+      "ttd_seconds": null
+     }
+    ],
+    "step_detection_rate": 0.1875,
+    "technique_coverage_exact": {
+     "coverage": 0.0,
+     "detected": [],
+     "missed": [
+      "T1021",
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1071.001",
+      "T1074.001",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110.003",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 0.0,
+     "detected": [],
+     "missed": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "extra": []
+    },
+    "median_ttd_seconds": 0.818,
+    "max_ttd_seconds": 79.343
+   },
+   "rule_table": [
+    {
+     "rule_id": "ML-001",
+     "hits": 31,
+     "malicious": 16,
+     "background": 15,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.5161290322580645
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 31,
+    "alerts": 31,
+    "alert_groups": 31,
+    "incidents": 0,
+    "dedup_ratio": 0.0,
+    "alert_reduction_ratio": 0.9997451894228951,
+    "group_reduction_ratio": 0.9997451894228951
+   },
+   "incident_level": {
+    "n_incidents": 0,
+    "n_true_incidents": 1,
+    "fragmentation": 0
+   }
+  },
+  "rules_v1": {
+   "name": "rules_v1",
+   "alert_level": {
+    "n_alerts": 33,
+    "tp": 33,
+    "fp": 0,
+    "unverifiable": 0,
+    "precision": 1.0,
+    "precision_ci95": [
+     1.0,
+     1.0
+    ],
+    "false_positive_alerts": []
+   },
+   "process_level": {
+    "tp": 84,
+    "fp": 1,
+    "fn": 22,
+    "precision": 0.9882352941176471,
+    "recall": 0.7924528301886793,
+    "f1": 0.8795811518324608,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E094886",
+      "timestamp": "2019-05-14 23:35:37.079000+00:00",
+      "host": "HR001",
+      "process": "recycler.exe",
+      "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+     },
+     {
+      "event_uid": "E097402",
+      "timestamp": "2019-05-14 23:37:55.957000+00:00",
+      "host": "HR001",
+      "process": "ftp.exe",
+      "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     }
+    ],
+    "flagged_background": [
+     {
+      "event_uid": "E117577",
+      "timestamp": "2019-05-14 23:44:30.570000+00:00",
+      "host": "HFDC01",
+      "process": "sethc.exe",
+      "command_line": "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent"
+     }
+    ]
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 3224,
+      "fp": 2,
+      "fn": 49263,
+      "precision": 0.9993800371977681,
+      "recall": 0.061424733743593654,
+      "f1": 0.11573600416419867
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 103,
+      "fp": 2,
+      "fn": 49246,
+      "precision": 0.9809523809523809,
+      "recall": 0.0020871750187440477,
+      "f1": 0.004165487119343229
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -0.08499999999999996
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 1.283
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -6.767
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 2.553
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 10.519
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -1566.874
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.439
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.468
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 19.357
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.014
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.047
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.322
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.851
+     }
+    ],
+    "step_detection_rate": 1.0,
+    "technique_coverage_exact": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1071.001",
+      "T1074.001",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110.003",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "median_ttd_seconds": 1.918,
+    "max_ttd_seconds": 19.357
+   },
+   "rule_table": [
+    {
+     "rule_id": "PY-001",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-002",
+     "hits": 3121,
+     "malicious": 3121,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-003",
+     "hits": 64,
+     "malicious": 64,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-006",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-001",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-002",
+     "hits": 7,
+     "malicious": 7,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-003",
+     "hits": 5,
+     "malicious": 5,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-004",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-005",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-006",
+     "hits": 67,
+     "malicious": 67,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-007",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-008",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-009",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-010",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-011",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-012",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-013",
+     "hits": 5,
+     "malicious": 4,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.8
+    },
+    {
+     "rule_id": "SIG-014",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-016",
+     "hits": 4,
+     "malicious": 3,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.75
+    },
+    {
+     "rule_id": "SIG-017",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 3398,
+    "alerts": 33,
+    "alert_groups": 19,
+    "incidents": 1,
+    "dedup_ratio": 0.4242424242424242,
+    "alert_reduction_ratio": 0.9997287500308238,
+    "group_reduction_ratio": 0.9998438257753228
+   },
+   "incident_level": {
+    "n_incidents": 1,
+    "n_true_incidents": 1,
+    "fragmentation": 0,
+    "alerts_in_largest_incident": 33,
+    "tactics_observed": [
+     "Initial Access",
+     "Execution",
+     "Defense Evasion",
+     "Command and Control",
+     "Discovery",
+     "Lateral Movement",
+     "Credential Access",
+     "Persistence",
+     "Collection"
+    ],
+    "tactic_recall": 1.0,
+    "tactics_missed": [],
+    "kill_chain_kendall_tau": 0.8333333333333334,
+    "share_of_alerts_in_incident": 1.0
+   }
+  },
+  "rules_v1+ml_queue": {
+   "name": "rules_v1+ml_queue",
+   "alert_level": {
+    "n_alerts": 35,
+    "tp": 33,
+    "fp": 2,
+    "unverifiable": 0,
+    "precision": 0.9428571428571428,
+    "precision_ci95": [
+     0.8571428571428571,
+     1.0
+    ],
+    "false_positive_alerts": [
+     {
+      "alert_id": "ALR-0001",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "ALR-0033",
+      "rule_id": "ML-001",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     }
+    ]
+   },
+   "process_level": {
+    "tp": 84,
+    "fp": 3,
+    "fn": 22,
+    "precision": 0.9655172413793104,
+    "recall": 0.7924528301886793,
+    "f1": 0.8704663212435234,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E094886",
+      "timestamp": "2019-05-14 23:35:37.079000+00:00",
+      "host": "HR001",
+      "process": "recycler.exe",
+      "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+     },
+     {
+      "event_uid": "E097402",
+      "timestamp": "2019-05-14 23:37:55.957000+00:00",
+      "host": "HR001",
+      "process": "ftp.exe",
+      "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     }
+    ],
+    "flagged_background": [
+     {
+      "event_uid": "E005839",
+      "timestamp": "2019-05-14 22:31:59.132000+00:00",
+      "host": "HR001",
+      "process": "searchprotocolhost.exe",
+      "command_line": "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe_S-1-5-21-2511"
+     },
+     {
+      "event_uid": "E105039",
+      "timestamp": "2019-05-14 23:43:04.802000+00:00",
+      "host": "HFDC01",
+      "process": "csrss.exe",
+      "command_line": "%%SystemRoot%%\\system32\\csrss.exe ObjectDirectory=\\Windows SharedSection=1024,20480,768 Wi"
+     },
+     {
+      "event_uid": "E117577",
+      "timestamp": "2019-05-14 23:44:30.570000+00:00",
+      "host": "HFDC01",
+      "process": "sethc.exe",
+      "command_line": "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent"
+     }
+    ]
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 3224,
+      "fp": 4,
+      "fn": 49263,
+      "precision": 0.9987608426270136,
+      "recall": 0.061424733743593654,
+      "f1": 0.11573184959167192
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 103,
+      "fp": 4,
+      "fn": 49246,
+      "precision": 0.9626168224299065,
+      "recall": 0.0020871750187440477,
+      "f1": 0.004165318667098027
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -0.08499999999999996
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -23.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 1.283
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -6.767
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 2.553
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 10.519
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -1566.874
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.439
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.468
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 19.357
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.014
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.047
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.322
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.851
+     }
+    ],
+    "step_detection_rate": 1.0,
+    "technique_coverage_exact": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1071.001",
+      "T1074.001",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110.003",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "median_ttd_seconds": 1.918,
+    "max_ttd_seconds": 19.357
+   },
+   "rule_table": [
+    {
+     "rule_id": "PY-001",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-002",
+     "hits": 3121,
+     "malicious": 3121,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-003",
+     "hits": 64,
+     "malicious": 64,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-006",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-001",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-002",
+     "hits": 7,
+     "malicious": 7,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-003",
+     "hits": 5,
+     "malicious": 5,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-004",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-005",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-006",
+     "hits": 67,
+     "malicious": 67,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-007",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-008",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-009",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-010",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-011",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-012",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-013",
+     "hits": 5,
+     "malicious": 4,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.8
+    },
+    {
+     "rule_id": "SIG-014",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-016",
+     "hits": 4,
+     "malicious": 3,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.75
+    },
+    {
+     "rule_id": "SIG-017",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 3398,
+    "alerts": 35,
+    "alert_groups": 21,
+    "incidents": 1,
+    "dedup_ratio": 0.4,
+    "alert_reduction_ratio": 0.9997123106387525,
+    "group_reduction_ratio": 0.9998273863832515
+   },
+   "incident_level": {
+    "n_incidents": 1,
+    "n_true_incidents": 1,
+    "fragmentation": 0,
+    "alerts_in_largest_incident": 33,
+    "tactics_observed": [
+     "Initial Access",
+     "Execution",
+     "Defense Evasion",
+     "Command and Control",
+     "Discovery",
+     "Lateral Movement",
+     "Credential Access",
+     "Persistence",
+     "Collection"
+    ],
+    "tactic_recall": 1.0,
+    "tactics_missed": [],
+    "kill_chain_kendall_tau": 0.8333333333333334,
+    "share_of_alerts_in_incident": 0.9428571428571428
+   }
+  },
+  "rules_v1+v2 (dev-tuned)": {
+   "name": "rules_v1+v2 (dev-tuned)",
+   "alert_level": {
+    "n_alerts": 36,
+    "tp": 36,
+    "fp": 0,
+    "unverifiable": 0,
+    "precision": 1.0,
+    "precision_ci95": [
+     1.0,
+     1.0
+    ],
+    "false_positive_alerts": []
+   },
+   "process_level": {
+    "tp": 92,
+    "fp": 0,
+    "fn": 14,
+    "precision": 1.0,
+    "recall": 0.8679245283018868,
+    "f1": 0.9292929292929293,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     }
+    ],
+    "flagged_background": []
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 3232,
+      "fp": 1,
+      "fn": 49255,
+      "precision": 0.9996906897618311,
+      "recall": 0.06157715243774649,
+      "f1": 0.1160086145010768
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 111,
+      "fp": 1,
+      "fn": 49238,
+      "precision": 0.9910714285714286,
+      "recall": 0.002249285699811546,
+      "f1": 0.004488384788014799
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -0.08499999999999996
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 1.283
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -6.767
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 2.553
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 10.519
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -1566.874
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.439
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.468
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 19.357
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.014
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.047
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.322
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 9.469
+     }
+    ],
+    "step_detection_rate": 1.0,
+    "technique_coverage_exact": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1071.001",
+      "T1074.001",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110.003",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "missed": [],
+     "extra": [
+      "T1048.003",
+      "T1560.001"
+     ]
+    },
+    "technique_coverage_family": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "missed": [],
+     "extra": [
+      "T1048",
+      "T1560"
+     ]
+    },
+    "median_ttd_seconds": 1.918,
+    "max_ttd_seconds": 19.357
+   },
+   "rule_table": [
+    {
+     "rule_id": "PY-001",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-002",
+     "hits": 3121,
+     "malicious": 3121,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-003",
+     "hits": 64,
+     "malicious": 64,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-006",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-001",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-002",
+     "hits": 7,
+     "malicious": 7,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-003",
+     "hits": 5,
+     "malicious": 5,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-004",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-005",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-006",
+     "hits": 67,
+     "malicious": 67,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-007",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-008",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-009",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-010",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-011",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-012",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-013",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-014",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-016",
+     "hits": 4,
+     "malicious": 3,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.75
+    },
+    {
+     "rule_id": "SIG-017",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-018",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-019",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-020",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 3405,
+    "alerts": 36,
+    "alert_groups": 22,
+    "incidents": 1,
+    "dedup_ratio": 0.38888888888888884,
+    "alert_reduction_ratio": 0.999704090942717,
+    "group_reduction_ratio": 0.9998191666872159
+   },
+   "incident_level": {
+    "n_incidents": 1,
+    "n_true_incidents": 1,
+    "fragmentation": 0,
+    "alerts_in_largest_incident": 36,
+    "tactics_observed": [
+     "Initial Access",
+     "Execution",
+     "Defense Evasion",
+     "Command and Control",
+     "Discovery",
+     "Lateral Movement",
+     "Credential Access",
+     "Persistence",
+     "Collection",
+     "Exfiltration"
+    ],
+    "tactic_recall": 1.0,
+    "tactics_missed": [],
+    "kill_chain_kendall_tau": 0.8333333333333334,
+    "share_of_alerts_in_incident": 1.0
+   }
+  },
+  "no_correlation (raw hits)": {
+   "name": "no_correlation (raw hits)",
+   "alert_level": {
+    "n_alerts": 3398,
+    "tp": 3396,
+    "fp": 2,
+    "unverifiable": 0,
+    "precision": 0.9994114184814596,
+    "precision_ci95": [
+     0.9985285462036492,
+     1.0
+    ],
+    "false_positive_alerts": [
+     {
+      "alert_id": "RAW-00000",
+      "rule_id": "SIG-016",
+      "verdict": "FP",
+      "host": "HR001",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     },
+     {
+      "alert_id": "RAW-00157",
+      "rule_id": "SIG-013",
+      "verdict": "FP",
+      "host": "HFDC01",
+      "n_events": 1,
+      "malicious": 0,
+      "background": 1,
+      "benign": 0,
+      "ambiguous": 0
+     }
+    ]
+   },
+   "process_level": {
+    "tp": 84,
+    "fp": 1,
+    "fn": 22,
+    "precision": 0.9882352941176471,
+    "recall": 0.7924528301886793,
+    "f1": 0.8795811518324608,
+    "n_process_creates": 308,
+    "n_malicious": 106,
+    "n_background_assumed_benign": 197,
+    "n_ambiguous_excluded": 5,
+    "missed_malicious": [
+     {
+      "event_uid": "E008327",
+      "timestamp": "2019-05-14 22:32:23.492000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E012665",
+      "timestamp": "2019-05-14 22:36:56.647000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 start"
+     },
+     {
+      "event_uid": "E016891",
+      "timestamp": "2019-05-14 22:41:48.721000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E020550",
+      "timestamp": "2019-05-14 22:43:10.278000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+     },
+     {
+      "event_uid": "E021202",
+      "timestamp": "2019-05-14 22:44:11.905000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+     },
+     {
+      "event_uid": "E021749",
+      "timestamp": "2019-05-14 22:45:18.650000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user"
+     },
+     {
+      "event_uid": "E022248",
+      "timestamp": "2019-05-14 22:46:15.147000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 user /domain"
+     },
+     {
+      "event_uid": "E022763",
+      "timestamp": "2019-05-14 22:47:16.747000+00:00",
+      "host": "HR001",
+      "process": "net1.exe",
+      "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+     },
+     {
+      "event_uid": "E025972",
+      "timestamp": "2019-05-14 22:51:19.229000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E029264",
+      "timestamp": "2019-05-14 22:52:19.428000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046785",
+      "timestamp": "2019-05-14 22:59:48.187000+00:00",
+      "host": "HR001",
+      "process": "cmd.exe",
+      "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+     },
+     {
+      "event_uid": "E046792",
+      "timestamp": "2019-05-14 22:59:48.193000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E046911",
+      "timestamp": "2019-05-14 22:59:49.121000+00:00",
+      "host": "HR001",
+      "process": "wscript.exe",
+      "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E047030",
+      "timestamp": "2019-05-14 22:59:49.644000+00:00",
+      "host": "HR001",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E066165",
+      "timestamp": "2019-05-14 23:12:24.489000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+     },
+     {
+      "event_uid": "E068798",
+      "timestamp": "2019-05-14 23:14:27.579000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+     },
+     {
+      "event_uid": "E070927",
+      "timestamp": "2019-05-14 23:16:09.836000+00:00",
+      "host": "HR001",
+      "process": "sc.exe",
+      "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+     },
+     {
+      "event_uid": "E070967",
+      "timestamp": "2019-05-14 23:16:09.942000+00:00",
+      "host": "HFDC01",
+      "process": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+     },
+     {
+      "event_uid": "E071118",
+      "timestamp": "2019-05-14 23:16:10.718000+00:00",
+      "host": "HFDC01",
+      "process": "conhost.exe",
+      "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+     },
+     {
+      "event_uid": "E094886",
+      "timestamp": "2019-05-14 23:35:37.079000+00:00",
+      "host": "HR001",
+      "process": "recycler.exe",
+      "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+     },
+     {
+      "event_uid": "E097402",
+      "timestamp": "2019-05-14 23:37:55.957000+00:00",
+      "host": "HR001",
+      "process": "ftp.exe",
+      "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+     },
+     {
+      "event_uid": "E102295",
+      "timestamp": "2019-05-14 23:42:00.723000+00:00",
+      "host": "HR001",
+      "process": "mstsc.exe",
+      "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+     }
+    ],
+    "flagged_background": [
+     {
+      "event_uid": "E117577",
+      "timestamp": "2019-05-14 23:44:30.570000+00:00",
+      "host": "HFDC01",
+      "process": "sethc.exe",
+      "command_line": "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent"
+     }
+    ]
+   },
+   "event_level": {
+    "all_event_types": {
+     "assumed": {
+      "tp": 3224,
+      "fp": 2,
+      "fn": 49263,
+      "precision": 0.9993800371977681,
+      "recall": 0.061424733743593654,
+      "f1": 0.11573600416419867
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    },
+    "excluding_network_connect": {
+     "assumed": {
+      "tp": 103,
+      "fp": 2,
+      "fn": 49246,
+      "precision": 0.9809523809523809,
+      "recall": 0.0020871750187440477,
+      "f1": 0.004165487119343229
+     },
+     "strict_flagged_pre_attack_benign": 0,
+     "n_pre_attack_benign": 831
+    }
+   },
+   "step_level": {
+    "steps": [
+     {
+      "step": "ST01",
+      "name": "Script delivered via browser",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -0.08499999999999996
+     },
+     {
+      "step": "ST02",
+      "name": "User executes script / WSH spawns shell",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST03",
+      "name": "Obfuscated hidden PowerShell stager",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 3,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 1.283
+     },
+     {
+      "step": "ST04",
+      "name": "Logging/AMSI bypass + download cradle",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 16,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": -6.767
+     },
+     {
+      "step": "ST05",
+      "name": "C2 beaconing (workstation)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 2749,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 2.553
+     },
+     {
+      "step": "ST06",
+      "name": "Host and domain discovery",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 26,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 10.519
+     },
+     {
+      "step": "ST07",
+      "name": "Password spraying admin shares / lateral",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 92,
+      "technique_exact": 0.6666666666666666,
+      "technique_family": 1.0,
+      "missed_techniques": [
+       "T1021"
+      ],
+      "ttd_seconds": 11.537
+     },
+     {
+      "step": "ST08",
+      "name": "Script staged in System32 (HR001)",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 26.345
+     },
+     {
+      "step": "ST09",
+      "name": "Remote service created on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.0
+     },
+     {
+      "step": "ST10",
+      "name": "SYSTEM Empire agent on the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.439
+     },
+     {
+      "step": "ST11",
+      "name": "C2 beaconing (DC)",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 194,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.468
+     },
+     {
+      "step": "ST12",
+      "name": "DC discovery",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 19.357
+     },
+     {
+      "step": "ST13",
+      "name": "takeown/icacls + overwrite Magnify.exe",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 4,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 0.014
+     },
+     {
+      "step": "ST14",
+      "name": "Data staged in Recycle Bin",
+      "host": "HR001",
+      "detected": true,
+      "n_alerts": 1,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.047
+     },
+     {
+      "step": "ST15",
+      "name": "RDP session to the DC",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 2,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 7.322
+     },
+     {
+      "step": "ST16",
+      "name": "Accessibility backdoor triggered",
+      "host": "HFDC01",
+      "detected": true,
+      "n_alerts": 5,
+      "technique_exact": 1.0,
+      "technique_family": 1.0,
+      "missed_techniques": [],
+      "ttd_seconds": 3.851
+     }
+    ],
+    "step_detection_rate": 1.0,
+    "technique_coverage_exact": {
+     "coverage": 0.9444444444444444,
+     "detected": [
+      "T1021.001",
+      "T1021.002",
+      "T1027",
+      "T1059.005",
+      "T1071.001",
+      "T1074.001",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110.003",
+      "T1189",
+      "T1204.002",
+      "T1222.001",
+      "T1543.003",
+      "T1546.008",
+      "T1562.001",
+      "T1564.003"
+     ],
+     "missed": [
+      "T1021"
+     ],
+     "extra": []
+    },
+    "technique_coverage_family": {
+     "coverage": 1.0,
+     "detected": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1105",
+      "T1110",
+      "T1189",
+      "T1204",
+      "T1222",
+      "T1543",
+      "T1546",
+      "T1562",
+      "T1564"
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "median_ttd_seconds": 3.0105,
+    "max_ttd_seconds": 26.345
+   },
+   "rule_table": [
+    {
+     "rule_id": "PY-001",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-002",
+     "hits": 3121,
+     "malicious": 3121,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-003",
+     "hits": 64,
+     "malicious": 64,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "PY-006",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-001",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-002",
+     "hits": 7,
+     "malicious": 7,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-003",
+     "hits": 5,
+     "malicious": 5,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-004",
+     "hits": 6,
+     "malicious": 6,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-005",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-006",
+     "hits": 67,
+     "malicious": 67,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-007",
+     "hits": 47,
+     "malicious": 47,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-008",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-009",
+     "hits": 3,
+     "malicious": 3,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-010",
+     "hits": 4,
+     "malicious": 4,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-011",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-012",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-013",
+     "hits": 5,
+     "malicious": 4,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.8
+    },
+    {
+     "rule_id": "SIG-014",
+     "hits": 2,
+     "malicious": 2,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    },
+    {
+     "rule_id": "SIG-016",
+     "hits": 4,
+     "malicious": 3,
+     "background": 1,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 0.75
+    },
+    {
+     "rule_id": "SIG-017",
+     "hits": 1,
+     "malicious": 1,
+     "background": 0,
+     "benign": 0,
+     "ambiguous": 0,
+     "hit_precision": 1.0
+    }
+   ],
+   "workload": {
+    "events": 121659,
+    "raw_hits": 3398,
+    "alerts": 3398,
+    "alert_groups": 3226,
+    "incidents": 0,
+    "dedup_ratio": 0.050618010594467355,
+    "alert_reduction_ratio": 0.9720694728708932,
+    "group_reduction_ratio": 0.9734832605890235
+   },
+   "incident_level": {
+    "n_incidents": 0,
+    "n_true_incidents": 1,
+    "fragmentation": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,538 @@
+[
+ {
+  "type": "host",
+  "value": "HR001",
+  "internal": true,
+  "context": "host of ALR-0001",
+  "alert_ids": [
+   "ALR-0001",
+   "ALR-0002",
+   "ALR-0003",
+   "ALR-0004",
+   "ALR-0005",
+   "ALR-0006",
+   "ALR-0007",
+   "ALR-0008",
+   "ALR-0009",
+   "ALR-0010",
+   "ALR-0011",
+   "ALR-0012",
+   "ALR-0013",
+   "ALR-0014",
+   "ALR-0015",
+   "ALR-0016",
+   "ALR-0017",
+   "ALR-0018",
+   "ALR-0019",
+   "ALR-0020",
+   "ALR-0031",
+   "ALR-0032"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "account",
+  "value": "nmartha",
+  "internal": true,
+  "context": "user of ALR-0001",
+  "alert_ids": [
+   "ALR-0001",
+   "ALR-0002",
+   "ALR-0003",
+   "ALR-0004",
+   "ALR-0005",
+   "ALR-0006",
+   "ALR-0007",
+   "ALR-0008",
+   "ALR-0009",
+   "ALR-0010",
+   "ALR-0011",
+   "ALR-0012",
+   "ALR-0013",
+   "ALR-0014",
+   "ALR-0015",
+   "ALR-0016",
+   "ALR-0018",
+   "ALR-0031",
+   "ALR-0032"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "2e934019907cdefc0e2eb87e81d21166b80fb565dd827a53f2e974b00afdfc57",
+  "internal": false,
+  "context": "SHA256 of searchprotocolhost.exe in ALR-0001",
+  "alert_ids": [
+   "ALR-0001"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "filename",
+  "value": "autoupdate[1].vbs",
+  "internal": true,
+  "context": "file written (C:\\Users\\nmartha\\AppData\\Local\\Packages\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\AC\\#!121\\MicrosoftEdge\\Cache\\U4NU94ZB\\autoupdate[1].vbs) in ALR-0002",
+  "alert_ids": [
+   "ALR-0002"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "47cacd60d91441137d055184614b1a418c0457992977857a76ca05c75bbc1b56",
+  "internal": false,
+  "context": "SHA256 of wscript.exe in ALR-0003",
+  "alert_ids": [
+   "ALR-0003"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "filename",
+  "value": "autoupdate.vbs",
+  "internal": true,
+  "context": "command line of wscript.exe in ALR-0003",
+  "alert_ids": [
+   "ALR-0003",
+   "ALR-0018",
+   "ALR-0020",
+   "ALR-0023"
+  ],
+  "verdict": "malicious",
+  "sources": [
+   {
+    "source": "local-lab-feed",
+    "verdict": "malicious",
+    "detail": "Empire VBS launcher copied across hosts",
+    "synthetic": true
+   }
+  ],
+  "tags": [
+   "empire",
+   "lab-annotated",
+   "stager"
+  ]
+ },
+ {
+  "type": "hash",
+  "value": "de96a6e69944335375dc1ac238336066889d9ffc7d73628ef4fe1b1b160ab32c",
+  "internal": false,
+  "context": "SHA256 of powershell.exe in ALR-0004",
+  "alert_ids": [
+   "ALR-0004",
+   "ALR-0005",
+   "ALR-0006",
+   "ALR-0013",
+   "ALR-0019"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "url",
+  "value": "https://10.0.10.106",
+  "internal": false,
+  "context": "decoded PowerShell payload in ALR-0004",
+  "alert_ids": [
+   "ALR-0004",
+   "ALR-0005",
+   "ALR-0006",
+   "ALR-0007",
+   "ALR-0008",
+   "ALR-0012",
+   "ALR-0013",
+   "ALR-0014",
+   "ALR-0019",
+   "ALR-0024",
+   "ALR-0025",
+   "ALR-0026"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "ip",
+  "value": "10.0.10.106",
+  "internal": true,
+  "context": "decoded PowerShell payload in ALR-0004",
+  "alert_ids": [
+   "ALR-0004",
+   "ALR-0005",
+   "ALR-0006",
+   "ALR-0007",
+   "ALR-0008",
+   "ALR-0009",
+   "ALR-0012",
+   "ALR-0013",
+   "ALR-0014",
+   "ALR-0019",
+   "ALR-0024",
+   "ALR-0025",
+   "ALR-0026",
+   "ALR-0027"
+  ],
+  "verdict": "malicious",
+  "sources": [
+   {
+    "source": "local-lab-feed",
+    "verdict": "malicious",
+    "detail": "Empire listener / C2 for the APT3 emulation (lab annotation)",
+    "synthetic": true
+   }
+  ],
+  "tags": [
+   "c2",
+   "empire",
+   "lab-annotated"
+  ]
+ },
+ {
+  "type": "url",
+  "value": "http://10.0.10.106:8080/update.ps1",
+  "internal": false,
+  "context": "decoded PowerShell payload in ALR-0005",
+  "alert_ids": [
+   "ALR-0005"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "3ee231b69bccacfbf961d2a8c624f4b4236ec54a239490b080d31d82b03f7c2d",
+  "internal": false,
+  "context": "SHA256 of route.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "c5dbbddd1193c7adca1e30cd17b8c7af6a76c406dd84dc164bb959c135f1aa70",
+  "internal": false,
+  "context": "SHA256 of ipconfig.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010",
+   "ALR-0011"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "1d5491e3c468ee4b4ef6edff4bbc7d06ee83180f6f0b1576763ea2efe049493a",
+  "internal": false,
+  "context": "SHA256 of whoami.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010",
+   "ALR-0011"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "7ee7a6fb1bdd972502d1eb23b7bd471a66cad63ca3b57d787a173fb290808eb6",
+  "internal": false,
+  "context": "SHA256 of qprocess.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "25c8266d2bc1d5626dcdf72419838b397d28d44d00ac09f02ff4e421b43ec369",
+  "internal": false,
+  "context": "SHA256 of net.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010",
+   "ALR-0011",
+   "ALR-0015",
+   "ALR-0016"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "9372044b501fefae7333a59624379dbfc7e4eccbea965ee7058f2583709c2287",
+  "internal": false,
+  "context": "SHA256 of netstat.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010",
+   "ALR-0011"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "19316d4266d0b776d9b2a05d5903d8cbc8f0ea1520e9c2a7e6d5960b6fa4dcaf",
+  "internal": false,
+  "context": "SHA256 of reg.exe in ALR-0010",
+  "alert_ids": [
+   "ALR-0010",
+   "ALR-0011"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "account",
+  "value": "pgustavo",
+  "internal": true,
+  "context": "user of ALR-0017",
+  "alert_ids": [
+   "ALR-0017",
+   "ALR-0019",
+   "ALR-0020",
+   "ALR-0021",
+   "ALR-0022",
+   "ALR-0034"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "78097c7cd0e57902536c60b7fa17528c313db20869e5f944223a0ba4c801d39b",
+  "internal": false,
+  "context": "SHA256 of sc.exe in ALR-0020",
+  "alert_ids": [
+   "ALR-0020"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "host",
+  "value": "HFDC01",
+  "internal": true,
+  "context": "host of ALR-0021",
+  "alert_ids": [
+   "ALR-0021",
+   "ALR-0022",
+   "ALR-0023",
+   "ALR-0024",
+   "ALR-0025",
+   "ALR-0026",
+   "ALR-0027",
+   "ALR-0028",
+   "ALR-0029",
+   "ALR-0030",
+   "ALR-0033",
+   "ALR-0034",
+   "ALR-0035"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "service",
+  "value": "Adobe Flash Updater",
+  "internal": true,
+  "context": "service installed in ALR-0021",
+  "alert_ids": [
+   "ALR-0021",
+   "ALR-0022"
+  ],
+  "verdict": "malicious",
+  "sources": [
+   {
+    "source": "local-lab-feed",
+    "verdict": "malicious",
+    "detail": "Service name used for remote persistence on the DC",
+    "synthetic": true
+   }
+  ],
+  "tags": [
+   "lab-annotated",
+   "persistence"
+  ]
+ },
+ {
+  "type": "service",
+  "value": "AdobeUpdater",
+  "internal": true,
+  "context": "service installed in ALR-0021",
+  "alert_ids": [
+   "ALR-0021",
+   "ALR-0022"
+  ],
+  "verdict": "malicious",
+  "sources": [
+   {
+    "source": "local-lab-feed",
+    "verdict": "malicious",
+    "detail": "Service name used for remote persistence on the DC",
+    "synthetic": true
+   }
+  ],
+  "tags": [
+   "lab-annotated",
+   "persistence"
+  ]
+ },
+ {
+  "type": "hash",
+  "value": "10d84f6ce8cc5c7f2f91a6cb663eec263fbaaaa81f2e68b4f11a0817d3dcff55",
+  "internal": false,
+  "context": "SHA256 of wscript.exe in ALR-0023",
+  "alert_ids": [
+   "ALR-0023"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "ba4038fd20e474c047be8aad5bfacdb1bfc1ddbe12f803f473b7918d8d819436",
+  "internal": false,
+  "context": "SHA256 of powershell.exe in ALR-0024",
+  "alert_ids": [
+   "ALR-0024",
+   "ALR-0025",
+   "ALR-0026"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "9e28034ce3aeea6951f790f8997df44cfbf80beff9fb17413dba317016a716ad",
+  "internal": false,
+  "context": "SHA256 of reg.exe in ALR-0028",
+  "alert_ids": [
+   "ALR-0028"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "dfabefdba0976dac4552238da3e0ee15eae604a813b78b2105f9c5ef1662cbd1",
+  "internal": false,
+  "context": "SHA256 of takeown.exe in ALR-0029",
+  "alert_ids": [
+   "ALR-0029"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "0ca4aff87eed104e2277c0e38b292cd32950dad6a233c791f798ea75ae28deec",
+  "internal": false,
+  "context": "SHA256 of icacls.exe in ALR-0029",
+  "alert_ids": [
+   "ALR-0029"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "151189510070b06a3ecf5b6a8612cc45748676a579b9b4d877f5be3eb1971082",
+  "internal": false,
+  "context": "SHA256 of csrss.exe in ALR-0033",
+  "alert_ids": [
+   "ALR-0033"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "ip",
+  "value": "172.18.39.106",
+  "internal": true,
+  "context": "remote source of logon in ALR-0034",
+  "alert_ids": [
+   "ALR-0034"
+  ],
+  "verdict": "internal",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "2dfcaa75bfb6efbd24a0862c80f90798be480f656a434c5ace7eeb618835c78a",
+  "internal": false,
+  "context": "SHA256 of sethc.exe in ALR-0035",
+  "alert_ids": [
+   "ALR-0035"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "935c1861df1f4018d698e8b65abfa02d7e9037d8f68ca3c2065b6ca165d44ad2",
+  "internal": false,
+  "context": "SHA256 of magnify.exe in ALR-0035",
+  "alert_ids": [
+   "ALR-0035"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "046f7a1b4de67562547ed9a180a72f481fc41e803de49a96d7d7c731964d53a0",
+  "internal": false,
+  "context": "SHA256 of conhost.exe in ALR-0035",
+  "alert_ids": [
+   "ALR-0035"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ },
+ {
+  "type": "hash",
+  "value": "8ecffcce38d4ee87abaee6cbe843d94d4f8fb98fab3c356c7f6b70e60b10f88a",
+  "internal": false,
+  "context": "SHA256 of whoami.exe in ALR-0035",
+  "alert_ids": [
+   "ALR-0035"
+  ],
+  "verdict": "unknown",
+  "sources": [],
+  "tags": []
+ }
+]

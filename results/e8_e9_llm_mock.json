@@ -1,0 +1,265 @@
+{
+ "provider": "mock",
+ "model": "template-v1",
+ "runs": 3,
+ "quality": {
+  "full": {
+   "action_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_recall": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "family_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "grounding": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "hallucinated": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "harmful_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "invalid_ids": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "n_actions": {
+    "mean": 7.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "passed": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "required_recall": {
+    "mean": 0.8000000000000002,
+    "std": 1.3597399555105182e-16,
+    "n": 3
+   },
+   "schema_valid": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "unknown_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_techniques_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_actions_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   }
+  },
+  "no_cti": {
+   "action_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_recall": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "family_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "grounding": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "hallucinated": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "harmful_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "invalid_ids": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "n_actions": {
+    "mean": 7.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "passed": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "required_recall": {
+    "mean": 0.6,
+    "std": 0.0,
+    "n": 3
+   },
+   "schema_valid": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "unknown_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_techniques_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_actions_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   }
+  },
+  "rules_only": {
+   "action_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_precision": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "exact_recall": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "family_f1": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "grounding": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "hallucinated": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "harmful_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "invalid_ids": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "n_actions": {
+    "mean": 7.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "passed": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "required_recall": {
+    "mean": 0.6,
+    "std": 0.0,
+    "n": 3
+   },
+   "schema_valid": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "unknown_actions": {
+    "mean": 0.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_techniques_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   },
+   "consistency_actions_jaccard": {
+    "mean": 1.0,
+    "std": 0.0,
+    "n": 3
+   }
+  }
+ },
+ "injection": {
+  "defended": {
+   "attack_success_rate": 0.0,
+   "trials": 3,
+   "trials_with_injection_flagged": 3
+  },
+  "raw": {
+   "attack_success_rate": 0.0,
+   "trials": 3,
+   "trials_with_injection_flagged": 3
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "_comment": "SYNTHETIC lab indicators for the empire_apt3 scenario (annotated by the analyst, not from any real CTI feed). The C2 address is RFC1918, so public reputation services (VirusTotal/MISP/OpenCTI) cannot know it; this file stands in for an internal CTI/TIP entry. Always disclose this in the paper.",
+  "indicators": [
+    {"type": "ip", "value": "10.0.10.106", "verdict": "malicious", "tags": ["empire", "c2", "lab-annotated"], "detail": "Empire listener / C2 for the APT3 emulation (lab annotation)"},
+    {"type": "filename", "value": "autoupdate.vbs", "verdict": "malicious", "tags": ["empire", "stager", "lab-annotated"], "detail": "Empire VBS launcher copied across hosts"},
+    {"type": "service", "value": "Adobe Flash Updater", "verdict": "malicious", "tags": ["persistence", "lab-annotated"], "detail": "Service name used for remote persistence on the DC"},
+    {"type": "service", "value": "AdobeUpdater", "verdict": "malicious", "tags": ["persistence", "lab-annotated"], "detail": "Service name used for remote persistence on the DC"}
+  ]
+}

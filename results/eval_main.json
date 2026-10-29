@@ -1,0 +1,662 @@
+{
+ "name": "full pipeline (rules; ML fused into risk)",
+ "alert_level": {
+  "n_alerts": 33,
+  "tp": 33,
+  "fp": 0,
+  "unverifiable": 0,
+  "precision": 1.0,
+  "precision_ci95": [
+   1.0,
+   1.0
+  ],
+  "false_positive_alerts": []
+ },
+ "process_level": {
+  "tp": 84,
+  "fp": 1,
+  "fn": 22,
+  "precision": 0.9882352941176471,
+  "recall": 0.7924528301886793,
+  "f1": 0.8795811518324608,
+  "n_process_creates": 308,
+  "n_malicious": 106,
+  "n_background_assumed_benign": 197,
+  "n_ambiguous_excluded": 5,
+  "missed_malicious": [
+   {
+    "event_uid": "E008327",
+    "timestamp": "2019-05-14 22:32:23.492000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E012665",
+    "timestamp": "2019-05-14 22:36:56.647000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 start"
+   },
+   {
+    "event_uid": "E016891",
+    "timestamp": "2019-05-14 22:41:48.721000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E020550",
+    "timestamp": "2019-05-14 22:43:10.278000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 group \"Domain Admins\" /domain"
+   },
+   {
+    "event_uid": "E021202",
+    "timestamp": "2019-05-14 22:44:11.905000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 localgroup Administrators"
+   },
+   {
+    "event_uid": "E021749",
+    "timestamp": "2019-05-14 22:45:18.650000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 user"
+   },
+   {
+    "event_uid": "E022248",
+    "timestamp": "2019-05-14 22:46:15.147000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 user /domain"
+   },
+   {
+    "event_uid": "E022763",
+    "timestamp": "2019-05-14 22:47:16.747000+00:00",
+    "host": "HR001",
+    "process": "net1.exe",
+    "command_line": "C:\\Windows\\system32\\net1 group \"Domain Computers\" /domain"
+   },
+   {
+    "event_uid": "E025972",
+    "timestamp": "2019-05-14 22:51:19.229000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E029264",
+    "timestamp": "2019-05-14 22:52:19.428000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E046785",
+    "timestamp": "2019-05-14 22:59:48.187000+00:00",
+    "host": "HR001",
+    "process": "cmd.exe",
+    "command_line": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs"
+   },
+   {
+    "event_uid": "E046792",
+    "timestamp": "2019-05-14 22:59:48.193000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E046911",
+    "timestamp": "2019-05-14 22:59:49.121000+00:00",
+    "host": "HR001",
+    "process": "wscript.exe",
+    "command_line": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" "
+   },
+   {
+    "event_uid": "E047030",
+    "timestamp": "2019-05-14 22:59:49.644000+00:00",
+    "host": "HR001",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E066165",
+    "timestamp": "2019-05-14 23:12:24.489000+00:00",
+    "host": "HR001",
+    "process": "sc.exe",
+    "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 query"
+   },
+   {
+    "event_uid": "E068798",
+    "timestamp": "2019-05-14 23:14:27.579000+00:00",
+    "host": "HR001",
+    "process": "sc.exe",
+    "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 qc AdobeUpdater"
+   },
+   {
+    "event_uid": "E070927",
+    "timestamp": "2019-05-14 23:16:09.836000+00:00",
+    "host": "HR001",
+    "process": "sc.exe",
+    "command_line": "\"C:\\Windows\\system32\\sc.exe\" \\\\HFDC01 start AdobeUpdater"
+   },
+   {
+    "event_uid": "E070967",
+    "timestamp": "2019-05-14 23:16:09.942000+00:00",
+    "host": "HFDC01",
+    "process": "cmd.exe",
+    "command_line": "cmd.exe /c \"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\" "
+   },
+   {
+    "event_uid": "E071118",
+    "timestamp": "2019-05-14 23:16:10.718000+00:00",
+    "host": "HFDC01",
+    "process": "conhost.exe",
+    "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+   },
+   {
+    "event_uid": "E094886",
+    "timestamp": "2019-05-14 23:35:37.079000+00:00",
+    "host": "HR001",
+    "process": "recycler.exe",
+    "command_line": "\"C:\\Windows\\system32\\recycler.exe\" a -t7z C:\\$Recycle.Bin\\old.7z C:\\$Recycle.Bin\\recipe.tx"
+   },
+   {
+    "event_uid": "E097402",
+    "timestamp": "2019-05-14 23:37:55.957000+00:00",
+    "host": "HR001",
+    "process": "ftp.exe",
+    "command_line": "\"C:\\Windows\\System32\\ftp.exe\" -v -s:ftp.txt"
+   },
+   {
+    "event_uid": "E102295",
+    "timestamp": "2019-05-14 23:42:00.723000+00:00",
+    "host": "HR001",
+    "process": "mstsc.exe",
+    "command_line": "\"C:\\Windows\\system32\\mstsc.exe\" "
+   }
+  ],
+  "flagged_background": [
+   {
+    "event_uid": "E117577",
+    "timestamp": "2019-05-14 23:44:30.570000+00:00",
+    "host": "HFDC01",
+    "process": "sethc.exe",
+    "command_line": "\"C:\\Windows\\System32\\Sethc.exe\" /AccessibilitySoundAgent"
+   }
+  ]
+ },
+ "event_level": {
+  "all_event_types": {
+   "assumed": {
+    "tp": 3224,
+    "fp": 2,
+    "fn": 49263,
+    "precision": 0.9993800371977681,
+    "recall": 0.061424733743593654,
+    "f1": 0.11573600416419867
+   },
+   "strict_flagged_pre_attack_benign": 0,
+   "n_pre_attack_benign": 831
+  },
+  "excluding_network_connect": {
+   "assumed": {
+    "tp": 103,
+    "fp": 2,
+    "fn": 49246,
+    "precision": 0.9809523809523809,
+    "recall": 0.0020871750187440477,
+    "f1": 0.004165487119343229
+   },
+   "strict_flagged_pre_attack_benign": 0,
+   "n_pre_attack_benign": 831
+  }
+ },
+ "step_level": {
+  "steps": [
+   {
+    "step": "ST01",
+    "name": "Script delivered via browser",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": -0.08499999999999996
+   },
+   {
+    "step": "ST02",
+    "name": "User executes script / WSH spawns shell",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 2,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 0.0
+   },
+   {
+    "step": "ST03",
+    "name": "Obfuscated hidden PowerShell stager",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 3,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 1.283
+   },
+   {
+    "step": "ST04",
+    "name": "Logging/AMSI bypass + download cradle",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 5,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": -6.767
+   },
+   {
+    "step": "ST05",
+    "name": "C2 beaconing (workstation)",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 3,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 2.553
+   },
+   {
+    "step": "ST06",
+    "name": "Host and domain discovery",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 2,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 10.519
+   },
+   {
+    "step": "ST07",
+    "name": "Password spraying admin shares / lateral",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 3,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 11.537
+   },
+   {
+    "step": "ST08",
+    "name": "Script staged in System32 (HR001)",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 5,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": -1566.874
+   },
+   {
+    "step": "ST09",
+    "name": "Remote service created on the DC",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 2,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 0.0
+   },
+   {
+    "step": "ST10",
+    "name": "SYSTEM Empire agent on the DC",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 4,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 0.439
+   },
+   {
+    "step": "ST11",
+    "name": "C2 beaconing (DC)",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 3.468
+   },
+   {
+    "step": "ST12",
+    "name": "DC discovery",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 19.357
+   },
+   {
+    "step": "ST13",
+    "name": "takeown/icacls + overwrite Magnify.exe",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 2,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 0.014
+   },
+   {
+    "step": "ST14",
+    "name": "Data staged in Recycle Bin",
+    "host": "HR001",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 7.047
+   },
+   {
+    "step": "ST15",
+    "name": "RDP session to the DC",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 7.322
+   },
+   {
+    "step": "ST16",
+    "name": "Accessibility backdoor triggered",
+    "host": "HFDC01",
+    "detected": true,
+    "n_alerts": 1,
+    "technique_exact": 1.0,
+    "technique_family": 1.0,
+    "missed_techniques": [],
+    "ttd_seconds": 3.851
+   }
+  ],
+  "step_detection_rate": 1.0,
+  "technique_coverage_exact": {
+   "coverage": 1.0,
+   "detected": [
+    "T1021",
+    "T1021.001",
+    "T1021.002",
+    "T1027",
+    "T1059.005",
+    "T1071.001",
+    "T1074.001",
+    "T1082",
+    "T1087",
+    "T1105",
+    "T1110.003",
+    "T1189",
+    "T1204.002",
+    "T1222.001",
+    "T1543.003",
+    "T1546.008",
+    "T1562.001",
+    "T1564.003"
+   ],
+   "missed": [],
+   "extra": []
+  },
+  "technique_coverage_family": {
+   "coverage": 1.0,
+   "detected": [
+    "T1021",
+    "T1027",
+    "T1059",
+    "T1071",
+    "T1074",
+    "T1082",
+    "T1087",
+    "T1105",
+    "T1110",
+    "T1189",
+    "T1204",
+    "T1222",
+    "T1543",
+    "T1546",
+    "T1562",
+    "T1564"
+   ],
+   "missed": [],
+   "extra": []
+  },
+  "median_ttd_seconds": 1.918,
+  "max_ttd_seconds": 19.357
+ },
+ "rule_table": [
+  {
+   "rule_id": "PY-001",
+   "hits": 47,
+   "malicious": 47,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "PY-002",
+   "hits": 3121,
+   "malicious": 3121,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "PY-003",
+   "hits": 64,
+   "malicious": 64,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "PY-006",
+   "hits": 2,
+   "malicious": 2,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-001",
+   "hits": 3,
+   "malicious": 3,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-002",
+   "hits": 7,
+   "malicious": 7,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-003",
+   "hits": 5,
+   "malicious": 5,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-004",
+   "hits": 6,
+   "malicious": 6,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-005",
+   "hits": 4,
+   "malicious": 4,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-006",
+   "hits": 67,
+   "malicious": 67,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-007",
+   "hits": 47,
+   "malicious": 47,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-008",
+   "hits": 2,
+   "malicious": 2,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-009",
+   "hits": 3,
+   "malicious": 3,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-010",
+   "hits": 4,
+   "malicious": 4,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-011",
+   "hits": 2,
+   "malicious": 2,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-012",
+   "hits": 2,
+   "malicious": 2,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-013",
+   "hits": 5,
+   "malicious": 4,
+   "background": 1,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 0.8
+  },
+  {
+   "rule_id": "SIG-014",
+   "hits": 2,
+   "malicious": 2,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  },
+  {
+   "rule_id": "SIG-016",
+   "hits": 4,
+   "malicious": 3,
+   "background": 1,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 0.75
+  },
+  {
+   "rule_id": "SIG-017",
+   "hits": 1,
+   "malicious": 1,
+   "background": 0,
+   "benign": 0,
+   "ambiguous": 0,
+   "hit_precision": 1.0
+  }
+ ],
+ "workload": {
+  "events": 121659,
+  "raw_hits": 3398,
+  "alerts": 33,
+  "alert_groups": 19,
+  "incidents": 1,
+  "dedup_ratio": 0.4242424242424242,
+  "alert_reduction_ratio": 0.9997287500308238,
+  "group_reduction_ratio": 0.9998438257753228
+ },
+ "incident_level": {
+  "n_incidents": 1,
+  "n_true_incidents": 1,
+  "fragmentation": 0,
+  "alerts_in_largest_incident": 33,
+  "tactics_observed": [
+   "Initial Access",
+   "Execution",
+   "Defense Evasion",
+   "Command and Control",
+   "Discovery",
+   "Lateral Movement",
+   "Credential Access",
+   "Persistence",
+   "Collection"
+  ],
+  "tactic_recall": 1.0,
+  "tactics_missed": [],
+  "kill_chain_kendall_tau": 0.8333333333333334,
+  "share_of_alerts_in_incident": 1.0
+ }
+}

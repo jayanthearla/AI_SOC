@@ -1,0 +1,127 @@
+[
+ {
+  "decision_id": "INC-001-A01",
+  "incident_id": "INC-001",
+  "action_id": "kill_process",
+  "target": "HFDC01",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:38:00+00:00",
+  "note": "",
+  "approvers": [
+   "123"
+  ],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Matches observed Execution activity.",
+  "evidence_ids": [
+   "ALR-0003"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A02",
+  "incident_id": "INC-001",
+  "action_id": "quarantine_file",
+  "target": "",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:49:29+00:00",
+  "note": "",
+  "approvers": [
+   "123"
+  ],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Matches observed Execution activity.",
+  "evidence_ids": [
+   "ALR-0003"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A03",
+  "incident_id": "INC-001",
+  "action_id": "block_ip",
+  "target": "10.0.10.106",
+  "status": "proposed",
+  "decided_by": "",
+  "decided_at": "",
+  "note": "",
+  "approvers": [],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Matches observed Command and Control activity.",
+  "evidence_ids": [
+   "ALR-0007"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A04",
+  "incident_id": "INC-001",
+  "action_id": "isolate_endpoint",
+  "target": "HFDC01",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:40:52+00:00",
+  "note": "",
+  "approvers": [],
+  "needs_two_person": true,
+  "report_verified": true,
+  "rationale": "Matches observed Command and Control activity.",
+  "evidence_ids": [
+   "ALR-0007"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A05",
+  "incident_id": "INC-001",
+  "action_id": "reset_credentials",
+  "target": "nmartha",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:40:48+00:00",
+  "note": "",
+  "approvers": [],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Matches observed Lateral Movement activity.",
+  "evidence_ids": [
+   "ALR-0015"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A06",
+  "incident_id": "INC-001",
+  "action_id": "remove_persistence",
+  "target": "HFDC01",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:40:44+00:00",
+  "note": "",
+  "approvers": [
+   "123"
+  ],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Matches observed Persistence activity.",
+  "evidence_ids": [
+   "ALR-0018"
+  ]
+ },
+ {
+  "decision_id": "INC-001-A07",
+  "incident_id": "INC-001",
+  "action_id": "hunt_similar_activity",
+  "target": "",
+  "status": "rejected",
+  "decided_by": "123",
+  "decided_at": "2026-10-29T02:40:37+00:00",
+  "note": "",
+  "approvers": [],
+  "needs_two_person": false,
+  "report_verified": true,
+  "rationale": "Search other hosts for the same indicators.",
+  "evidence_ids": [
+   "ALR-0002"
+  ]
+ }
+]

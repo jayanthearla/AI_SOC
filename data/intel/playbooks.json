@@ -1,0 +1,26 @@
+{
+  "_comment": "Generic incident-response guidance written for this project (NIST-style containment/eradication ideas). `actions` must be ids from ai_soc.response.actions.CATALOGUE.",
+  "playbooks": [
+    {"id": "PB-EXEC-SCRIPT", "title": "Malicious script / encoded PowerShell execution", "tactics": ["Execution", "Defense Evasion"], "techniques": ["T1059", "T1027", "T1204", "T1564"],
+     "text": "A user-launched script host spawned an obfuscated PowerShell stager. Contain the endpoint, preserve the script and PowerShell logs, kill the process tree, reset the user's credentials, and hunt for the same script name or encoded stager on other hosts.",
+     "actions": ["isolate_endpoint", "kill_process", "quarantine_file", "reset_credentials", "hunt_similar_activity"]},
+    {"id": "PB-C2", "title": "Command-and-control beaconing", "tactics": ["Command and Control"], "techniques": ["T1071", "T1105"],
+     "text": "A script engine polls one endpoint at fixed short intervals. Block the destination at the perimeter, isolate the beaconing host, capture memory for the implant, and search proxy/DNS/flow logs for other hosts talking to the same endpoint.",
+     "actions": ["block_ip", "isolate_endpoint", "collect_forensic_triage", "hunt_similar_activity"]},
+    {"id": "PB-DISCOVERY", "title": "Host and domain discovery", "tactics": ["Discovery"], "techniques": ["T1087", "T1082", "T1033", "T1016", "T1049", "T1069"],
+     "text": "Reconnaissance commands usually precede lateral movement. Treat as part of a larger intrusion if correlated with execution/C2 alerts; review which accounts and domain groups were enumerated.",
+     "actions": ["monitor_and_review", "hunt_similar_activity", "create_detection_rule"]},
+    {"id": "PB-CRED-LATERAL", "title": "Password spraying and lateral movement over SMB/RDP", "tactics": ["Credential Access", "Lateral Movement"], "techniques": ["T1110", "T1021", "T1550"],
+     "text": "Repeated authentication attempts and admin-share access from one workstation to several hosts indicate credential abuse. Reset every credential used, disable accounts that appear on multiple hosts, isolate the source host, and review authentication logs on each destination.",
+     "actions": ["reset_credentials", "disable_account", "isolate_endpoint", "hunt_similar_activity"]},
+    {"id": "PB-PERSIST", "title": "Persistence via remote service or accessibility-feature backdoor", "tactics": ["Persistence", "Privilege Escalation"], "techniques": ["T1543", "T1546", "T1222"],
+     "text": "A service was created remotely or an accessibility binary was replaced. Remove the service or restore the original binary from a trusted source, verify file hashes, and rebuild the host if tampering with system binaries is confirmed.",
+     "actions": ["remove_persistence", "isolate_endpoint", "collect_forensic_triage", "create_detection_rule"]},
+    {"id": "PB-COLLECT-EXFIL", "title": "Data staging, archiving and exfiltration", "tactics": ["Collection", "Exfiltration"], "techniques": ["T1074", "T1560", "T1048"],
+     "text": "Data was collected into an archive and may have been sent out. Determine what the archive contains, block the destination, preserve network logs, and assess notification obligations.",
+     "actions": ["block_ip", "quarantine_file", "collect_forensic_triage", "isolate_endpoint"]},
+    {"id": "PB-INITIAL", "title": "Malicious file delivery / initial access", "tactics": ["Initial Access"], "techniques": ["T1189", "T1566", "T1204"],
+     "text": "A script file was delivered through the browser. Identify the delivery URL or sender, block it, and check who else received or downloaded the file.",
+     "actions": ["quarantine_file", "block_ip", "hunt_similar_activity"]}
+  ]
+}

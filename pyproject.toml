@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-soc"
+version = "0.2.0"
+description = "Multi-agent AI SOC pipeline: correlation-driven detection, CTI enrichment, verified LLM triage, human-approved response"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "numpy", "scikit-learn>=1.3", "scipy", "pyyaml", "pydantic>=2.0", "requests", "matplotlib"]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.30"]
+ml = ["xgboost"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

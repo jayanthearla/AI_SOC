@@ -1,0 +1,124 @@
+[
+ {
+  "session_id": "SES-003",
+  "host": "HR001",
+  "start": "2019-05-14 22:32:15.144000+00:00",
+  "end": "2019-05-14 22:59:50.423000+00:00",
+  "duration_min": 27.6,
+  "n_notable_events": 94,
+  "users": [
+   "nmartha",
+   "pgustavo"
+  ],
+  "chains": [
+   "CH-0020",
+   "CH-0024"
+  ],
+  "kinds": {
+   "process": 82,
+   "script_block": 6,
+   "explicit_creds": 5,
+   "file_drop": 1
+  },
+  "processes": {
+   "net.exe": 58,
+   "powershell.exe": 6,
+   "net1.exe": 6,
+   "wscript.exe": 2,
+   "whoami.exe": 2,
+   "netstat.exe": 2,
+   "rundll32.exe": 1,
+   "route.exe": 1
+  }
+ },
+ {
+  "session_id": "SES-004",
+  "host": "HR001",
+  "start": "2019-05-14 23:12:24.489000+00:00",
+  "end": "2019-05-14 23:16:09.836000+00:00",
+  "duration_min": 3.8,
+  "n_notable_events": 4,
+  "users": [
+   "pgustavo"
+  ],
+  "chains": [
+   "CH-0024"
+  ],
+  "kinds": {
+   "process": 4
+  },
+  "processes": {
+   "sc.exe": 4
+  }
+ },
+ {
+  "session_id": "SES-001",
+  "host": "HFDC01",
+  "start": "2019-05-14 23:13:31.343000+00:00",
+  "end": "2019-05-14 23:31:10.473000+00:00",
+  "duration_min": 17.7,
+  "n_notable_events": 12,
+  "users": [
+   "pgustavo",
+   "system"
+  ],
+  "chains": [
+   "CH-0119"
+  ],
+  "kinds": {
+   "process": 7,
+   "file_drop": 3,
+   "service_install": 2
+  },
+  "processes": {
+   "icacls.exe": 2,
+   "cmd.exe": 1,
+   "wscript.exe": 1,
+   "powershell.exe": 1,
+   "reg.exe": 1,
+   "takeown.exe": 1
+  }
+ },
+ {
+  "session_id": "SES-005",
+  "host": "HR001",
+  "start": "2019-05-14 23:34:30.648000+00:00",
+  "end": "2019-05-14 23:43:04.754000+00:00",
+  "duration_min": 8.6,
+  "n_notable_events": 6,
+  "users": [
+   "nmartha"
+  ],
+  "chains": [
+   "CH-0024"
+  ],
+  "kinds": {
+   "file_drop": 2,
+   "process": 2,
+   "explicit_creds": 2
+  },
+  "processes": {
+   "recycler.exe": 1,
+   "ftp.exe": 1
+  }
+ },
+ {
+  "session_id": "SES-002",
+  "host": "HFDC01",
+  "start": "2019-05-14 23:43:02.746000+00:00",
+  "end": "2019-05-14 23:43:59.575000+00:00",
+  "duration_min": 0.9,
+  "n_notable_events": 17,
+  "users": [
+   "hfdc01$",
+   "pgustavo"
+  ],
+  "chains": [],
+  "kinds": {
+   "file_drop": 7,
+   "service_install": 6,
+   "remote_logon": 4
+  },
+  "processes": {}
+ }
+]

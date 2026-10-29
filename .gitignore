@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 data/raw/*
 !data/raw/.gitkeep
 data/intel/enterprise-attack.json
+=======
+# data/raw/*
+# !data/raw/.gitkeep
+# data/intel/enterprise-attack.json
+>>>>>>> fdf05b7 (Initial commit: AI-SOC project)
 data/intel/lookup_cache.json
 # baselines/sigmahq/rules/
 __pycache__/
